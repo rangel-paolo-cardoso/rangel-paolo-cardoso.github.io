@@ -4,26 +4,98 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rangel: portifólio</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light&display=swap">
+        <style>
+            body {
+                background-color: #a8e3f7;
+                color: #28334f;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .eu {
+                font-family: Pacifico, sans-serif;
+                font-size: 45px;
+            }
+
+            .indice {
+                list-style-type: none;
+                width: 30%;
+            }
+
+            .indice li {
+                margin-bottom: 12px;
+            }
+
+            .indice li a {
+                text-decoration: none;
+                color: #fff;
+                background-color: #333;
+                border: 2px solid #f00;
+                border-radius: 4px;
+                padding: 2px 6px;
+                font-weight: 500;
+                font-family: Verdana, sans-serif;
+            }
+
+            .general {
+                font-size: 18px;
+                line-height: 25px;
+                color: #404e5c;
+                font-weight: 500;
+                background-color: #fff;
+                width: 35%;
+                padding: 10px 15px;
+                border-radius: 7px;
+                border: 3px solid #ccc;
+                list-style-type: none;
+            }
+
+            .sections {
+                font-size: 35px;
+            }
+
+            #desc {
+            }
+
+            p#desc span {
+                font-weight: 900;
+                color: #24292e;
+            }
+
+            .habs li {
+                border-bottom: 1px solid #f00;
+                text-align: center;
+            }
+
+            .links {
+                color: #fff;
+                text-decoration: none;
+                font-size: 20px;
+                background-color: #df374a;
+                padding: 5px 7px;
+                border-radius: 8px;
+            }
+        </style>
     </head>
     <body>
-        <h1 id="eu">Rangel Paolo Cardoso Bomfim</h1>
-        <img src="images/rangel_big.jpg" alt="Rangel de braços cruzados usando a camisa da Trybe" width="200px">
-        <p>
-            Paixão: tecnologia e programação.<br>
-            Onde mora: cidade e estado de São Paulo.<br>
-            Formação: Análise e Desenvolvimento de Sistemas.<br>
-            Nacionalidade: brasileiro nativo.
-        </p>
-        <br>
-        <ol>
+        <h2 class="sections eu">Índice</h2>
+        <ol class="indice">
             <li><a href="#habilidades">Principais habilidades</a></li>
             <li><a href="#projetos">Portifólio: uma pequena amostra</a></li>
-            <li><a href="#eu">Minhas informações</a></li>
+            <li><a href="#desc">Minhas informações</a></li>
             <li><a href="#blogs">Site favorito</a></li>
             <li><a href="#foto">Foto ampliada</a></li>
         </ol>
-        <h2 id="habilidades">Principais Habilidades</h2>
-        <ul>
+        <h1 class="eu">Rangel Paolo Cardoso Bomfim</h1>
+        <img src="images/rangel_big.jpg" alt="Rangel de braços cruzados usando a camisa da Trybe" width="200px">
+        <p class="general" id="desc">
+            <span>Paixão:</span> tecnologia e programação.<br>
+            <span>Onde mora:</span> cidade e estado de São Paulo.<br>
+            <span>Formação:</span> Análise e Desenvolvimento de Sistemas.<br>
+            <span>Nacionalidade:</span> brasileiro nativo.
+        </p>
+        <br>
+        <h2 class="sections" id="habilidades">Principais Habilidades</h2>
+        <ul class="general habs">
             <li><strong>Java</strong></li>
             <li>HTML</li>
             <li>CSS</li>
@@ -32,15 +104,15 @@
             <li>Shell Script</li>
         </ul>
         <br>
-        <h2 id="porjetos">Portifólio: uma pequena amostra </h2>
-        <ul>
+        <h2 class="sections" id="projetos">Portifólio: uma pequena amostra </h2>
+        <ul class="general">
             <li><em>trybe-bloco1and2 - scripts em Shell Script</em></li>
             <li><em>SGC - Sistema Gerenciador de Condomínio</em></li>
         </ul>
-        <h2 id="blogs">Site favorito</h2>
-        <a href="https://www.residentevil.com/re3/pt-br/" target="_blank">Minha série de jogo favorita</a>
+        <h2 class="sections" id="blogs">Site favorito</h2>
+        <a class="links" href="https://www.residentevil.com/re3/pt-br/" target="_blank">Minha série de jogo favorita</a>
         <br><br>
-        <h2 id="foto">Foto ampliada</h2>
-        <a href="images/rangel_big.jpg" target="_blank">Este sou eu</a>
+        <h2 class="sections" id="foto">Foto ampliada</h2>
+        <a class="links" href="images/rangel_big.jpg" target="_blank">Este sou eu</a>
     </body>
 </html>
