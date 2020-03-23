@@ -3,13 +3,14 @@ body {
     color: #28334f;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    max-width: 100vh;
+    max-width: 140vh;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
+    padding: 35px;
 }
 
-.eu {
+.inicio {
     font-family: Pacifico, sans-serif;
     font-size: 45px;
 }
@@ -40,26 +41,24 @@ body {
     font-family: Verdana, sans-serif;
 }
 
-.my-photo {
+#presentation {
+    overflow: hidden;
+    position: relative;
+}
+
+#my-photo {
     border: 2px solid #000;
     border-radius: 10px;
     width: 18em;
+    float: left;
+    padding: 6px;
+    background-color: #1291bbbb;
 }
 
-.general {
-    font-size: 18px;
-    line-height: 25px;
-    color: #404e5c;
-    font-weight: 500;
-    background-color: #fff;
-    padding: 10px 15px;
-    border-radius: 7px;
-    border: 3px solid #ccc;
-    list-style-type: none;
-}
-
-.sections {
-    font-size: 35px;
+#desc {
+    position: absolute;
+    top: 104px;
+    left: 269px;
 }
 
 p#desc span {
@@ -72,6 +71,23 @@ p#desc span a {
     color: #0fa36b;
 }
 
+.general {
+    font-size: 18px;
+    line-height: 25px;
+    color: #404e5c;
+    font-weight: 500;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 7px;
+    border: 3px solid #ccc;
+    list-style-type: none;
+    margin: 35px;
+}
+
+.sections {
+    font-size: 35px;
+}
+
 .habs li strong {
     font-size: 25px;
 }
@@ -79,6 +95,10 @@ p#desc span a {
 .habs li {
     border-bottom: 1px solid #f00;
     text-align: center;
+}
+
+.habs li:nth-child(odd) {
+    color: #0fa36b;
 }
 
 .links {
