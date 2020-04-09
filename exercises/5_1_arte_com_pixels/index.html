@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pixels Art</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap">
+    </head>
+    <body>
+        <div class="corpo">
+            <header>
+                <h1 id="title">Paleta de Cores</h1>
+                <!-- Paleta de cores -->
+                <div id="color-palette">
+                    <div class="color selected"></div>
+                    <div class="color"></div>
+                    <div class="color"></div>
+                    <div class="color"></div>
+                </div>
+                <!-- Área de opções -->
+                <fieldset>
+                    <legend>Opções</legend>
+                    <label>Apagar tudo:</label>
+                    <button id="clear-board">Limpar quadro</button>
+                    <br>
+                    <label for="board-size">Número de pixels:</label>
+                    <input id="board-size" type="number" placeholder="Digite quantos pixels você quer">
+                    <button id="generate-board">Gerar quadro</button>
+                </fieldset>
+            </header>
+            <br>
+            <section class="paint">
+                <!-- Quadro de pixels -->
+                <div id="pixel-board" class="pixelboard">
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                    <div class="pixel"></div>
+                </div>
+            </section>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
