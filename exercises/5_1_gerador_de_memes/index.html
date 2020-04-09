@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meme Generator</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap">
+    </head>
+    <body>
+        <div>
+            <form>
+                <label for="text-input">Digite o texto do seu meme: </label>
+                <input id="text-input" type="text" maxlength="60"><br>
+
+                <label for="meme-insert">Selecione sua imagem: </label>
+                <input type="file" id="meme-insert">
+            </form>
+            <fieldset id="botoes">
+                <legend>Opções de moldura</legend>
+                <button id="button1">Tracejada vermelha</button>
+                <button id="button2">Dupla azul</button>
+                <button id="button3">Entalhada verde</button>
+            </fieldset>
+            <fieldset id="super-memes">
+                <legend>Memes famosos</legend>
+                <img id="meme-1" src="imgs/meme1.jpeg" alt="">
+                <img id="meme-2" src="imgs/meme2.jpeg" alt="">
+                <img id="meme-3" src="imgs/meme3.jpeg" alt="">
+                <img id="meme-4" src="imgs/meme4.jpeg" alt="">
+            </fieldset>
+            <div id="meme-image-container">
+                <img id="meme-image" src="" alt="Imagem do meme escolhido.">
+                <p id="meme-text"></p>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
