@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Creepster|Text+Me+One" rel="stylesheet">
+        <link rel="stylesheet" href="ex06-style.css">
+        <title>A Creepy Story</title>
+    </head>
+    <body>
+        <h1>The Basement</h1>
+        <p id="story">I knew I shouldn't go there, in that dank, cold little place. But I wanted to find my friend, and he was hiding in the basement.</p>
+        
+        <button onclick="goDark()">Get In The Mood</button>
+        <div class="textEntry">Type your name here, if you dare: <input type="text" id="name" autocomplete="off" oninput="typeAndScream()"></div>
+        <button onclick="complainMessage()">Please, Please Don't Click Me</button>
+        <button onclick="finishTheStory()">Tell Me What Happened!</button>
+        <audio id="audio" src="http://reboot-me.com/ouch.mp3" type="audio/mpeg"></audio>
+        <script src="ex06-script.js"></script>
+    </body>
+</html>

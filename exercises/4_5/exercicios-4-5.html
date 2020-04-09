@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 4.5</title>
+        <style>
+        div {
+            border-color: black;
+            border-style: solid;
+        }
+        .title {
+            text-align: center;
+        }
+
+        .main-content {
+            background-color: yellow;
+        }
+
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .main-content .center-content p {
+            font-style: italic;
+        }
+
+        .main-content .left-content {
+            background-color: green;
+            width: 60%;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .main-content .left-content .small-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100%;
+        }
+
+        .main-content .right-content {
+            background-color: blue;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .main-content .description {
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <script>
+            let numbers = [
+                'um', 'dois', 'três', 'quatro',
+                'cinco', 'seis', 'sete', 'oito',
+                'nove', 'dez'
+            ];
+
+            // passo1
+            let titulo = document.createElement('h1');
+            titulo.innerHTML = 'Exercício 4.5 - JavaScript DOM'
+            document.body.appendChild(titulo);
+
+            // passo2
+            let div = document.createElement('div');
+            div.className = 'main-content';
+            document.body.appendChild(div);
+
+            // passo3
+            let divTwo = document.createElement('div');
+            divTwo.className = 'center-content';
+            div.appendChild(divTwo);
+
+            // passo4
+            let p = document.createElement('p');
+            p.innerText = 'My name is Rangel';
+            divTwo.appendChild(p);
+
+            // passo5
+            let divThree = document.createElement('div');
+            divThree.className = 'left-content';
+            div.appendChild(divThree);
+
+            // passo6
+            let divFour = document.createElement('div');
+            divFour.className = 'right-content';
+            div.appendChild(divFour);
+
+            // passo7
+            let img = document.createElement('img');
+            img.className = 'small-image';
+            img.src = 'https://picsum.photos/200';
+            divThree.appendChild(img);
+
+            // passo8
+            let lista = document.createElement('ul');
+            for(let i = 0 ; i < numbers.length ; i++) {
+                let item = document.createElement('li');
+                item.innerHTML = numbers[i];
+                lista.appendChild(item);
+            }
+            divFour.appendChild(lista);
+
+            // passo9
+            for(let i = 0 ; i < 3 ; i++) {
+                let levelThree = document.createElement('h3');
+                div.appendChild(levelThree);
+            }
+
+            // Parte2 ------------------//--------------------
+            // passo1
+            titulo.className = 'page-title';
+
+            // passo2
+            let hTrezes = document.querySelectorAll('h3');
+            for(let i = 0 ; i < hTrezes.length ; i++) {
+                hTrezes[i].className = 'description';
+            }
+
+            // passo3
+            div.removeChild(divThree);
+
+            // passo4
+            divFour.style.marginRight = 'auto';
+
+            // passo5
+            divTwo.parentElement.style.backgroundColor = 'lime';
+
+            // passo6
+            for(let i = 2; i > 0 ; i--) {
+                let comprimento = lista.childNodes.length - 1;
+                console.log(lista.removeChild(lista.childNodes[comprimento]));
+            }
+        </script>
+    </body>
+</html>

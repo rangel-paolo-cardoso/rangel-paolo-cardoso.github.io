@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Storage</title>
+        <style>
+            @charset "utf-8";
+            @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+            
+            body {
+                font-family: 'Comic Neue', cursive;
+            }
+        </style>
+    </head>
+    <body class="muda-fundo muda-cor tamanho-font espace-linha tipo-font">
+        <div>
+            <section>
+                <h1>Lorem Ipsum</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet imperdiet dui, mattis congue elit. 
+                    Pellentesque non ante neque. Phasellus tempor mauris non lacinia pellentesque. 
+                    Suspendisse euismod scelerisque sagittis. Fusce felis velit, consequat ac viverra sit amet, placerat sed neque. 
+                    Fusce cursus et enim eget mattis. Ut et ante in mauris pretium consequat sed id nulla.
+                </p>
+                <p>
+                    Ut scelerisque ligula in justo ullamcorper convallis sollicitudin eget turpis. 
+                    Vivamus eget tellus id velit feugiat ultricies. Aenean elementum molestie lorem in blandit. 
+                    Fusce bibendum mauris justo, vitae lacinia nisl tincidunt eu. Mauris et ultrices leo. 
+                    Proin scelerisque faucibus placerat. Curabitur condimentum porta dolor, vel rhoncus elit vehicula ut. 
+                    Praesent volutpat tortor ligula. Suspendisse ac nisl eleifend, luctus velit sed, efficitur metus. 
+                    Aenean non nibh aliquet, ultrices neque nec, dignissim ante. Curabitur efficitur odio a luctus imperdiet.
+                </p>
+                <p>
+                    Vestibulum mattis dui in lectus semper, at mattis augue molestie. Sed laoreet cursus neque sit amet maximus. 
+                    Duis nec tempus enim. Vestibulum luctus enim quis lorem volutpat, ac feugiat tellus pulvinar. 
+                    Vestibulum suscipit, elit semper porttitor molestie, neque turpis efficitur arcu, eu laoreet sapien ex id lacus. 
+                    In in urna in nisl tincidunt aliquet pharetra sagittis diam. Nulla sit amet elit suscipit est dapibus eleifend. 
+                    Vivamus facilisis ex in accumsan rhoncus. Aliquam erat volutpat. 
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                </p>
+                <p>
+                    Nunc ac mauris pretium, bibendum leo eu, convallis enim. 
+                    Integer facilisis vehicula metus, id tempus metus facilisis eget. 
+                    Pellentesque congue felis id erat placerat placerat. Curabitur commodo lacinia lacus sit amet tempus. 
+                    Ut sit amet sapien fringilla, euismod diam eget, auctor magna. Donec blandit scelerisque erat at eleifend. 
+                    Donec ut vestibulum elit. Nullam tempor sapien nec laoreet ultrices.
+                </p>
+                <p>
+                    Maecenas magna velit, laoreet quis cursus ac, lacinia euismod risus. Cras maximus tempus urna in ultrices. 
+                    Integer ultricies nunc urna, ac interdum justo iaculis ut. Sed cursus sit amet enim non convallis. 
+                    Mauris vestibulum condimentum ultrices. Nullam condimentum tellus vel accumsan pretium. 
+                    Mauris ac metus dolor.
+                </p>
+            </section>
+            <aside>
+                <fieldset>
+                    <legend>Configurações</legend>
+
+                    <fieldset>
+                        <legend>Funda da página</legend>
+                        <input id="muda-fundo" type="text">
+                        <button>Mudar cor do fundo</button>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Cor do Texto</legend>
+                        <input id="muda-cor" type="text">
+                        <button>Mudar cor do texto</button>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Tamanho da Fonte</legend>
+                        <input id="tamanho-font" type="number" >
+                        <button>Mudar tamanho da fonte</button>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Espaçamento entre linhas</legend>
+                        <input id="espace-linha" type="number">
+                        <button>Mudar espaço das linhas</button>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Tipo da Fonte (Arial, Times...)</legend>
+                        <input id="tipo-font" type="text">
+                        <button>Mudar tipo de fonte</button>
+                    </fieldset>
+                </fieldset>
+            </aside>
+        </div>
+
+        <script>
+            window.onload = function() {
+                if(typeof(Storage) !== 'undefined') {
+                    let botoes = document.querySelectorAll('button');
+                    let caixasTxt = document.querySelectorAll('input');
+                    for(let i = 0; i < botoes.length; i++) {
+                        botoes[i].addEventListener('click', function() {
+                            let input = caixasTxt[i];
+                            switch(i) {
+                                case 0:
+                                    localStorage.setItem(`${input.id}`, `${input.value}`);
+                                    alert(localStorage.getItem(`${input.id}`));
+                                    document.querySelector('.'+input.id).style.backgroundColor = input.value;
+                                    break;
+                                case 1:
+                                    localStorage.setItem(`${input.id}`, `${input.value}`);
+                                    alert(localStorage.getItem(`${input.id}`));
+                                    document.querySelector('.'+input.id).style.color = input.value;
+                                    break;
+                                case 2:
+                                    localStorage.setItem(`${input.id}`, `${input.value}`);
+                                    alert(localStorage.getItem(`${input.id}`));
+                                    document.querySelector('.'+input.id).style.fontSize = input.value + 'px';
+                                    break;
+                                case 3:
+                                    localStorage.setItem(`${input.id}`, `${input.value}`);
+                                    alert(localStorage.getItem(`${input.id}`));
+                                    document.querySelector('.'+input.id).style.lineHeight = input.value + 'px';
+                                    break;
+                                case 4:
+                                    localStorage.setItem(`${input.id}`, `${input.value}`);
+                                    alert(localStorage.getItem(`${input.id}`));
+                                    document.querySelector('.'+input.id).style.fontFamily = input.value;
+                                    break;
+                            }
+                        });
+                    }
+                    for(let j = 0; j < caixasTxt.length; j++) {
+                        let chave = localStorage.key(j);
+                        if(chave) {
+                            switch(localStorage.key(j)) {
+                                case 'muda-fundo':
+                                    document.querySelector('.'+chave).style.backgroundColor = localStorage.getItem(localStorage.key(j));
+                                    break;
+                                case 'muda-cor':
+                                    document.querySelector('.'+chave).style.color = localStorage.getItem(localStorage.key(j));
+                                    break;
+                                case 'tamanho-font':
+                                    document.querySelector('.'+chave).style.fontSize = localStorage.getItem(localStorage.key(j)) + 'px';
+                                    break;
+                                case 'espace-linha':
+                                    document.querySelector('.'+chave).style.lineHeight = localStorage.getItem(localStorage.key(j)) + 'px';
+                                    break;
+                                case 'tipo-font':
+                                    document.querySelector('.'+chave).style.fontFamily = localStorage.getItem(localStorage.key(j));
+                                    break;
+                            }
+                        }
+                    }
+                } else {
+                    console.log('Não existe suporte a Web Storage.');
+                }
+            }
+        </script>
+    </body>
+</html>
