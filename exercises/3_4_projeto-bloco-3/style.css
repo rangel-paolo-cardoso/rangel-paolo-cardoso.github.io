@@ -1,0 +1,61 @@
+img , ul li {
+  margin: 2px;
+  padding: 5px;
+  border: 2px solid rgb(158 , 175 , 206);
+  width: 250px;
+  background-color: rgb(172 , 207 , 142);
+}
+
+body {
+  background-color: rgb(186 , 189 , 192);
+  font-family: Josefin Sans, sans-serif;
+  font-size: 1em;
+  color: rgb(4 , 27 , 4);
+  text-align: center;
+  font-style: oblique;
+}
+
+#cabecalho , nav {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(54 , 19 , 19);
+}
+
+section {
+  margin-top: 80px;
+}
+
+section , aside {
+  width: 50%;
+  text-align: justify;
+}
+
+.lado-esquerdo , .lado-direito {
+  float: left;
+}
+
+div {
+  width: 100%;
+}
+
+#esquerda , ul {
+  float: left;
+}
+
+#direita {
+  float: left;
+}
+
+ul , ol {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+ol {
+  clear: both;
+}
+
+ul li {
+  display: inline-block;
+}

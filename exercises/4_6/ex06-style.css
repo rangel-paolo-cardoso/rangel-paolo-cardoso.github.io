@@ -1,0 +1,30 @@
+body {
+    margin: 20px;
+    font-family: 'Text Me One', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  body.dark {
+    color: white;
+    background: black;
+  }
+  
+  h1 {
+    font-family: 'Creepster', cursive;
+    font-weight: normal;
+    font-size: 60px;
+    margin: 5px;
+  }
+  
+  button {  
+    display: block;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .textEntry {
+    margin-top: 12px;
+    margin-bottom: 15px;
+  }
