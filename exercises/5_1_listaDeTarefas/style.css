@@ -1,0 +1,66 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, serif;
+  transition: background-color 1.8s;
+}
+
+.pagina {
+  background: url('bloquinho-min.jpg') repeat-y;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 55px;
+  padding-top: 2px;
+  width: 50%;
+}
+
+h1 , p {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  width: 60%;
+}
+
+input {
+  background-color: rgba(236 , 230 , 172 , 0.842);
+  border-radius: 5px;
+  color: rgb(31 , 31 , 192);
+  font-size: 1.2vw;
+  font-weight: 600;
+  height: 20px;
+  text-indent: 6px;
+  width: 50%;
+}
+
+button {
+  background-color: rgba(139 , 0 , 0 , 0.61);
+  border-radius: 10px;
+  color: white;
+  font-weight: 900;
+  height: 30px;
+}
+
+button , li {
+  cursor: pointer;
+}
+
+input:hover , button:hover {
+  border: 2px solid blue;
+  box-shadow: 1px 1px 3px black;
+}
+
+ol {
+  background-color: rgb(107 , 141 , 252);
+  width: 60%;
+}
+
+li {
+  background-color: white;
+  font-weight: 700;
+  list-style-position: inside;
+  padding: 2px;
+}
+
+li:hover {
+  border: 2px solid rgb(33 , 95 , 104);
+}
