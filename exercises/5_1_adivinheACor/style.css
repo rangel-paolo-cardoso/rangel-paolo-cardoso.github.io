@@ -1,0 +1,93 @@
+body {
+  background: url('https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_960_720.jpg') no-repeat;
+  background-size: cover;
+}
+
+.gameTitle , .rgbColor , .resposta , label {
+  background-color: rgba(90, 0, 90, 0.4);
+  color: white;
+  height: 45px;
+  text-align: center;
+}
+
+.rgbColor , .resposta , label {
+  font-size: 20pt;
+}
+
+button {
+  background-color: teal;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+}
+
+button , .pontos , label {
+  display: block;
+  height: 30px;
+  margin: 50px auto;
+  width: 110px;
+}
+
+button:hover {
+  border-color: darkgreen;
+}
+
+.pontos {
+  background-color: rgb(9, 9, 112);
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.choose {
+  background-color: rgba(0, 110, 255, 0.562);
+  border-radius: 10px;
+  margin: auto;
+  width: 50%;
+}
+
+.ball {
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  height: 55px;
+  margin: 0 4%;
+  width: 55px;
+}
+
+.ball:hover {
+  border-color: lime;
+}
+
+.luz , .coroa , .sol {
+  border-radius: 100%;
+}
+
+.luz {
+  background-color: rgba(255, 217, 0, 0.301);
+  height: 150px;
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  width: 150px;
+}
+
+.coroa {
+  background-color: rgba(255, 140, 0, 0.301);
+  height: 60px;
+  left: 45px;
+  position: absolute;
+  top: 45px;
+  width: 60px;
+}
+
+.sol {
+  background-color: rgb(236, 229, 130);
+  height: 50px;
+  left: 5px;
+  position: absolute;
+  top: 5px;
+  width: 50px;
+}
