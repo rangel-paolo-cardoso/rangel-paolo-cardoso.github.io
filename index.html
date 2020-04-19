@@ -11,61 +11,63 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h2 class="sections inicio">Índice</h2>
-        <ol class="indice">
-            <li><a href="#habilidades">Principais habilidades</a></li>
-            <li><a href="#projetos">Portifólio: uma pequena amostra</a></li>
-            <li><a href="#desc">Minhas informações</a></li>
-            <li><a href="#blogs">Site favorito</a></li>
-            <li><a href="#foto">Foto ampliada</a></li>
-        </ol>
+        <header>
+            <h1 class="sections inicio">Índice</h1>
+            <ol class="indice">
+                <li><a href="#habilidades">Principais habilidades</a></li>
+                <li><a href="#projetos">Portifólio: uma pequena amostra</a></li>
+                <li><a href="#desc">Minhas informações</a></li>
+                <li><a href="#blogs">Site favorito</a></li>
+            </ol>
+        </header>
+        <article>
+            <section id="presentation">
+                <h1 class="inicio">Rangel Paolo Cardoso Bomfim</h1>
+                <div class="sinopse">
+                    <a href="images/rangel_big.jpg" target="_blank">
+                        <img id="my-photo" src="images/rangel_big.jpg" alt="Rangel de braços cruzados usando a camisa da Trybe">
+                    </a>
+                    <p id="desc">
+                        <span>Paixão:</span> tecnologia e programação.<br>
+                        <span>Onde mora:</span> cidade e estado de São Paulo.<br>
+                        <span>Formação:</span> Análise e Desenvolvimento de Sistemas.<br>
+                        <span>Nacionalidade:</span> brasileiro nativo.<br>
+                        <span>O que faz:</span> estuda Desenvolvimento de Software na <span><a href="https://www.betrybe.com/" target="_blank">Trybe</a></span>.
+                    </p>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="sections" id="habilidades">Principais Habilidades</h2>
+                <ul class="general habs">
+                    <li><strong>Java</strong></li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Linguagem C</li>
+                    <li>SQL</li>
+                    <li>Shell Script</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2 class="sections" id="projetos">Portifólio: uma pequena amostra </h2>
+                <ul class="general" id="portfolio">
+                    <li><em><a href="exercises/5_1_cartaMisteriosa/index.html">Carta Misteriosa</a></em></li>
+                    <li><em><a href="exercises/5_1_adivinheACor/index.html">Adivinhe a Cor</a></em></li>
+                    <li><em><a href="exercises/5_1_listaDeTarefas/index.html">Lista de Tarefas</a></em></li>
+                    <li><em><a href="exercises/5_1_arte_com_pixels/index.html">Pixels Art</a></em></li>
+                    <li><em><a href="exercises/5_1_gerador_de_memes/index.html">Gerador de Memes</a></em></li>
+                    <li><em><a href="exercises/3_4_projeto-bloco-3/index.html">Projeto Block3</a></em></li>
+                    <!--<li><em>trybe-bloco1and2 - scripts em Shell Script</em></li>
+                    <li><em>SGC - Sistema Gerenciador de Condomínio</em></li>-->
+                </ul>
+            </section>
 
-        <div id="presentation">
-            <h1 class="inicio">Rangel Paolo Cardoso Bomfim</h1>
-            <img id="my-photo" src="images/rangel_big.jpg" alt="Rangel de braços cruzados usando a camisa da Trybe">
-            <p class="general" id="desc">
-                <span>Paixão:</span> tecnologia e programação.<br>
-                <span>Onde mora:</span> cidade e estado de São Paulo.<br>
-                <span>Formação:</span> Análise e Desenvolvimento de Sistemas.<br>
-                <span>Nacionalidade:</span> brasileiro nativo.<br>
-                <span>O que faz:</span> estuda Desenvolvimento de Software na <span><a href="https://www.betrybe.com/" target="_blank">Trybe</a></span>.
-            </p>
-        </div>
-        
-        <div>
-            <h2 class="sections" id="habilidades">Principais Habilidades</h2>
-            <ul class="general habs">
-                <li><strong>Java</strong></li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Linguagem C</li>
-                <li>SQL</li>
-                <li>Shell Script</li>
-            </ul>
-        </div>
-        
-        <div>
-            <h2 class="sections" id="projetos">Portifólio: uma pequena amostra </h2>
-            <ul class="general">
-                <li><em><a href="exercises/5_1_cartaMisteriosa/index.html">Carta Misteriosa</a></em></li>
-                <li><em><a href="exercises/5_1_adivinheACor/index.html">Adivinhe a Cor</a></em></li>
-                <li><em><a href="exercises/5_1_listaDeTarefas/index.html">Lista de Tarefas</a></em></li>
-                <li><em><a href="exercises/5_1_arte_com_pixels/index.html">Pixels Art</a></em></li>
-                <li><em><a href="exercises/5_1_gerador_de_memes/index.html">Gerador de Memes</a></em></li>
-                <li><em><a href="exercises/3_4_projeto-bloco-3/index.html">Projeto Block3</a></em></li>
-                <!--<li><em>trybe-bloco1and2 - scripts em Shell Script</em></li>
-                <li><em>SGC - Sistema Gerenciador de Condomínio</em></li>-->
-            </ul>
-        </div>
-
-        <div>
-            <h2 class="sections" id="blogs">Site favorito</h2>
-            <a class="links" href="https://www.residentevil.com/re3/pt-br/" target="_blank">Minha série de jogo favorita</a>
-        </div>
-        
-        <div>
-            <h2 class="sections" id="foto">Foto ampliada</h2>
-            <a class="links" href="images/rangel_big.jpg" target="_blank">Este sou eu</a>
-        </div>
+            <section>
+                <h2 class="sections" id="blogs">Site favorito</h2>
+                <a class="links" href="https://www.residentevil.com/re3/pt-br/" target="_blank">Minha série de jogo favorita</a>
+            </section>
+        </article>
+        <footer></footer>
     </body>
 </html>

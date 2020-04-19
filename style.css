@@ -1,5 +1,10 @@
+html {
+    background-color: #4d6b75;
+}
+
 body {
     background-color: #a8e3f7;
+    border: 1px solid black;
     color: #28334f;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -16,14 +21,23 @@ body {
 }
 
 .indice {
+    display: flex;
+    flex-direction: row;
     list-style-type: none;
     background-color: #0009;
     border-radius: 10px;
+    box-sizing: border-box;
     padding: 10px;
+    margin: 0;
+    width: 100%;
 }
 
 .indice li {
-    margin-bottom: 10px;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 0 5px;
+    width: 25%;
 }
 
 .indice li:last-child {
@@ -31,14 +45,23 @@ body {
 }
 
 .indice li a {
-    text-decoration: none;
-    color: #fff;
+    align-self: stretch;
     background-color: #333;
-    border: 2px solid #f00;
     border-radius: 4px;
-    padding: 2px 6px;
-    font-weight: 500;
+    border: 2px solid #f00;
+    color: #fff;
+    flex-wrap: wrap;
     font-family: Verdana, sans-serif;
+    font-size: 1.7vh;
+    font-weight: 500;
+    padding: 5px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.indice li a:hover {
+    background-color: rgb(123, 136, 143);
+    border: 2px solid rgb(221, 172, 172);
 }
 
 #presentation {
@@ -50,17 +73,27 @@ body {
 #my-photo {
     border: 2px solid #000;
     border-radius: 10px;
-    width: 33%;
-    float: left;
     padding: 6px;
     background-color: #1291bbbb;
+    width: 70%;
+}
+
+#my-photo:hover {
+    background-color: #136885;
 }
 
 #desc {
-    position: absolute;
-    top: 104px;
-    left: 31%;
-    width: 61%;
+    background-color: #fff;
+    border: 3px solid rgba(0, 0, 0, 0.555);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    line-height: 3.7vmin;
+    margin: 0;
+    padding: 50px;
+    text-align: justify;
+    justify-self: left;
+    width: 30%;
 }
 
 p#desc span {
@@ -84,6 +117,35 @@ p#desc span a {
     border: 3px solid #ccc;
     list-style-type: none;
     margin: 35px;
+}
+
+ul#portfolio li {
+    padding: 3px;
+}
+
+ul#portfolio li a {
+    font-weight: 700;
+    text-shadow: 0px 0px 5px black;
+}
+
+ul#portfolio li a:link {
+    color: white;
+}
+
+ul#portfolio li a:visited {
+    color: rgb(212, 228, 228);
+}
+
+ul#portfolio li:nth-child(odd) {
+    background-color: #bedee9a4;
+}
+
+ul#portfolio li:nth-child(even) {
+    background-color: #61aecca4;
+}
+
+ul#portfolio li:hover {
+    background-color: #536168a4;
 }
 
 .sections {
@@ -110,4 +172,10 @@ p#desc span a {
     background-color: #df374a;
     padding: 5px 7px;
     border-radius: 8px;
+}
+
+.sinopse {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
