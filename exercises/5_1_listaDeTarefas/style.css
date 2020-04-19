@@ -6,13 +6,14 @@ body {
 
 .pagina {
   background: url('bloquinho-min.jpg') repeat-y;
-  background-size: cover;
+  background-size: 100%;
+  box-shadow: 4vw 4vh 30px rgba(0, 0, 0, 0.7);
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 9%;
+  padding-left: 10%;
   padding-top: 2px;
-  width: 55%;
+  width: 53%;
 }
 
 h1 , p {
@@ -64,4 +65,17 @@ li {
 
 li:hover {
   border: 2px solid rgb(33 , 95 , 104);
+}
+
+.msgAlert {
+  background-color: lightblue;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  color: red;
+  font-size: 2.3vh;
+  padding: 5px;
+  text-align: center;
+  width: 15vw;
 }

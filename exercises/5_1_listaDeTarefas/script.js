@@ -37,6 +37,9 @@ function marcaItem() { // Risca o item que for clicado duas vezes, e desfaz o ri
 }
 
 function criaItem() { // Cria item com base do contexto e necessidade.
+  if (textoTarefa.value === '') {
+    alert('Digite algo para colocar na lista.');
+  }
   const item = document.createElement('li');
   item.innerHTML = textoTarefa.value;
   item.addEventListener('click', selecionaItem);
