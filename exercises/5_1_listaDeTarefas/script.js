@@ -7,6 +7,7 @@ const btnMoveCima = document.getElementById('mover-cima'); // Manipula botão mo
 const btnMoveBaixo = document.getElementById('mover-baixo'); // Manipula botão mover para baixo.
 const btnRemoveSelecionado = document.getElementById('remover-selecionado'); // Manipula remover item.
 const lista = document.getElementById('lista-tarefas'); // Manipula a lista de tarefas.
+const message = document.getElementById('mensagem'); // Manipula a div da mensagem de erro.
 const corpo = document.body; // Manipula o corpo.
 
 function storeExists() { // Verifica so o navegador tem suporte a Storage.
@@ -37,12 +38,17 @@ function marcaItem() { // Risca o item que for clicado duas vezes, e desfaz o ri
 }
 
 function criaItem() { // Cria item com base do contexto e necessidade.
-  const item = document.createElement('li');
-  item.innerHTML = textoTarefa.value;
-  item.addEventListener('click', selecionaItem);
-  item.addEventListener('dblclick', marcaItem);
-  lista.appendChild(item);
-  textoTarefa.value = '';
+  if (textoTarefa.value === '') {
+    message.style.display = 'block';
+  } else {
+    const item = document.createElement('li');
+    item.innerHTML = textoTarefa.value;
+    item.addEventListener('click', selecionaItem);
+    item.addEventListener('dblclick', marcaItem);
+    lista.appendChild(item);
+    textoTarefa.value = '';
+    message.style.display = 'none';
+  }
 }
 
 function carregaLista() { // Carrega a lista salva no Storage usando a função criaItem.
