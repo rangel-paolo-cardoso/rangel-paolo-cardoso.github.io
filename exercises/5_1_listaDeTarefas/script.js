@@ -7,7 +7,7 @@ const btnMoveCima = document.getElementById('mover-cima'); // Manipula botão mo
 const btnMoveBaixo = document.getElementById('mover-baixo'); // Manipula botão mover para baixo.
 const btnRemoveSelecionado = document.getElementById('remover-selecionado'); // Manipula remover item.
 const lista = document.getElementById('lista-tarefas'); // Manipula a lista de tarefas.
-const message = document.getElementById('mensagem');
+const message = document.getElementById('mensagem'); // Manipula a div da mensagem de erro.
 const corpo = document.body; // Manipula o corpo.
 
 function storeExists() { // Verifica so o navegador tem suporte a Storage.
