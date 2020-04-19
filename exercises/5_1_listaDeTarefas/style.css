@@ -74,6 +74,7 @@ li:hover {
   border-top-right-radius: 10px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   color: red;
+  display: none;
   font-size: 2.3vh;
   padding: 5px;
   text-align: center;
