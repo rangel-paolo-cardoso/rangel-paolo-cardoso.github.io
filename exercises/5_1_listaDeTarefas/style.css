@@ -1,16 +1,18 @@
 body {
   font-family: Cambria, Cochin, Georgia, Times, serif;
+  margin: 0;
   transition: background-color 1.8s;
 }
 
 .pagina {
   background: url('bloquinho-min.jpg') repeat-y;
+  background-size: cover;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 55px;
+  padding-left: 9%;
   padding-top: 2px;
-  width: 50%;
+  width: 55%;
 }
 
 h1 , p {
