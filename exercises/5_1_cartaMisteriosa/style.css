@@ -122,7 +122,7 @@ button:hover {
 
 span {
   border: 1px solid black;
-  box-shadow: 6px 6px 15px black;
+  box-shadow: 8px 8px 15px black;
   cursor: pointer;
   display: inline-block;
   margin: 40px 4px 45px;
