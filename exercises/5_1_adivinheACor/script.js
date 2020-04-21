@@ -6,12 +6,12 @@ const bolas = document.querySelectorAll('.ball'); // Manipula as bolas de cores.
 let pontos = 0;
 let status = true;
 
+function colorLv() { // Gera um número aleatório entre 0 e 255.
+  return Number.parseInt(Math.random() * 255, 10);
+}
+
 function geraRGB() { // Gera cor aleatória.
-  const red = Number.parseInt(Math.random() * 255, 10);
-  const green = Number.parseInt(Math.random() * 255, 10);
-  const blue = Number.parseInt(Math.random() * 255, 10);
-  const cor = `(${red}, ${green}, ${blue})`;
-  return cor;
+  return `(${colorLv()}, ${colorLv()}, ${colorLv()})`;
 }
 
 function limpaCores() { // Retira a cor das bolas.
