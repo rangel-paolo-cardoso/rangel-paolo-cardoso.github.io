@@ -1,10 +1,21 @@
 body {
   background: url('https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_960_720.jpg') no-repeat;
   background-size: cover;
+  margin: auto;
+  width: 80%;
+}
+
+.rgbColor {
+  text-shadow: 5px 5px 3px black;
+}
+
+.gameTitle {
+  margin-top: 120px;
 }
 
 .gameTitle , .rgbColor , .resposta , label {
-  background-color: rgba(90, 0, 90, 0.4);
+  background-color: rgba(90, 160, 240, 0.4);
+  border: 2px solid rgb(0, 50, 50);
   color: white;
   height: 45px;
   text-align: center;
@@ -67,6 +78,7 @@ button:hover {
 
 .luz {
   background-color: rgba(255, 217, 0, 0.301);
+  box-shadow: 0 0 30px yellow;
   height: 150px;
   margin: 10px;
   position: absolute;
@@ -76,6 +88,7 @@ button:hover {
 
 .coroa {
   background-color: rgba(255, 140, 0, 0.301);
+  box-shadow: 0 0 25px orange;
   height: 60px;
   left: 45px;
   position: absolute;
@@ -85,6 +98,7 @@ button:hover {
 
 .sol {
   background-color: rgb(236, 229, 130);
+  box-shadow: 0 0 10px yellow;
   height: 50px;
   left: 5px;
   position: absolute;
