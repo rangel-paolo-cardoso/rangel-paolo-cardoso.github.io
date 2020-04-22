@@ -17,23 +17,19 @@ function storeExists() { // Verifica so o navegador tem suporte a Storage.
 function selecionaItem() { // Altera o fundo do item clicado.
   const itens = document.querySelectorAll('li');
   for (let i = 0; i < itens.length; i += 1) {
-    if (itens[i].style.backgroundColor === 'rgb(128, 128, 128)') {
-      itens[i].style.backgroundColor = 'white';
-      itens[i].classList.remove('selected'); // remova uma classe específica.
-    }
+    itens[i].style.backgroundColor = 'white';
+    itens[i].classList.remove('selected'); // remova uma classe específica.
   }
   event.target.style.backgroundColor = 'rgb(128,128,128)';
   event.target.classList.add('selected'); // Adiciona um classe a mais no elemento.
 }
 
 function marcaItem() { // Risca o item que for clicado duas vezes, e desfaz o risco.
-  const indentifier = event.target.style.textDecoration;
-  if (indentifier === 'line-through') {
-    event.target.style.textDecoration = 'none';
+  const indentifier = event.target.className.indexOf('completed') > -1;
+  if (indentifier) {
     event.target.classList.remove('completed');
   } else {
-    event.target.style.textDecoration = 'line-through';
-    event.target.className = 'completed';
+    event.target.classList.add('completed');
   }
 }
 
@@ -80,12 +76,6 @@ function salvaListaNoStorage() { // Usa a função concluiSalvamento, exibe mens
   }
 }
 
-function apagaLista(number) { // Apaga todos os item da lista.
-  for (let n = 0; n < number; n += 1) {
-    lista.innerHTML = '';
-  }
-}
-
 function eventBtnAdiciona() { // Evento para o botão que adiciona itens.
   btnAdiciona.addEventListener('click', function () {
     criaItem();
@@ -94,8 +84,7 @@ function eventBtnAdiciona() { // Evento para o botão que adiciona itens.
 
 function eventBtnLimpa() { // Evento para o botão que limpa a lista.
   btnLimpa.addEventListener('click', function () {
-    const comprimentoLista = lista.childNodes.length;
-    apagaLista(comprimentoLista);
+    lista.innerHTML = '';
   });
 }
 
@@ -114,18 +103,24 @@ function eventBtnSalvarTarefas() {
   });
 }
 
+function trocaValores(itemSelecionado, itemSeguinte) {
+  const backText = itemSeguinte.innerText;
+  const backupSeguinte = itemSeguinte.className;
+  const backupSelecionado = itemSelecionado.className;
+  itemSeguinte.className = backupSelecionado;
+  itemSelecionado.className = backupSeguinte;
+  itemSeguinte.innerText = itemSelecionado.innerText;
+  itemSelecionado.innerText = backText;
+  itemSeguinte.style.backgroundColor = 'rgb(128,128,128)';
+  itemSelecionado.style.backgroundColor = 'white';
+}
+
 function eventBtnMoveCima() { // Evento para o botão mover-cima.
   btnMoveCima.addEventListener('click', function () {
     const itemSelecionado = document.querySelector('.selected');
     const itemAnterior = itemSelecionado.previousElementSibling;
-    const backup = itemAnterior.innerText;
-    if (itemAnterior) {
-      itemAnterior.innerText = itemSelecionado.innerText;
-      itemSelecionado.innerText = backup;
-      itemAnterior.style.backgroundColor = 'rgb(128,128,128)';
-      itemSelecionado.style.backgroundColor = 'white';
-      itemAnterior.classList.add('selected');
-      itemSelecionado.classList.remove('selected');
+    if (itemAnterior !== null) {
+      trocaValores(itemSelecionado, itemAnterior);
     }
   });
 }
@@ -134,14 +129,8 @@ function eventBtnMoveBaixo() { // Evento para o botão mover-baixo.
   btnMoveBaixo.addEventListener('click', function () {
     const itemSelecionado = document.querySelector('.selected');
     const itemPosterior = itemSelecionado.nextElementSibling;
-    const backup = itemPosterior.innerText;
-    if (itemPosterior) {
-      itemPosterior.innerText = itemSelecionado.innerText;
-      itemSelecionado.innerText = backup;
-      itemPosterior.style.backgroundColor = 'rgb(128,128,128)';
-      itemSelecionado.style.backgroundColor = 'white';
-      itemPosterior.classList.add('selected');
-      itemSelecionado.classList.remove('selected');
+    if (itemPosterior !== null) {
+      trocaValores(itemSelecionado, itemPosterior);
     }
   });
 }
