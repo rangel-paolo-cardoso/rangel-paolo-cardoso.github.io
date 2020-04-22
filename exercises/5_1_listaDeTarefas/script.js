@@ -17,10 +17,8 @@ function storeExists() { // Verifica so o navegador tem suporte a Storage.
 function selecionaItem() { // Altera o fundo do item clicado.
   const itens = document.querySelectorAll('li');
   for (let i = 0; i < itens.length; i += 1) {
-    if (itens[i].style.backgroundColor === 'rgb(128, 128, 128)') {
-      itens[i].style.backgroundColor = 'white';
-      itens[i].classList.remove('selected'); // remova uma classe específica.
-    }
+    itens[i].style.backgroundColor = 'white';
+    itens[i].classList.remove('selected'); // remova uma classe específica.
   }
   event.target.style.backgroundColor = 'rgb(128,128,128)';
   event.target.classList.add('selected'); // Adiciona um classe a mais no elemento.
