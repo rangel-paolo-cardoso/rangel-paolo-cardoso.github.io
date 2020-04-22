@@ -95,7 +95,7 @@ function eventReset() { // Evento para o botão de reset.
 
 function eventDicas() { // Evento para o botão de dicas.
   dicas.addEventListener('click', function () {
-    if (dica.style.display === 'none') {
+    if (dica.style.display === '' || dica.style.display === 'none') {
       dica.style.display = 'block';
     } else {
       dica.style.display = 'none';
