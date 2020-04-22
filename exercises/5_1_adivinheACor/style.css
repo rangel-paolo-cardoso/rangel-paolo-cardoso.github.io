@@ -32,7 +32,7 @@ button {
   font-weight: 700;
 }
 
-button , .pontos , label {
+button , .pontos-pos , .pontos-neg , label {
   display: block;
   height: 30px;
   margin: 50px auto;
@@ -43,13 +43,17 @@ button:hover {
   border-color: darkgreen;
 }
 
-.pontos {
+.pontos-pos {
   background-color: rgb(9, 9, 112);
   border-radius: 10px;
   color: white;
   font-size: 20px;
   font-weight: 900;
   text-align: center;
+}
+
+.pontos-neg {
+  background-color: rgb(255, 0, 0);
 }
 
 .choose {

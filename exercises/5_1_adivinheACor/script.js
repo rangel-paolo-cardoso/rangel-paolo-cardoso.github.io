@@ -6,12 +6,12 @@ const bolas = document.querySelectorAll('.ball'); // Manipula as bolas de cores.
 let pontos = 0;
 let status = true;
 
+function colorLv() { // Gera um número aleatório entre 0 e 255.
+  return Number.parseInt(Math.random() * 255, 10);
+}
+
 function geraRGB() { // Gera cor aleatória.
-  const red = Number.parseInt(Math.random() * 255, 10);
-  const green = Number.parseInt(Math.random() * 255, 10);
-  const blue = Number.parseInt(Math.random() * 255, 10);
-  const cor = `(${red}, ${green}, ${blue})`;
-  return cor;
+  return `(${colorLv()}, ${colorLv()}, ${colorLv()})`;
 }
 
 function limpaCores() { // Retira a cor das bolas.
@@ -22,7 +22,7 @@ function limpaCores() { // Retira a cor das bolas.
 
 function atribuiCores() { // Atribui uma cor para cada bola.
   const comprimento = bolas.length;
-  const corCorreta = Number.parseInt(Math.floor(Math.random() * comprimento), 10);
+  const corCorreta = Math.floor(Math.random() * comprimento);
   bolas[corCorreta].style.backgroundColor = `rgb${adivinhaRGB.innerText}`;
   for (let b = 0; b < comprimento; b += 1) {
     if (bolas[b].style.backgroundColor === '') {
@@ -39,11 +39,26 @@ function mudaStatus() { // Altera o status, limita para 1 acerto por rodada.
   status = false;
 }
 
-function configuraPlcar() { // Configura placar incrementando pontos.
+function alarm() {
+  if (pontos > 0) {
+    score.classList.remove('pontos-neg');
+  } else {
+    score.classList.add('pontos-neg');
+  }
+}
+
+function configuraPlcar(tipo) { // Configura placar incrementando pontos.
   if (status) {
-    pontos += 3;
-    score.innerHTML = pontos;
-    mudaStatus();
+    if (tipo === 1) {
+      pontos += 3;
+      score.innerHTML = pontos;
+      alarm();
+      mudaStatus();
+    } else {
+      pontos -= 2;
+      score.innerHTML = pontos;
+      alarm();
+    }
   }
 }
 
@@ -51,8 +66,9 @@ function clickBall() { // Avalia o acerto.
   const cor = event.target.style.backgroundColor;
   if (cor === `rgb${adivinhaRGB.innerText}`) {
     answer.innerText = 'Acertou!';
-    configuraPlcar();
+    configuraPlcar(1);
   } else {
+    configuraPlcar(2);
     answer.innerText = 'Errou! Tente novamente!';
   }
 }
