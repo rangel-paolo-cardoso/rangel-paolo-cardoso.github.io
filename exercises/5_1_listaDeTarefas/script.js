@@ -31,7 +31,7 @@ function marcaItem() { // Risca o item que for clicado duas vezes, e desfaz o ri
     event.target.classList.remove('completed');
   } else {
     event.target.style.textDecoration = 'line-through';
-    event.target.className = 'completed';
+    event.target.classList.add('completed');
   }
 }
 
