@@ -80,12 +80,6 @@ function salvaListaNoStorage() { // Usa a função concluiSalvamento, exibe mens
   }
 }
 
-function apagaLista(number) { // Apaga todos os item da lista.
-  for (let n = 0; n < number; n += 1) {
-    lista.innerHTML = '';
-  }
-}
-
 function eventBtnAdiciona() { // Evento para o botão que adiciona itens.
   btnAdiciona.addEventListener('click', function () {
     criaItem();
@@ -94,8 +88,7 @@ function eventBtnAdiciona() { // Evento para o botão que adiciona itens.
 
 function eventBtnLimpa() { // Evento para o botão que limpa a lista.
   btnLimpa.addEventListener('click', function () {
-    const comprimentoLista = lista.childNodes.length;
-    apagaLista(comprimentoLista);
+    lista.innerHTML = '';
   });
 }
 
