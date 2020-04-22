@@ -7,25 +7,48 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 id="title" class="gameTitle">Adivinhe a Cor!🤓</h1>
-        <label>Placar:</label>
-        <p id="score" class="pontos-pos">0</p>
-        <p id="rgb-color" class="rgbColor"></p>
-        <div class="luz">
-            <div class="coroa">
-                <div class="sol"></div>
-            </div>
-        </div>
-        <div class="choose">
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-        </div>
-        <p id="answer" class="resposta">Escolha uma cor</p>
-        <button id="reset-game">Reiniciar Jogo</button>
+        <main>
+            <header>
+                <h1 id="title" class="gameTitle">Adivinhe a Cor!🤓</h1>
+            </header>
+            <section>
+                <label>Placar:</label>
+                <p id="score" class="pontos-pos">0</p>
+                <p id="rgb-color" class="rgbColor"></p>
+                <div class="luz">
+                    <div class="coroa">
+                        <div class="sol"></div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="choose">
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                </div>
+                <p id="answer" class="resposta">Escolha uma cor</p>
+                <button id="reset-game">Reiniciar Jogo</button>
+            </section>
+            <footer>
+                <button id="dicas">Dicas</button>
+                <div class="dicas">
+                    <p>
+                        Dicas: Os números entre os parênteses representam o RGB da cor,
+                        o primeira número é o nível de vermelho, o segundo de verde e 
+                        o terceiro número é o nível de azul.
+                    </p>
+                    <p>
+                        Pontos: A cada acerto você ganha 3 pontos, ao errar perde 2.
+                        Assim que você acerta, os pontos deixam de ser contabilizados,
+                        então você precisa clicar em reiniciar, para adivinhar outra cor.
+                    </p>
+                </div>
+            </footer>
+        </main>
         <script src="script.js"></script>
     </body>
 </html>
