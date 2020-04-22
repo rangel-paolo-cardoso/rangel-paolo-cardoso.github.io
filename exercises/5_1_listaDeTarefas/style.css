@@ -51,6 +51,14 @@ input:hover , button:hover {
   box-shadow: 1px 1px 3px black;
 }
 
+.selected {
+  background-color: rgb(128, 128, 128);
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
 ol {
   background-color: rgb(107 , 141 , 252);
   width: 60%;
