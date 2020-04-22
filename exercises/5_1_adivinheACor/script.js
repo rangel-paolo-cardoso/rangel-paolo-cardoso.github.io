@@ -39,7 +39,7 @@ function mudaStatus() { // Altera o status, limita para 1 acerto por rodada.
   status = false;
 }
 
-function alarm() {
+function alarm() { // Muda a cor de fundo da pontuação.
   if (pontos > 0) {
     score.classList.remove('pontos-neg');
   } else {
