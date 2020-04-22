@@ -1,8 +1,10 @@
 const adivinhaRGB = document.getElementById('rgb-color'); // Manipula texto que exibe RGB.
 const answer = document.getElementById('answer'); // Manipula o texto de resposta.
 const reset = document.getElementById('reset-game'); // Manipula botão de reiniciar.
+const dicas = document.getElementById('dicas'); // Manipula botão de dicas.
 const score = document.getElementById('score'); // Manipula o placar de pontos.
 const bolas = document.querySelectorAll('.ball'); // Manipula as bolas de cores.
+const dica = document.querySelector('div.dicas'); // Manipula div das dicas.
 let pontos = 0;
 let status = true;
 
@@ -39,7 +41,7 @@ function mudaStatus() { // Altera o status, limita para 1 acerto por rodada.
   status = false;
 }
 
-function alarm() {
+function alarm() { // Muda a cor de fundo da pontuação.
   if (pontos > 0) {
     score.classList.remove('pontos-neg');
   } else {
@@ -91,9 +93,20 @@ function eventReset() { // Evento para o botão de reset.
   reset.addEventListener('click', reiniciaJogo);
 }
 
+function eventDicas() { // Evento para o botão de dicas.
+  dicas.addEventListener('click', function () {
+    if (dica.style.display === 'none') {
+      dica.style.display = 'block';
+    } else {
+      dica.style.display = 'none';
+    }
+  });
+}
+
 window.onload = function () {
   configuraRGB();
   atribuiCores();
   eventCores();
   eventReset();
+  eventDicas();
 };
