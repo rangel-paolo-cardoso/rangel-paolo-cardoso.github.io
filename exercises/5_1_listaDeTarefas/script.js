@@ -10,6 +10,8 @@ const lista = document.getElementById('lista-tarefas'); // Manipula a lista de t
 const message = document.getElementById('mensagem'); // Manipula a div da mensagem de erro.
 const corpo = document.body; // Manipula o corpo.
 
+const minhaLista = [];
+
 function storeExists() { // Verifica so o navegador tem suporte a Storage.
   return typeof Storage !== 'undefined';
 }
@@ -38,11 +40,13 @@ function criaItem() { // Cria item com base do contexto e necessidade.
     message.style.display = 'block';
   } else {
     const item = document.createElement('li');
+    minhaLista.push(textoTarefa.value);
     item.innerHTML = textoTarefa.value;
     item.addEventListener('click', selecionaItem);
     item.addEventListener('dblclick', marcaItem);
     lista.appendChild(item);
     textoTarefa.value = '';
+    textoTarefa.focus();
     message.style.display = 'none';
   }
 }
