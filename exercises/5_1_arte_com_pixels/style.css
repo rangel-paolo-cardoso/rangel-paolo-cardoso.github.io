@@ -28,6 +28,10 @@ fieldset , .pixelboard , .color {
   width: 55px;
 }
 
+.color:active {
+  border: 1px solid white;
+}
+
 .pixelboard {
   height: 210px;
   margin-left: auto;
