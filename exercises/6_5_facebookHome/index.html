@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Facebook – entre ou cadastre-se</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="corpo">
+      <header class="top-bar">
+        <div class="menu-bar">
+          <a href="https://www.facebook.com/">
+            <h1>
+              <div class="facebook-logo"></div>
+            </h1>
+          </a>
+          <form class="formulario" name="login-form" action="#">
+            <table cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>
+                    <label class="form-label" id="user-email-phone-label" for="user-email-phone">Email ou telefone</label>
+                  </td>
+                  <td>
+                    <label class="form-label" for="user-password">Senha</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input class="data-entry" type="text" id="user-email-phone" required>
+                  </td>
+                  <td>
+                    <input class="data-entry" type="password" id="user-password" required>
+                  </td>
+                  <td>
+                    <button class="data-login" type="submit" id="button-login">Entrar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <div>
+                      <a class="forgot-acount" href="#">Esqueceu a conta?</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </header>
+      <section class="intro-section">
+        <div class="res-section">
+          <div class="presentation">
+            <div class="pres-text">
+              O Facebook ajuda você a se conectar e compartilhar com as pessoas que
+              fazem parte da sua vida.
+            </div>
+            <img id="facebook-networking" src="imagens/networking.png">
+          </div>
+          <div class="register">
+            <div class="register-title">
+              <span class="res-desc">Abra uma conta</span>
+              <div>É rápido e fácil.</div>
+            </div>
+            <div class="form-container">
+              <form class="user-data-info" name="resg-form" action="#">
+                <div class="user-login-data">
+                  <div class="user-name">
+                    <input type="text" class="res-data" placeholder="Nome">
+                    <input type="text" class="res-data" placeholder="Sobrenome">
+                  </div>
+                  <div class="user-email">
+                    <input type="text" class="res-data" placeholder="Celular ou email">
+                  </div>
+                  <div class="user-pass">
+                    <input type="password" class="res-data" placeholder="Nova senha">
+                  </div>
+                </div>
+                <div class="user-birth">
+                  <div class="info-title">Data de nascimento</div>
+                  <div class="birth-container">
+                    <div class="date-select">
+                      <input id="data-nasc" class="res-data" type="text" placeholder="dd/mm/aaaa">
+                    </div>
+                    <div class="info-message">
+                      <a href="#">
+                        <div class="info-message-icon"></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="gender">
+                  <div class="info-title">Gênero</div>
+                  <div class="user-gender">
+                    <div class="gender-fem">
+                      <input type="radio" name="genero" id="femGen" checked value="Feminino">
+                      <label for="femGen">Feminino</label>
+                    </div>
+                    <div class="gender-masc">
+                      <input type="radio" name="genero" id="mascGen" value="Masculino">
+                      <label for="mascGen">Masculino</label>
+                    </div>
+                    <div class="gender-pers">
+                      <input type="radio" name="genero" id="persGen" value="Personalizado">
+                      <label for="persGen">Personalizado</label>
+                    </div>
+                  </div>
+                  <div class="info-message">
+                    <a href="#">
+                      <div class="info-message-icon info-message-icon-two"></div>
+                    </a>
+                  </div>
+                  <div class="res-dicas">
+                    <p class="res-dicas-text">
+                      Ao clicar em Cadastre-se, você concorda com nossos <a href="#">Termos</a>,
+                      <a href="#">Política de Dados</a> e <a href="#">Política de Cookies</a>. Você pode receber
+                      notificações por SMS e pode cancelar isso quando quiser.
+                    </p>
+                  </div>
+                </div>
+                <div class="form-sub-button">
+                  <button id="facebook-register" type="submit">Cadastre-se</button>
+                </div>
+              </form>
+              <div class="res-page-celeb">
+                <a href="#">Criar uma Página</a> para uma celebridade, banda ou empresa.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="rodape">
+        <div class="lang-selection">
+          <ul class="locateSelector">
+            <li>Português (Brasil)</li>
+            <li><a href="#">English (US)</a></li>
+            <li><a href="#">Español</a></li>
+            <li><a href="#">Français (France)</a></li>
+            <li><a href="#">Italiano</a></li>
+            <li><a href="#">العربية</a></li>
+            <li><a href="#">Deutsch</a></li>
+            <li><a href="#">हिन्दी</a></li>
+            <li><a href="#">中文(简体)</a></li>
+            <li><a href="#">日本語</a></li>
+            <li>
+              <a class="more-lang" href="#">
+                <div class="list-lang-icon"></div>
+              </a>
+            </li>
+          </ul>
+          <div class="division-bar"></div>
+          <div class="op-container">
+            <ul class="op-list">
+              <li><a href="#">Cadastre-se</a></li>
+              <li><a href="#">Entrar</a></li>
+              <li><a href="#">Messenger</a></li>
+              <li><a href="#">Facebook Lite</a></li>
+              <li><a href="#">Watch</a></li>
+              <li><a href="#">Pessoas</a></li>
+              <li><a href="#">Páginas</a></li>
+              <li><a href="#">Categorias de Página</a></li>
+              <li><a href="#">Locais</a></li>
+              <li><a href="#">Jogos</a></li>
+              <li><a href="#">Locais</a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Grupos</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Local</a></li>
+              <li><a href="#">Campanhas de arrecadação de fundos</a></li>
+              <li><a href="#">Serviços</a></li>
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Criar anúncio</a></li>
+              <li><a href="#">Criar Página</a></li>
+              <li><a href="#">Desenvolver</a></li>
+              <li><a href="#">Carreiras</a></li>
+              <li><a href="#">Privacidade</a></li>
+              <li><a href="#">Cookies</a></li>
+              <li>
+                <a class="link-anounce" href="#">
+                  Opções de anúncio
+                  <div class="anounce-icon"></div>
+                </a>
+              </li>
+              <li><a href="#">Termos</a></li>
+              <li><a href="#">Ajuda</a></li>
+            </ul>
+          </div>
+          <div class="trademark-facebook">
+            Facebook © 2020
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="script.js"></script>
+    <script>
+      const dataNasc = document.getElementById('data-nasc');
+      const picker = new Pikaday({
+        field: dataNasc,
+        format: 'DD/MM/YYY',
+        toString(date, format) {
+          const day = date.getDate();
+          const month = date.getMonth() + 1;
+          const year = date.getFullYear();
+          return `${day}/${month}/${year}`;
+        }
+      });
+    </script>
+  </body>
+</html>
