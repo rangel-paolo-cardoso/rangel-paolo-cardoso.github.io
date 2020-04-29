@@ -92,7 +92,7 @@ li:hover {
 }
 
 .pelicula {
-  background: green;
+  background: transparent;
   display: none;
   height: 100%;
   justify-content: center;
@@ -110,11 +110,13 @@ li:hover {
   box-shadow: 5px 5px 15px black;
   color: white;
   display: flex;
+  flex-direction: column;
   font-size: 4vh;
   font-weight: 700;
   height: 200px;
   justify-content: center;
   margin-top: -220px;
   text-align: center;
+  transition: margin-top 1000ms;
   width: 20%;
 }
