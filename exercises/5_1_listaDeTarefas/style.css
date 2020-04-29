@@ -130,3 +130,13 @@ li:hover {
     width: 100%;
   }
 }
+
+@media screen and (min-width: 461px) and (max-width: 1050px) {
+  .pagina {
+    width: 70%;
+  }
+
+  .modal {
+    width: 90%;
+  }
+}
