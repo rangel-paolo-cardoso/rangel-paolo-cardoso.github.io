@@ -9,6 +9,8 @@ const btnRemoveSelecionado = document.getElementById('remover-selecionado'); // 
 const lista = document.getElementById('lista-tarefas'); // Manipula a lista de tarefas.
 const message = document.getElementById('mensagem'); // Manipula a div da mensagem de erro.
 const corpo = document.body; // Manipula o corpo.
+const pelicula = document.getElementById('pelicula-glass'); // Manipula película.
+const modal = document.getElementById('modal-window'); // Manipula modal.
 
 const minhaLista = [];
 
@@ -62,6 +64,22 @@ function carregaLista() { // Carrega a lista salva no Storage usando a função 
   }
 }
 
+function setModal(param) {
+  if (param === 1) {
+    pelicula.style.display = 'flex';
+    setTimeout(function () {
+      modal.style.marginTop = '300px';
+      document.querySelector('.pagina').style.filter = 'blur(10px)';
+    }, 0);
+  } else {
+    modal.style.marginTop = '-220px';
+    document.querySelector('.pagina').style.filter = 'blur(0)';
+    setTimeout(function () {
+      pelicula.style.display = 'none';
+    }, 1000);
+  }
+}
+
 function concluiSalvamento() { // Função que salva no localStorage.
   const itens = lista.childNodes;
   if (itens.length === 0) {
@@ -69,7 +87,7 @@ function concluiSalvamento() { // Função que salva no localStorage.
   } else {
     localStorage.clear();
     localStorage.setItem('itens', `${lista.innerHTML}`);
-    alert('Sua lista foi salva com sucesso!🤗✅');
+    setModal(1);
   }
 }
 
