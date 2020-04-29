@@ -9,6 +9,8 @@ const btnRemoveSelecionado = document.getElementById('remover-selecionado'); // 
 const lista = document.getElementById('lista-tarefas'); // Manipula a lista de tarefas.
 const message = document.getElementById('mensagem'); // Manipula a div da mensagem de erro.
 const corpo = document.body; // Manipula o corpo.
+const pelicula = document.getElementById('pelicula-glass'); // Manipula película.
+const modal = document.getElementById('modal-window'); // Manipula modal.
 
 const minhaLista = [];
 
@@ -70,6 +72,7 @@ function concluiSalvamento() { // Função que salva no localStorage.
     localStorage.clear();
     localStorage.setItem('itens', `${lista.innerHTML}`);
     alert('Sua lista foi salva com sucesso!🤗✅');
+    pelicula.style.display = 'flex';
   }
 }
 

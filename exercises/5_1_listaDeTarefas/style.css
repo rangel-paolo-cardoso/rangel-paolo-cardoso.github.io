@@ -90,3 +90,31 @@ li:hover {
   text-shadow: 1px 1px 4px yellow;
   width: 15vw;
 }
+
+.pelicula {
+  background: green;
+  display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.modal {
+  align-items: center;
+  background: rgb(49, 47, 47);
+  border: 4px inset white;
+  border-radius: 22px;
+  box-shadow: 5px 5px 15px black;
+  color: white;
+  display: flex;
+  font-size: 4vh;
+  font-weight: 700;
+  height: 200px;
+  justify-content: center;
+  margin-top: -220px;
+  text-align: center;
+  width: 20%;
+}
