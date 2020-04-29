@@ -87,7 +87,6 @@ function concluiSalvamento() { // Função que salva no localStorage.
   } else {
     localStorage.clear();
     localStorage.setItem('itens', `${lista.innerHTML}`);
-    alert('Sua lista foi salva com sucesso!🤗✅');
     setModal(1);
   }
 }

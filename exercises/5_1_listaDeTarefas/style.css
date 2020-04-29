@@ -121,7 +121,11 @@ li:hover {
   width: 20%;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 460px) {
+  .pagina {
+    width: 75%;
+  }
+
   .modal {
     width: 100%;
   }
