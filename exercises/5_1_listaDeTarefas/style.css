@@ -120,3 +120,9 @@ li:hover {
   transition: margin-top 1000ms;
   width: 20%;
 }
+
+@media screen and (max-width: 360px) {
+  .modal {
+    width: 100%;
+  }
+}
