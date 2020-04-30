@@ -11,6 +11,7 @@ const message = document.getElementById('mensagem'); // Manipula a div da mensag
 const corpo = document.body; // Manipula o corpo.
 const pelicula = document.getElementById('pelicula-glass'); // Manipula película.
 const modal = document.getElementById('modal-window'); // Manipula modal.
+const msgText = document.getElementById('msgText'); // Manipula mensagem.
 
 const minhaLista = [];
 
@@ -64,13 +65,22 @@ function carregaLista() { // Carrega a lista salva no Storage usando a função 
   }
 }
 
+function exibeModal() {
+  setTimeout(function () {
+    modal.style.marginTop = '300px';
+    document.querySelector('.pagina').style.filter = 'blur(10px)';
+  }, 100);
+}
+
 function setModal(param) {
   if (param === 1) {
     pelicula.style.display = 'flex';
-    setTimeout(function () {
-      modal.style.marginTop = '300px';
-      document.querySelector('.pagina').style.filter = 'blur(10px)';
-    }, 0);
+    msgText.innerText = 'Alterações salvas com sucesso!✅';
+    exibeModal();
+  } else if (param === 2) {
+    pelicula.style.display = 'flex';
+    msgText.innerText = 'Lista apagada!✅';
+    exibeModal();
   } else {
     modal.style.marginTop = '-220px';
     document.querySelector('.pagina').style.filter = 'blur(0)';
@@ -84,6 +94,7 @@ function concluiSalvamento() { // Função que salva no localStorage.
   const itens = lista.childNodes;
   if (itens.length === 0) {
     localStorage.clear();
+    setModal(1);
   } else {
     localStorage.clear();
     localStorage.setItem('itens', `${lista.innerHTML}`);

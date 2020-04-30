@@ -22,7 +22,7 @@
                     <button id="mover-cima">↑</button>
                     <button id="mover-baixo">↓</button>
                     <button id="remover-selecionado">X</button>
-                    <button id="apaga-tudo">Limpar lista</button>
+                    <button id="apaga-tudo" onclick="setModal(2)">Limpar lista</button>
                     <button id="remover-finalizados">Limpar Concluídas</button>
                 </fieldset>
                 <ol id="lista-tarefas"></ol>
@@ -30,8 +30,8 @@
         </div>
         <section id="pelicula-glass" class="pelicula">
             <div id="modal-window" class="modal">
-                Sua lista foi salva com sucesso!✅
-                <button onclick="setModal(2)">OK</button>
+                <span id="msgText">Sua lista foi salva com sucesso!✅</span>
+                <button onclick="setModal(3)">OK</button>
             </div>
         </section>
         <script src="script.js"></script>
