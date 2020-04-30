@@ -47,7 +47,7 @@ input:hover {
 }
 
 button {
-  background-color: rgba(177, 122, 19, 0.801);
+  background-color: rgba(19, 74, 177, 0.801);
   border-radius: 10px;
   color: white;
   font-weight: 900;
@@ -72,21 +72,39 @@ input:hover , button:hover {
 }
 
 ol {
-  background-color: rgb(107 , 141 , 252);
+  background: transparent;
   margin-left: 5px;
   padding: 0;
   width: 60%;
 }
 
 li {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.185);
+  border-bottom: 1px solid black;
   font-weight: 700;
   list-style-position: inside;
   padding: 2px;
 }
 
 li:hover {
-  border: 2px solid rgb(33 , 95 , 104);
+  animation: boom-fx 1s ;
+}
+
+@keyframes boom-fx {
+
+  0% {
+    background: purple;
+    border-left: 2px solid orange;
+  }
+
+  50% {
+    border-top: 2px solid orange;
+  }
+
+  100% {
+    background: aqua;
+    border-right: 2px solid orange;
+  }
 }
 
 .msgAlert {
