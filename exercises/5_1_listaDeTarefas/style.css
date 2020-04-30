@@ -34,6 +34,12 @@ input {
   width: 50%;
 }
 
+.botoes {
+  background: orange;
+  border-radius: 15px;
+  width: 75%;
+}
+
 button {
   background-color: rgba(139 , 0 , 0 , 0.61);
   border-radius: 10px;
@@ -128,19 +134,33 @@ li:hover {
   }
 
   header {
-    width: 400px;
+    width: 100vw;
+  }
+
+  header h1 , header p {
+    margin: 13px 0;
   }
 
   .pagina header {
     text-align: center;
   }
 
+  input {
+    width: 60%;
+  }
+
   .botoes {
     background: rgba(128, 128, 128, 0.438);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
     margin-top: 10px;
     padding: 1px;
     width: 85%;
+  }
+
+  .botoes button {
+    width: 100%;
   }
 
   ol {
@@ -160,6 +180,23 @@ li:hover {
 
   .pagina {
     width: 70%;
+  }
+
+  header {
+    text-align: center;
+    width: 90vw;
+  }
+
+  input {
+    width: 65%;
+  }
+
+  .botoes {
+    background: rgba(128, 128, 128, 0.438);
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 1px;
+    width: 85%;
   }
 
   .msgAlert {
