@@ -45,8 +45,10 @@ input {
   background-color: rgba(236 , 230 , 172 , 0.842);
   border-radius: 5px;
   color: rgb(31 , 31 , 192);
+  display: block;
   font-weight: 600;
   height: 20px;
+  margin-bottom: 5px;
   text-indent: 6px;
   transition: width 1s ease-in-out;
   width: 20%;
@@ -91,12 +93,13 @@ input:hover , button:hover {
 ol {
   border: 4px solid rgb(107 , 141 , 252);
   margin-left: 5px;
+  margin-top: 5px;
   padding: 0;
   width: 60%;
 }
 
 li {
-  background-color: rgba(255, 255, 255, 0.185);
+  background-color: white;
   border-bottom: 1px solid black;
   font-weight: 700;
   list-style-position: inside;
@@ -199,7 +202,28 @@ li:hover {
   }
 
   input {
+    animation: entrada-item 2s;
+    transition: width 1s ease-in-out;
     width: 60%;
+  }
+
+  @keyframes entrada-item {
+
+    0% {
+      width: 10%;
+    }
+
+    25% {
+      width: 60%;
+    }
+
+    50% {
+      width: 25%;
+    }
+
+    100% {
+      width: 60%;
+    }
   }
 
   .botoes {
@@ -249,7 +273,7 @@ li:hover {
     border-radius: 8px;
     margin-top: 10px;
     padding: 1px;
-    width: 85%;
+    width: 82%;
   }
 
   ol {
