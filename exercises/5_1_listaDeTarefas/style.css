@@ -121,9 +121,25 @@ li:hover {
   width: 20%;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and ( max-width : 460px ) {
+
   .pagina {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     width: 75%;
+  }
+
+  .pagina header {
+    text-align: center;
+  }
+
+  ol {
+    width: 75%;
+  }
+
+  .msgAlert {
+    width: 80%;
   }
 
   .modal {
@@ -131,9 +147,14 @@ li:hover {
   }
 }
 
-@media screen and (min-width: 461px) and (max-width: 1050px) {
+@media screen and ( min-width : 461px ) and ( max-width : 1050px ) {
+
   .pagina {
     width: 70%;
+  }
+
+  .msgAlert {
+    width: 50%;
   }
 
   .modal {
