@@ -96,7 +96,7 @@ ol {
 }
 
 li {
-  background-color: rgba(255, 255, 255, 0.185);
+  background-color: white;
   border-bottom: 1px solid black;
   font-weight: 700;
   list-style-position: inside;
