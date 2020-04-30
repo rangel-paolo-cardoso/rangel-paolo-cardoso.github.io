@@ -31,17 +31,23 @@ input {
   font-weight: 600;
   height: 20px;
   text-indent: 6px;
-  width: 50%;
+  transition: width 1s ease-in-out;
+  width: 20%;
+}
+
+input:hover {
+  width: 60%;
 }
 
 .botoes {
-  background: orange;
+  background: rgba(119, 128, 122, 0.411);
   border-radius: 15px;
-  width: 75%;
+  margin-top: 5px;
+  width: 55%;
 }
 
 button {
-  background-color: rgba(139 , 0 , 0 , 0.61);
+  background-color: rgba(177, 122, 19, 0.801);
   border-radius: 10px;
   color: white;
   font-weight: 900;
@@ -67,6 +73,8 @@ input:hover , button:hover {
 
 ol {
   background-color: rgb(107 , 141 , 252);
+  margin-left: 5px;
+  padding: 0;
   width: 60%;
 }
 
@@ -164,7 +172,7 @@ li:hover {
   }
 
   ol {
-    width: 75%;
+    width: 85%;
   }
 
   .msgAlert {
@@ -197,6 +205,10 @@ li:hover {
     margin-top: 10px;
     padding: 1px;
     width: 85%;
+  }
+
+  ol {
+    width: 80%;
   }
 
   .msgAlert {
