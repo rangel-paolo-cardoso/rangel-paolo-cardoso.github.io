@@ -124,14 +124,23 @@ li:hover {
 @media screen and ( max-width : 460px ) {
 
   .pagina {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     width: 75%;
+  }
+
+  header {
+    width: 400px;
   }
 
   .pagina header {
     text-align: center;
+  }
+
+  .botoes {
+    background: rgba(128, 128, 128, 0.438);
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 1px;
+    width: 85%;
   }
 
   ol {
