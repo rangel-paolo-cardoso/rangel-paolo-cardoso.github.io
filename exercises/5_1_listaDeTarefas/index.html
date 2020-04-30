@@ -10,20 +10,22 @@
     <body>
         <div class="pagina">
             <header>
-                <h1>Minha Lista de Tarefas</h1>
+                <h1>Minha Lista de Tarefas<div class="catavento"></div></h1>
                 <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
             </header>
             <section>
                 <input id="texto-tarefa" type="text">
                 <button id="criar-tarefa">Adicionar</button>
                 <div id="mensagem" class="msgAlert">Digite algo para colocar na lista!</div>
+                <fieldset class="botoes">
+                    <button id="salvar-tarefas">Salvar Lista</button>
+                    <button id="mover-cima">↑</button>
+                    <button id="mover-baixo">↓</button>
+                    <button id="remover-selecionado">X</button>
+                    <button id="apaga-tudo">Limpar lista</button>
+                    <button id="remover-finalizados">Limpar Concluídas</button>
+                </fieldset>
                 <ol id="lista-tarefas"></ol>
-                <button id="apaga-tudo">Limpar lista</button>
-                <button id="remover-finalizados">Limpar Concluídas</button>
-                <button id="salvar-tarefas">Salvar Lista</button>
-                <button id="mover-cima">↑</button>
-                <button id="mover-baixo">↓</button>
-                <button id="remover-selecionado">X</button>
             </section>
         </div>
         <section id="pelicula-glass" class="pelicula">
