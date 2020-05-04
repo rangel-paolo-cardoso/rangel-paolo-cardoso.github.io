@@ -1,11 +1,3 @@
-img , ul li {
-  margin: 2px;
-  padding: 5px;
-  border: 2px solid rgb(158 , 175 , 206);
-  width: 250px;
-  background-color: rgb(172 , 207 , 142);
-}
-
 body {
   background-color: rgb(186 , 189 , 192);
   font-family: Josefin Sans, sans-serif;
@@ -13,6 +5,15 @@ body {
   color: rgb(4 , 27 , 4);
   text-align: center;
   font-style: oblique;
+  margin: 0;
+}
+
+img , ul li {
+  margin: 2px;
+  padding: 5px;
+  border: 2px solid rgb(158 , 175 , 206);
+  width: 100%;
+  background-color: rgb(172 , 207 , 142);
 }
 
 #cabecalho , nav {
@@ -22,17 +23,17 @@ body {
   background-color: rgb(54 , 19 , 19);
 }
 
-section {
-  margin-top: 80px;
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 135px;
 }
 
 section , aside {
-  width: 50%;
-  text-align: justify;
-}
-
-.lado-esquerdo , .lado-direito {
-  float: left;
+  display: flex;
+  flex-direction: column;
+  margin: 0 8px;
+  width: 48%;
 }
 
 div {
