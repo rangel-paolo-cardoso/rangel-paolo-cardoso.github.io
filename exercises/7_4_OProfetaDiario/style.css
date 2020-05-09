@@ -1,0 +1,356 @@
+@charset 'utf-8' ;
+
+html , body {
+  color: white;
+  font-family: Cinzel Decorative, cursive;
+  margin: 0;
+}
+
+.container-layout {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.pseudo-container {
+  align-items: center;
+  background: url('https://cdn.pixabay.com/photo/2014/09/04/07/59/document-435349_960_720.jpg') repeat-y;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.cabecalho {
+  background: linear-gradient(rgba(100, 100, 100, 0.95), rgba(50, 50, 50, 1));
+  border-bottom: 8px double black;
+  border-top: 5px solid black;
+  color: floralwhite;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.cabecalho figure {
+  margin: 0;
+  width: 100%;
+}
+
+.cabecalho .titulo {
+  width: 60%;
+}
+
+.cabecalho figure figcaption {
+  font-size: 18pt;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.artigo {
+  align-items: center;
+  background: rgba(12, 10, 10, 0.92);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 60px;
+}
+
+.aticle-title {
+  color: aliceblue;
+  font-size: 28pt;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.main-article {
+  align-items: center;
+  background: linear-gradient(black, rgba(40, 30, 30, 0.88) 70%, rgba(50, 50, 190, 0.6));
+  box-shadow: 2px 2px 5px black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 9px;
+  padding: 15px;
+  width: 25%;
+}
+
+.main-article:hover {
+  background: linear-gradient(black, rgba(40, 30, 30, 0.88) 70%, rgba(80, 80, 250, 0.9));
+  box-shadow: 5px 5px 8px white;
+  transition: box-shadow 0.5s;
+}
+
+.main-article .text-title {
+  font-size: 14pt;
+  margin: 0;
+  padding-top: 12px;
+  text-align: center;
+}
+
+.main-article p {
+  font-size: 12pt;
+  line-height: 20px;
+  padding-top: 13px;
+  text-align: justify;
+  text-indent: 25px;
+  word-spacing: 6px;
+}
+
+.video-sec iframe {
+  width: 90%;
+}
+
+.lateral {
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+
+.article-animation {
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-name: article-grow;
+  animation-play-state: paused;
+  transition: font-size 4s;
+}
+
+.article-animation:active {
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-name: article-grow;
+  animation-play-state: running;
+  animation-timing-function: linear steps(1, start);
+}
+
+img {
+  transition: border 1s;
+  width: 50%;
+}
+
+.interest-sec {
+  background: linear-gradient(black, rgba(40, 30, 30, 0.88) 70%, rgba(50, 130, 50, 0.6));
+  box-shadow: 2px 2px 5px black;
+  margin-bottom: 12px;
+  padding: 15px;
+  width: 45%;
+}
+
+.interest-sec:hover {
+  background: linear-gradient(black, rgba(40, 30, 30, 0.88) 70%, rgba(80, 250, 80, 0.9));
+  box-shadow: 5px 5px 8px white;
+  transition: box-shadow 1s;
+}
+
+.interest-sec img {
+  width: 65%;
+}
+
+.interest-sec img:hover {
+  animation: borda 0.7s linear;
+}
+
+.rodape {
+  align-items: center;
+  background: linear-gradient(rgb(25, 22, 185), black);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.link-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.link-list li {
+  margin: 8px 10px;
+}
+
+.link-list li a div {
+  background-color: white;
+  background-image: url('https://paintingvalley.com/sketches/social-icons-sketch-16.png');
+  background-size: 682px 581px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.github {
+  background-position: 24.1% 56.5%;
+}
+
+.linkedin {
+  background-position: 65.6% 4.5%;
+}
+
+.fly {
+  background: url('https://cdn.pixabay.com/photo/2014/08/11/11/50/full-moon-415501_960_720.jpg');
+  background-position: 84.7% 44%;
+  background-size: 305px 120px;
+  border-radius: 50%;
+  height: 80px;
+  left: 20px;
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  width: 80px;
+}
+
+.witch-flying {
+  animation: witch-fly 1.5s linear infinite alternate;
+  position: absolute;
+  top: 455px;
+}
+
+@keyframes borda {
+
+  0% {
+    border-left: 1px solid white;
+  }
+
+  25% {
+    border-bottom: 2px solid white;
+  }
+
+  50% {
+    border-right: 3px solid white;
+  }
+
+  100% {
+    border-top: 4px solid white;
+  }
+}
+
+@keyframes witch-fly {
+
+  100% {
+    margin-top: 150px;
+  }
+}
+
+@keyframes flying {
+
+  0% {
+    display: block;
+    opacity: 0.4;
+  }
+
+  20% {
+    opacity: 0.5;
+    transform: translateY(75px);
+  }
+
+  40% {
+    opacity: 0.8;
+    transform: translateY(-25px) scale(1.3);
+  }
+
+  60% {
+    opacity: 0.2;
+    transform: translateY(-45px) skew(10deg);
+  }
+
+  80% {
+    opacity: 0.5;
+    transform: translateY(70px);
+  }
+
+  100% {
+    margin-left: 85%;
+    opacity: 1;
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes article-grow {
+
+  100% {
+    font-size: 18pt;
+    transform: scale(1.5);
+  }
+}
+
+@media screen and ( max-width : 760px ) {
+
+  .container-layout {
+    background-color: yellow;
+    width: 100%;
+  }
+
+  .pseudo-container {
+    width: 98%;
+  }
+
+  .cabecalho .titulo {
+    width: 80%;
+  }
+
+  .cabecalho figure figcaption {
+    font-size: 13pt;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .artigo {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .main-article .text-title {
+    font-size: 16pt;
+  }
+
+  .main-article p , .interest-sec p {
+    font-size: 14pt;
+    line-height: 27px;
+    padding-top: 14px;
+    text-align: justify;
+    text-indent: 25px;
+  }
+
+  main , .interest-sec {
+    padding: 2px;
+  }
+
+  .main-article {
+    padding: 2px;
+  }
+
+  .main-article , .interest-sec {
+    width: 86%;
+  }
+
+  .artigo main , .lateral {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fly {
+    display: none;
+  }
+}
+
+@media screen and ( min-width : 1170px ) {
+
+  .container-layout {
+    background-color: red;
+  }
+}
+
+@media ( orientation : landscape ) {
+
+  .container-orientation {
+    border: 1px solid red;
+  }
+}
