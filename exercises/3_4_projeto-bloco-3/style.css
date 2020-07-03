@@ -75,5 +75,6 @@ ul li {
 }
 
 footer {
+  line-height: 6vh;
   margin: 30px 0;
 }
