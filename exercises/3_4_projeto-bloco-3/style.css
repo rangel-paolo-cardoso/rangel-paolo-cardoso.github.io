@@ -37,7 +37,7 @@ img , ul li {
 
 main {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 135px;
 }
 
@@ -58,6 +58,11 @@ div {
 
 #direita {
   float: left;
+}
+
+article p {
+  text-align: justify;
+  text-indent: 50px;
 }
 
 ul , ol {
