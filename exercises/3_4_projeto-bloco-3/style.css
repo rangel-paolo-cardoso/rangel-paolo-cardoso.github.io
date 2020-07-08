@@ -14,11 +14,11 @@ body {
 }
 
 img , ul li {
+  background-color: rgb(220, 235, 207);
+  border: 2px solid rgb(158 , 175 , 206);
   margin: 2px;
   padding: 5px;
-  border: 2px solid rgb(158 , 175 , 206);
   width: 100%;
-  background-color: rgb(172 , 207 , 142);
 }
 
 .my-pets:hover {
