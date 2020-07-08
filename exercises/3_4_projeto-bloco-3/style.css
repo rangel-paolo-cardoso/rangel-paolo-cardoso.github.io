@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: rgb(186 , 189 , 192);
+  background-color: white;
   font-family: Josefin Sans, sans-serif;
   font-size: 1em;
   color: rgb(4 , 27 , 4);
@@ -21,11 +21,15 @@ img , ul li {
   background-color: rgb(172 , 207 , 142);
 }
 
+.my-pets:hover {
+  background-color: lime;
+}
+
 #cabecalho , nav {
   top: 0;
   position: fixed;
   width: 100%;
-  background-color: rgb(54 , 19 , 19);
+  background-color: rgb(37, 129, 9);
 }
 
 .navigation {
