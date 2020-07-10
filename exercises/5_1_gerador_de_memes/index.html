@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Meme Generator</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap">
-    </head>
-    <body>
-        <div>
-            <form>
-                <label for="text-input">Digite o texto do seu meme: </label>
-                <input id="text-input" type="text" maxlength="60"><br>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap"
+    />
+  </head>
+  <body>
+    <div>
+      <form>
+        <label for="text-input">Digite o texto do seu meme: </label>
+        <input id="text-input" type="text" maxlength="60" /><br />
 
-                <label for="meme-insert">Selecione sua imagem: </label>
-                <input type="file" id="meme-insert">
-            </form>
-            <fieldset id="botoes" class="botoesCamp">
-                <legend>Opções de moldura</legend>
-                <button id="button1" class="buttonUm">Tracejada vermelha</button>
-                <button id="button2" class="buttonDois">Dupla azul</button>
-                <button id="button3" class="buttonTres">Entalhada verde</button>
-            </fieldset>
-            <fieldset id="super-memes" class="superMemes">
-                <legend>Memes famosos</legend>
-                <img id="meme-1" src="imgs/meme1.jpeg" alt="">
-                <img id="meme-2" src="imgs/meme2.jpeg" alt="">
-                <img id="meme-3" src="imgs/meme3.jpeg" alt="">
-                <img id="meme-4" src="imgs/meme4.jpeg" alt="">
-            </fieldset>
-            <div id="meme-image-container" class="memeImageContainer">
-                <img id="meme-image" class="memeImage" src="" alt="Imagem do meme escolhido.">
-                <p id="meme-text" class="memeText"></p>
-            </div>
+        <label for="meme-insert">Selecione sua imagem: </label>
+        <input type="file" id="meme-insert" />
+      </form>
+      <div id="botoes" class="options-group">
+        <p class="op-title">Opções de moldura</p>
+        <div class="botoesCamp">
+          <button id="button1" class="buttonUm">Tracejada vermelha</button>
+          <button id="button2" class="buttonDois">Dupla azul</button>
+          <button id="button3" class="buttonTres">Entalhada verde</button>
         </div>
+      </div>
+      <div id="super-memes" class="options-group">
+        <p class="op-title">Memes famosos</p>
+        <div class="superMemes">
+          <img id="meme-1" src="imgs/meme1.jpeg" alt="Meme Favorito" />
+          <img id="meme-2" src="imgs/meme2.jpeg" alt="Meme Favorito" />
+          <img id="meme-3" src="imgs/meme3.jpeg" alt="Meme Favorito" />
+          <img id="meme-4" src="imgs/meme4.jpeg" alt="Meme Favorito" />
+        </div>
+      </div>
+      <div id="meme-image-container" class="memeImageContainer">
+        <img
+          id="meme-image"
+          class="memeImage"
+          src="Meme escolhido"
+          alt="Imagem do meme escolhido."
+        />
+        <p id="meme-text" class="memeText"></p>
+      </div>
+    </div>
 
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+  </body>
 </html>

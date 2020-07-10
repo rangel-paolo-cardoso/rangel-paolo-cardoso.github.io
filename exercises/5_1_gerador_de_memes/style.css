@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .memeImageContainer {
-  background-color: white;
+  background-color: gray;
   border: 1px solid black;
   box-sizing: border-box;
   height: 450px;
@@ -12,34 +12,47 @@ fieldset {
   background-color: rgb(223, 226, 236);
   border-radius: 4px;
   font-weight: bold;
-  height: 75px;
-  padding-top: 10px;
+  padding-top: 5px;
   position: relative;
-  width: 37%;
 }
 
-.botoesCamp {
-  float: left;
+.options-group {
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.op-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.botoesCamp, .superMemes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
 }
 
 .superMemes img {
-  border: 1px solid #000;
   height: 65px;
+  padding: 3px;
   width: 65px;
 }
 
 .superMemes img:hover {
-  border: 2px solid aqua;
+  background-color: aqua;
 }
 
 button {
   background-color: rgba(36, 34, 34, 0.705);
   border-radius: 6px;
   color: white;
-  height: 40px;
+  height: 35px;
   margin: 5px;
   transition: background-color 1.5s;
-  width: 140px;
+  width: 25%;
 }
 
 .buttonUm:hover, .buttonDois:hover, .buttonTres:hover {
@@ -61,12 +74,14 @@ button {
 .memeImage {
   display: none;
   height: 100%;
+  /* margin: 0; */
   max-height: 500px;
   min-height: 200px;
   width: 100%;
 }
 
 .memeImageContainer, .memeImage {
+  margin: 0 auto;
   position: relative;
 }
 
@@ -79,6 +94,8 @@ button {
   max-height: inherit;
   position: absolute;
   text-indent: 25px;
+  text-align: center;
   width: 100%;
+  word-wrap: break-word;
   z-index: 1;
 }
