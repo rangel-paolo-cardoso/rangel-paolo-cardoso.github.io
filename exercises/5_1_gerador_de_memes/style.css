@@ -74,10 +74,12 @@ button {
 .memeImage {
   display: none;
   height: 100%;
-  /* margin: 0; */
-  max-height: 500px;
-  min-height: 200px;
   width: 100%;
+}
+
+.memeImageContainer {
+  min-width: 430px;
+  width: 50%;
 }
 
 .memeImageContainer, .memeImage {
