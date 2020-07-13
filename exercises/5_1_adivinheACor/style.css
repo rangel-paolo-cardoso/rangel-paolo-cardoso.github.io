@@ -22,7 +22,10 @@ body {
 }
 
 .dicas {
+  animation: tips 1s linear infinite;
+  background: rgba(50, 120, 200, 0.70);
   display: none;
+  font-weight: 700;
   height: 100%;
 }
 
@@ -113,4 +116,15 @@ button:hover {
   position: absolute;
   top: 5px;
   width: 50px;
+}
+
+@keyframes tips {
+
+  0% {
+    box-shadow: 0 0 100px yellow;
+  }
+
+  100% {
+    box-shadow: 0 0 170px cyan;
+  }
 }
