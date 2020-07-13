@@ -1,23 +1,20 @@
 @charset "utf-8";
 
-body,
-.memeImageContainer {
-  background-color: #f2e74b;
+body {
+  margin: 0;
 }
 
 .corpo {
-  background-color: #010440;
+  background-color: #f2e74b;
   color: white;
-}
-
-form, .options-group {
-  background: linear-gradient(blue, #040dbf);
 }
 
 form {
   align-items: center;
+  background: linear-gradient(#010440, #040fd9);
   display: flex;
   flex-direction: column;
+  /* padding-top: 10px; */
 }
 
 .memeImageContainer {
@@ -37,8 +34,7 @@ fieldset {
 
 .options-group {
   background-color: #040fd9;
-  border: 1px solid blue;
-  border-radius: 5px;
+  border: 1px solid #f2e74b;
 }
 
 .op-title {
