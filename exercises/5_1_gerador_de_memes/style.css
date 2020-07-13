@@ -1,7 +1,26 @@
 @charset "utf-8";
 
+body,
 .memeImageContainer {
-  background-color: gray;
+  background-color: #f2e74b;
+}
+
+.corpo {
+  background-color: #010440;
+  color: white;
+}
+
+form, .options-group {
+  background: linear-gradient(blue, #040dbf);
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.memeImageContainer {
   border: 1px solid black;
   box-sizing: border-box;
   height: 450px;
@@ -17,6 +36,7 @@ fieldset {
 }
 
 .options-group {
+  background-color: #040fd9;
   border: 1px solid blue;
   border-radius: 5px;
 }
@@ -24,11 +44,12 @@ fieldset {
 .op-title {
   font-size: 20px;
   font-weight: 700;
-  margin: 10px 0;
+  margin: 2px 0;
   text-align: center;
 }
 
-.botoesCamp, .superMemes {
+.botoesCamp,
+.superMemes {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -42,7 +63,7 @@ fieldset {
 }
 
 .superMemes img:hover {
-  background-color: aqua;
+  background-color: #f2e74b;
 }
 
 button {
@@ -55,7 +76,9 @@ button {
   width: 25%;
 }
 
-.buttonUm:hover, .buttonDois:hover, .buttonTres:hover {
+.buttonUm:hover,
+.buttonDois:hover,
+.buttonTres:hover {
   font-weight: bold;
 }
 
@@ -82,13 +105,14 @@ button {
   width: 50%;
 }
 
-.memeImageContainer, .memeImage {
+.memeImageContainer,
+.memeImage {
   margin: 0 auto;
   position: relative;
 }
 
 .memeText {
-  background-color: rgba(0 , 0 , 0 , 0.65);
+  background-color: rgba(0, 0, 0, 0.65);
   bottom: 30px;
   color: #fff;
   font-family: 'Titillium Web', Helvetica, sans-serif;
