@@ -62,13 +62,7 @@ const adicionaEventPixel = () => {
   pixel.forEach((elemento) => elemento.addEventListener('click', config));
 };
 
-function eventoLimpador() {
-  btnLimpar.addEventListener('click', function () {
-    for (let p = 0; p < pixel.length; p += 1) {
-      pixel[p].style.backgroundColor = 'white';
-    }
-  });
-}
+const eventoLimpador = () => btnLimpar.addEventListener('click', configuraPixels);
 
 function mudaTamanhoQuadro(l, a) {
   quadro.style.height = `${a}px`;
