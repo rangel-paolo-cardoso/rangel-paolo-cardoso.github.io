@@ -9,7 +9,7 @@ const estilos = [
   ['skewleft', 'skewright'],
 ]; // Matriz de estilos.
 
-function adicionaClass(elemento) {
+const adicionaClass = (elemento) => {
   elemento.classList = '';
   for (let i = 0; i < 3; i += 1) {
     const grupo = Math.floor(Math.random() * estilos.length);
@@ -19,13 +19,11 @@ function adicionaClass(elemento) {
       break;
     }
   }
-}
+};
 
-function contaPalavras(vet) {
-  contador.innerHTML = vet.length;
-}
+const contaPalavras = (vet) => contador.innerHTML = vet.length;
 
-function insereCarta(vet) {
+const insereCarta = (vet) => {
   cartaGerada.innerHTML = '';
   for (let i = 0; i < vet.length; i += 1) {
     const carta = document.createElement('span');
@@ -37,17 +35,11 @@ function insereCarta(vet) {
     cartaGerada.appendChild(carta);
   }
   contaPalavras(vet);
-}
-
-function geraCarta() {
-  if (cartaTexto.value === '') {
-    alert('Não há texto para gerar cartas.');
-  } else {
-    const textoDividido = cartaTexto.value.split(' '); // Vetor onde cada palavra é um índice.
-    insereCarta(textoDividido);
-  }
-}
-
-window.onload = function () {
-  btnCriarCarta.addEventListener('click', geraCarta);
 };
+
+const geraCarta = () =>
+  (!cartaTexto.value)
+  ? alert('Não há texto para gerar cartas.')
+  : insereCarta(cartaTexto.value.split(' ')); // Vetor onde cada palavra é um índice.
+
+window.onload = () => btnCriarCarta.addEventListener('click', geraCarta);
