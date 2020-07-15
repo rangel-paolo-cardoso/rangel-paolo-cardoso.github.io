@@ -6,28 +6,28 @@ let pixel = document.querySelectorAll('.pixel'); // Manipula os pixels.
 const opcaoUsuario = document.getElementById('board-size');
 let selectedColor = 'black'; // Cor selecionada. Por padrão preto.
 
-function carregaCores() { // Define as cores da paleta.
-  for (let number = 0; number < paleta.length; number += 1) {
-    switch (number) {
+const carregaCores = () => { // Define as cores da paleta.
+  paleta.forEach((elemento, indice) => {
+    switch (indice) {
       case 0:
-        paleta[number].style.backgroundColor = 'black';
+        elemento.style.backgroundColor = 'black';
         break;
       case 1:
-        paleta[number].style.backgroundColor = 'red';
+        elemento.style.backgroundColor = 'red';
         break;
       case 2:
-        paleta[number].style.backgroundColor = 'blue';
+        elemento.style.backgroundColor = 'blue';
         break;
       case 3:
-        paleta[number].style.backgroundColor = 'green';
+        elemento.style.backgroundColor = 'green';
         break;
       default:
-        paleta[number].style.backgroundColor = '';
+        elemento.style.backgroundColor = '';
     }
-  }
-}
+  });
+};
 
-function carregaCoresAleatorio() { // Carrega cores aleatoriamente.
+const carregaCoresAleatorio = () => { // Carrega cores aleatoriamente.
   let red;
   let green;
   let blue;
@@ -37,7 +37,7 @@ function carregaCoresAleatorio() { // Carrega cores aleatoriamente.
     blue = Number.parseInt(Math.random() * 255, 10);
     paleta[number].style.backgroundColor = `rgb(${red},${green},${blue})`;
   }
-}
+};
 
 function configuraPixels() { // Cor de fundo dos pixels do painel é branca.
   for (let p = 0; p < pixel.length; p += 1) { // For que percorre todos os div .pixel.
