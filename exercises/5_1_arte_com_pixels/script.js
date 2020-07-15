@@ -28,15 +28,11 @@ const carregaCores = () => { // Define as cores da paleta.
 };
 
 const carregaCoresAleatorio = () => { // Carrega cores aleatoriamente.
-  let red;
-  let green;
-  let blue;
-  for (let number = 1; number < paleta.length; number += 1) {
-    red = Number.parseInt(Math.random() * 255, 10);
-    green = Number.parseInt(Math.random() * 255, 10);
-    blue = Number.parseInt(Math.random() * 255, 10);
-    paleta[number].style.backgroundColor = `rgb(${red},${green},${blue})`;
-  }
+  const hex = '0123456789abcdef';
+  const color = () => hex[parseInt(Math.random() * 16, 10)];
+  paleta.forEach((elemento) => {
+    elemento.style.backgroundColor = `#${color()}${color()}${color()}${color()}${color()}${color()}`;
+  });
 };
 
 // Cor de fundo dos pixels do painel é branca. forEach preenche eles.
@@ -69,36 +65,31 @@ function mudaTamanhoQuadro(l, a) {
   quadro.style.width = `${l}px`;
 }
 
-function apagaPixels() { // Função chamada para apagar os pixels.
-  for (let p = 0; p < pixel.length; p += 1) {
-    quadro.removeChild(pixel[p]);
-  }
-}
+// Função chamada para apagar os pixels.
+const apagaPixels = () => pixel.forEach((elemento) => quadro.removeChild(elemento));
 
-function gerarPixels(numero) { // Gera novos pixels
+const gerarPixels = (numero) => { // Gera novos pixels
   for (let n = 0; n < numero; n += 1) {
     const pix = document.createElement('div');
     pix.className = 'pixel';
     pix.style.backgroundColor = 'white';
     quadro.appendChild(pix);
   }
-}
+};
 
-function verificaEntrada(entrada) { // Verifica entrado do usuário.
+const verificaEntrada = (entrada) => { // Verifica entrado do usuário.
   if (entrada < 5) {
     entrada = 5;
   } else if (entrada > 50) {
     entrada = 50;
   }
   return entrada;
-}
+};
 
-function calculaPixels(numero) { // Calcula número de pixels.
-  return numero * numero;
-}
+const calculaPixels = (numero) => numero * numero; // Calcula número de pixels.
 
-function eventoGerador() { // Primeiro apaga os pixels.
-  btnGerar.addEventListener('click', function () {
+const eventoGerador = () => { // Primeiro apaga os pixels.
+  btnGerar.addEventListener('click', () => {
     const usuarioNumber = verificaEntrada(Number(opcaoUsuario.value));
     const numeroPixels = calculaPixels(usuarioNumber);
     const largura = (usuarioNumber * 40) + (usuarioNumber * 2);
@@ -109,7 +100,7 @@ function eventoGerador() { // Primeiro apaga os pixels.
     pixel = document.querySelectorAll('.pixel');
     adicionaEventPixel();
   });
-}
+};
 
 window.onload = function () {
   carregaCores();
