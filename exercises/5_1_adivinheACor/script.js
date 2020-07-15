@@ -29,19 +29,15 @@ const atribuiCores = () => { // Atribui uma cor para cada bola.
 // Configura o texto com a cor a ser adivinhada.
 const configuraRGB = () => adivinhaRGB.innerText = geraRGB();
 
-function mudaStatus() { // Altera o status, limita para 1 acerto por rodada.
-  status = false;
-}
+// Altera o status, limita para 1 acerto por rodada.
+const mudaStatus = () => status = false;
 
-function alarm() { // Muda a cor de fundo da pontuação.
-  if (pontos > 0) {
-    score.classList.remove('pontos-neg');
-  } else {
-    score.classList.add('pontos-neg');
-  }
-}
+const alarm = () => // Muda a cor de fundo da pontuação.
+  (pontos > 0)
+  ? score.classList.remove('pontos-neg')
+  : score.classList.add('pontos-neg');
 
-function configuraPlcar(tipo) { // Configura placar incrementando pontos.
+const configuraPlcar = (tipo) => { // Configura placar incrementando pontos.
   if (status) {
     if (tipo === 1) {
       pontos += 3;
@@ -54,9 +50,9 @@ function configuraPlcar(tipo) { // Configura placar incrementando pontos.
       alarm();
     }
   }
-}
+};
 
-function clickBall() { // Avalia o acerto.
+const clickBall = () => { // Avalia o acerto.
   const cor = event.target.style.backgroundColor;
   if (cor === `rgb${adivinhaRGB.innerText}`) {
     answer.innerText = 'Acertou!';
@@ -65,10 +61,11 @@ function clickBall() { // Avalia o acerto.
     configuraPlcar(2);
     answer.innerText = 'Errou! Tente novamente!';
   }
-}
+};
 
 // Adicona evento para cada bola.
-const eventCores = () => bolas.forEach((bola) => bola.addEventListener('click', clickBall));
+const eventCores = () =>
+  bolas.forEach((bola) => bola.addEventListener('click', clickBall));
 
 const reiniciaJogo = () => { // Reinicia o jogo e seus valores padrão.
   limpaCores();
@@ -78,19 +75,18 @@ const reiniciaJogo = () => { // Reinicia o jogo e seus valores padrão.
   answer.innerText = 'Escolha uma cor';
 };
 
-function eventReset() { // Evento para o botão de reset.
-  reset.addEventListener('click', reiniciaJogo);
-}
+// Evento para o botão de reset.
+const eventReset = () => reset.addEventListener('click', reiniciaJogo);
 
-function eventDicas() { // Evento para o botão de dicas.
-  dicas.addEventListener('click', function () {
+const eventDicas = () => { // Evento para o botão de dicas.
+  dicas.addEventListener('click', () => {
     if (dica.style.display === '' || dica.style.display === 'none') {
       dica.style.display = 'block';
     } else {
       dica.style.display = 'none';
     }
   });
-}
+};
 
 window.onload = () => {
   configuraRGB();
