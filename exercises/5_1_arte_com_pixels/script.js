@@ -43,20 +43,17 @@ const carregaCoresAleatorio = () => { // Carrega cores aleatoriamente.
 const configuraPixels = () =>
   pixel.forEach((elemento) => elemento.style.backgroundColor = 'white'); // Configura cor de fundo para branco.);
 
-function removeSelected() {
+const removeSelected = () =>
   document.querySelector('.selected').classList.remove('selected');
-}
 
-function adcionaEventPaleta() { // Adiciona evento click em cada cor da paleta.
-  const config = function () {
+const adicionaEventPaleta = () => { // Adiciona evento click em cada cor da paleta.
+  const config = () => {
     selectedColor = event.target.style.backgroundColor;
     removeSelected();
     event.target.classList.add('selected');
   };
-  for (let p = 0; p < paleta.length; p += 1) { // For que percorre todos os div .pixel.
-    paleta[p].addEventListener('click', config);
-  }
-}
+  paleta.forEach((pixel) => pixel.addEventListener('click', config)); // Percorre todos os div .pixel.
+};
 
 function adicionaEventPixel() {
   const config = function () {
@@ -125,7 +122,7 @@ function eventoGerador() { // Primeiro apaga os pixels.
 window.onload = function () {
   carregaCores();
   configuraPixels();
-  adcionaEventPaleta();
+  adicionaEventPaleta();
   adicionaEventPixel();
   eventoLimpador();
   eventoGerador();
