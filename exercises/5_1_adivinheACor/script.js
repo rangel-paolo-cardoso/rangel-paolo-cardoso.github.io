@@ -8,19 +8,13 @@ const dica = document.querySelector('div.dicas'); // Manipula div das dicas.
 let pontos = 0;
 let status = true;
 
-function colorLv() { // Gera um número aleatório entre 0 e 255.
-  return Number.parseInt(Math.random() * 255, 10);
-}
+const colorLv = () => parseInt(Math.random() * 255, 10);
 
-function geraRGB() { // Gera cor aleatória.
-  return `(${colorLv()}, ${colorLv()}, ${colorLv()})`;
-}
+// Gera cor aleatória.
+const geraRGB = () => `(${colorLv()}, ${colorLv()}, ${colorLv()})`;
 
-function limpaCores() { // Retira a cor das bolas.
-  for (let b = 0; b < bolas.length; b += 1) {
-    bolas[b].style.backgroundColor = '';
-  }
-}
+// Retira a cor das bolas.
+const limpaCores = () => bolas.forEach((bola) => bola.style.backgroundColor = '');
 
 function atribuiCores() { // Atribui uma cor para cada bola.
   const comprimento = bolas.length;
