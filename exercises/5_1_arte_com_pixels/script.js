@@ -6,112 +6,90 @@ let pixel = document.querySelectorAll('.pixel'); // Manipula os pixels.
 const opcaoUsuario = document.getElementById('board-size');
 let selectedColor = 'black'; // Cor selecionada. Por padrão preto.
 
-function carregaCores() { // Define as cores da paleta.
-  for (let number = 0; number < paleta.length; number += 1) {
-    switch (number) {
+const carregaCores = () => { // Define as cores da paleta.
+  paleta.forEach((elemento, indice) => {
+    switch (indice) {
       case 0:
-        paleta[number].style.backgroundColor = 'black';
+        elemento.style.backgroundColor = 'black';
         break;
       case 1:
-        paleta[number].style.backgroundColor = 'red';
+        elemento.style.backgroundColor = 'red';
         break;
       case 2:
-        paleta[number].style.backgroundColor = 'blue';
+        elemento.style.backgroundColor = 'blue';
         break;
       case 3:
-        paleta[number].style.backgroundColor = 'green';
+        elemento.style.backgroundColor = 'green';
         break;
       default:
-        paleta[number].style.backgroundColor = '';
+        elemento.style.backgroundColor = '';
     }
-  }
-}
+  });
+};
 
-function carregaCoresAleatorio() { // Carrega cores aleatoriamente.
-  let red;
-  let green;
-  let blue;
-  for (let number = 1; number < paleta.length; number += 1) {
-    red = Number.parseInt(Math.random() * 255, 10);
-    green = Number.parseInt(Math.random() * 255, 10);
-    blue = Number.parseInt(Math.random() * 255, 10);
-    paleta[number].style.backgroundColor = `rgb(${red},${green},${blue})`;
-  }
-}
+const carregaCoresAleatorio = () => { // Carrega cores aleatoriamente.
+  const hex = '0123456789abcdef';
+  const color = () => hex[parseInt(Math.random() * 16, 10)];
+  paleta.forEach((elemento) => {
+    elemento.style.backgroundColor = `#${color()}${color()}${color()}${color()}${color()}${color()}`;
+  });
+};
 
-function configuraPixels() { // Cor de fundo dos pixels do painel é branca.
-  for (let p = 0; p < pixel.length; p += 1) { // For que percorre todos os div .pixel.
-    pixel[p].style.backgroundColor = 'white'; // Configura cor de fundo para branco.
-  }
-}
+// Cor de fundo dos pixels do painel é branca. forEach preenche eles.
+const configuraPixels = () =>
+  pixel.forEach((elemento) => elemento.style.backgroundColor = 'white'); // Configura cor de fundo para branco.);
 
-function removeSelected() {
+const removeSelected = () =>
   document.querySelector('.selected').classList.remove('selected');
-}
 
-function adcionaEventPaleta() { // Adiciona evento click em cada cor da paleta.
-  const config = function () {
+const adicionaEventPaleta = () => { // Adiciona evento click em cada cor da paleta.
+  const config = () => {
     selectedColor = event.target.style.backgroundColor;
     removeSelected();
     event.target.classList.add('selected');
   };
-  for (let p = 0; p < paleta.length; p += 1) { // For que percorre todos os div .pixel.
-    paleta[p].addEventListener('click', config);
-  }
-}
+  paleta.forEach((pixel) => pixel.addEventListener('click', config)); // Percorre todos os div .pixel.
+};
 
-function adicionaEventPixel() {
-  const config = function () {
+const adicionaEventPixel = () => {
+  const config = () => {
     event.target.style.backgroundColor = selectedColor;
   };
-  for (let p = 0; p < pixel.length; p += 1) {
-    pixel[p].addEventListener('click', config);
-  }
-}
+  pixel.forEach((elemento) => elemento.addEventListener('click', config));
+};
 
-function eventoLimpador() {
-  btnLimpar.addEventListener('click', function () {
-    for (let p = 0; p < pixel.length; p += 1) {
-      pixel[p].style.backgroundColor = 'white';
-    }
-  });
-}
+const eventoLimpador = () => btnLimpar.addEventListener('click', configuraPixels);
 
 function mudaTamanhoQuadro(l, a) {
   quadro.style.height = `${a}px`;
   quadro.style.width = `${l}px`;
 }
 
-function apagaPixels() { // Função chamada para apagar os pixels.
-  for (let p = 0; p < pixel.length; p += 1) {
-    quadro.removeChild(pixel[p]);
-  }
-}
+// Função chamada para apagar os pixels.
+const apagaPixels = () => pixel.forEach((elemento) => quadro.removeChild(elemento));
 
-function gerarPixels(numero) { // Gera novos pixels
+const gerarPixels = (numero) => { // Gera novos pixels
   for (let n = 0; n < numero; n += 1) {
     const pix = document.createElement('div');
     pix.className = 'pixel';
     pix.style.backgroundColor = 'white';
     quadro.appendChild(pix);
   }
-}
+};
 
-function verificaEntrada(entrada) { // Verifica entrado do usuário.
+const verificaEntrada = (entrada) => { // Verifica entrado do usuário.
   if (entrada < 5) {
     entrada = 5;
   } else if (entrada > 50) {
     entrada = 50;
   }
   return entrada;
-}
+};
 
-function calculaPixels(numero) { // Calcula número de pixels.
-  return numero * numero;
-}
+const calculaPixels = (numero) => numero * numero; // Calcula número de pixels.
 
-function eventoGerador() { // Primeiro apaga os pixels.
-  btnGerar.addEventListener('click', function () {
+const eventoGerador = () => { // Primeiro apaga os pixels.
+  btnGerar.addEventListener('click', () => {
     const usuarioNumber = verificaEntrada(Number(opcaoUsuario.value));
     const numeroPixels = calculaPixels(usuarioNumber);
     const largura = (usuarioNumber * 40) + (usuarioNumber * 2);
@@ -122,12 +100,12 @@ function eventoGerador() { // Primeiro apaga os pixels.
     pixel = document.querySelectorAll('.pixel');
     adicionaEventPixel();
   });
-}
+};
 
-window.onload = function () {
+window.onload = () => {
   carregaCores();
   configuraPixels();
-  adcionaEventPaleta();
+  adicionaEventPaleta();
   adicionaEventPixel();
   eventoLimpador();
   eventoGerador();
