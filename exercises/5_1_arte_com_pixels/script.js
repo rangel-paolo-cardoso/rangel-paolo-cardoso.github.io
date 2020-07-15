@@ -39,11 +39,9 @@ const carregaCoresAleatorio = () => { // Carrega cores aleatoriamente.
   }
 };
 
-function configuraPixels() { // Cor de fundo dos pixels do painel é branca.
-  for (let p = 0; p < pixel.length; p += 1) { // For que percorre todos os div .pixel.
-    pixel[p].style.backgroundColor = 'white'; // Configura cor de fundo para branco.
-  }
-}
+// Cor de fundo dos pixels do painel é branca. forEach preenche eles.
+const configuraPixels = () =>
+  pixel.forEach((elemento) => elemento.style.backgroundColor = 'white'); // Configura cor de fundo para branco.);
 
 function removeSelected() {
   document.querySelector('.selected').classList.remove('selected');
