@@ -16,20 +16,18 @@ const geraRGB = () => `(${colorLv()}, ${colorLv()}, ${colorLv()})`;
 // Retira a cor das bolas.
 const limpaCores = () => bolas.forEach((bola) => bola.style.backgroundColor = '');
 
-function atribuiCores() { // Atribui uma cor para cada bola.
-  const comprimento = bolas.length;
-  const corCorreta = Math.floor(Math.random() * comprimento);
+const atribuiCores = () => { // Atribui uma cor para cada bola.
+  const corCorreta = Math.floor(Math.random() * bolas.length);
   bolas[corCorreta].style.backgroundColor = `rgb${adivinhaRGB.innerText}`;
-  for (let b = 0; b < comprimento; b += 1) {
-    if (bolas[b].style.backgroundColor === '') {
-      bolas[b].style.backgroundColor = `rgb${geraRGB()}`;
+  bolas.forEach((bola) => {
+    if (bola.style.backgroundColor === '') {
+      bola.style.backgroundColor = `rgb${geraRGB()}`;
     }
-  }
-}
+  });
+};
 
-function configuraRGB() { // Configura o texto com a cor a ser adivinhada.
-  adivinhaRGB.innerText = geraRGB();
-}
+// Configura o texto com a cor a ser adivinhada.
+const configuraRGB = () => adivinhaRGB.innerText = geraRGB();
 
 function mudaStatus() { // Altera o status, limita para 1 acerto por rodada.
   status = false;
@@ -69,19 +67,16 @@ function clickBall() { // Avalia o acerto.
   }
 }
 
-function eventCores() { // Adicona evento para cada bola.
-  for (let i = 0; i < bolas.length; i += 1) {
-    bolas[i].addEventListener('click', clickBall);
-  }
-}
+// Adicona evento para cada bola.
+const eventCores = () => bolas.forEach((bola) => bola.addEventListener('click', clickBall));
 
-function reiniciaJogo() { // Reinicia o jogo e seus valores padrão.
+const reiniciaJogo = () => { // Reinicia o jogo e seus valores padrão.
   limpaCores();
   configuraRGB();
   atribuiCores();
   status = true;
   answer.innerText = 'Escolha uma cor';
-}
+};
 
 function eventReset() { // Evento para o botão de reset.
   reset.addEventListener('click', reiniciaJogo);
@@ -97,7 +92,7 @@ function eventDicas() { // Evento para o botão de dicas.
   });
 }
 
-window.onload = function () {
+window.onload = () => {
   configuraRGB();
   atribuiCores();
   eventCores();
