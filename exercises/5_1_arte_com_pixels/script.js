@@ -55,14 +55,12 @@ const adicionaEventPaleta = () => { // Adiciona evento click em cada cor da pale
   paleta.forEach((pixel) => pixel.addEventListener('click', config)); // Percorre todos os div .pixel.
 };
 
-function adicionaEventPixel() {
-  const config = function () {
+const adicionaEventPixel = () => {
+  const config = () => {
     event.target.style.backgroundColor = selectedColor;
   };
-  for (let p = 0; p < pixel.length; p += 1) {
-    pixel[p].addEventListener('click', config);
-  }
-}
+  pixel.forEach((elemento) => elemento.addEventListener('click', config));
+};
 
 function eventoLimpador() {
   btnLimpar.addEventListener('click', function () {
