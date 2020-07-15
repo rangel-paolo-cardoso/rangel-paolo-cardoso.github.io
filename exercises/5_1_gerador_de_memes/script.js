@@ -17,47 +17,45 @@ btn1.addEventListener('click', mudaBorda); // Evento para o botão1.
 btn2.addEventListener('click', mudaBorda); // Evento para o botão2.
 btn3.addEventListener('click', mudaBorda); // Evento para o botão3.
 
-function apareceImagem() {
-    img.style.display = 'block';
-}
+const apareceImagem = () => img.style.display = 'block';
 
 function addImage() {
-    img.src = URL.createObjectURL(event.target.files[0]);
-    container.appendChild(img);
-    apareceImagem();
+  img.src = URL.createObjectURL(event.target.files[0]);
+  container.appendChild(img);
+  apareceImagem();
 }
 
 function addText() {
-    let memeTxt = inputText.value;
-    txt.innerText = memeTxt;
+  let memeTxt = inputText.value;
+  txt.innerText = memeTxt;
 }
 
 function mudaBorda(event) {
-    let tipo = event.target.id;
-    if(tipo === 'button1') {
-        container.style.border = '3px dashed red';
-    } else if(tipo === 'button2') {
-        container.style.border = '5px double blue';
-    } else {
-        container.style.border = '6px groove green';
-    }
+  let tipo = event.target.id;
+  if (tipo === 'button1') {
+    container.style.border = '3px dashed red';
+  } else if (tipo === 'button2') {
+    container.style.border = '5px double blue';
+  } else {
+    container.style.border = '6px groove green';
+  }
 }
 
 function usaMeme(event) {
-    let selection = event.target.src;
-    apareceImagem();
-    switch(event.target.id) {
-        case 'meme-1':
-            img.src = selection;
-            break;
-        case 'meme-2':
-            img.src = selection;
-            break;
-        case 'meme-3':
-            img.src = selection;
-            break;
-        case 'meme-4':
-            img.src = selection;
-            break;
-    }
+  let selection = event.target.src;
+  apareceImagem();
+  switch (event.target.id) {
+    case 'meme-1':
+      img.src = selection;
+      break;
+    case 'meme-2':
+      img.src = selection;
+      break;
+    case 'meme-3':
+      img.src = selection;
+      break;
+    case 'meme-4':
+      img.src = selection;
+      break;
+  }
 }

@@ -8,48 +8,36 @@ const dica = document.querySelector('div.dicas'); // Manipula div das dicas.
 let pontos = 0;
 let status = true;
 
-function colorLv() { // Gera um número aleatório entre 0 e 255.
-  return Number.parseInt(Math.random() * 255, 10);
-}
+const colorLv = () => parseInt(Math.random() * 255, 10);
 
-function geraRGB() { // Gera cor aleatória.
-  return `(${colorLv()}, ${colorLv()}, ${colorLv()})`;
-}
+// Gera cor aleatória.
+const geraRGB = () => `(${colorLv()}, ${colorLv()}, ${colorLv()})`;
 
-function limpaCores() { // Retira a cor das bolas.
-  for (let b = 0; b < bolas.length; b += 1) {
-    bolas[b].style.backgroundColor = '';
-  }
-}
+// Retira a cor das bolas.
+const limpaCores = () => bolas.forEach((bola) => bola.style.backgroundColor = '');
 
-function atribuiCores() { // Atribui uma cor para cada bola.
-  const comprimento = bolas.length;
-  const corCorreta = Math.floor(Math.random() * comprimento);
+const atribuiCores = () => { // Atribui uma cor para cada bola.
+  const corCorreta = Math.floor(Math.random() * bolas.length);
   bolas[corCorreta].style.backgroundColor = `rgb${adivinhaRGB.innerText}`;
-  for (let b = 0; b < comprimento; b += 1) {
-    if (bolas[b].style.backgroundColor === '') {
-      bolas[b].style.backgroundColor = `rgb${geraRGB()}`;
+  bolas.forEach((bola) => {
+    if (bola.style.backgroundColor === '') {
+      bola.style.backgroundColor = `rgb${geraRGB()}`;
     }
-  }
-}
+  });
+};
 
-function configuraRGB() { // Configura o texto com a cor a ser adivinhada.
-  adivinhaRGB.innerText = geraRGB();
-}
+// Configura o texto com a cor a ser adivinhada.
+const configuraRGB = () => adivinhaRGB.innerText = geraRGB();
 
-function mudaStatus() { // Altera o status, limita para 1 acerto por rodada.
-  status = false;
-}
+// Altera o status, limita para 1 acerto por rodada.
+const mudaStatus = () => status = false;
 
-function alarm() { // Muda a cor de fundo da pontuação.
-  if (pontos > 0) {
-    score.classList.remove('pontos-neg');
-  } else {
-    score.classList.add('pontos-neg');
-  }
-}
+const alarm = () => // Muda a cor de fundo da pontuação.
+  (pontos > 0)
+  ? score.classList.remove('pontos-neg')
+  : score.classList.add('pontos-neg');
 
-function configuraPlcar(tipo) { // Configura placar incrementando pontos.
+const configuraPlcar = (tipo) => { // Configura placar incrementando pontos.
   if (status) {
     if (tipo === 1) {
       pontos += 3;
@@ -62,9 +50,9 @@ function configuraPlcar(tipo) { // Configura placar incrementando pontos.
       alarm();
     }
   }
-}
+};
 
-function clickBall() { // Avalia o acerto.
+const clickBall = () => { // Avalia o acerto.
   const cor = event.target.style.backgroundColor;
   if (cor === `rgb${adivinhaRGB.innerText}`) {
     answer.innerText = 'Acertou!';
@@ -73,37 +61,34 @@ function clickBall() { // Avalia o acerto.
     configuraPlcar(2);
     answer.innerText = 'Errou! Tente novamente!';
   }
-}
+};
 
-function eventCores() { // Adicona evento para cada bola.
-  for (let i = 0; i < bolas.length; i += 1) {
-    bolas[i].addEventListener('click', clickBall);
-  }
-}
+// Adicona evento para cada bola.
+const eventCores = () =>
+  bolas.forEach((bola) => bola.addEventListener('click', clickBall));
 
-function reiniciaJogo() { // Reinicia o jogo e seus valores padrão.
+const reiniciaJogo = () => { // Reinicia o jogo e seus valores padrão.
   limpaCores();
   configuraRGB();
   atribuiCores();
   status = true;
   answer.innerText = 'Escolha uma cor';
-}
+};
 
-function eventReset() { // Evento para o botão de reset.
-  reset.addEventListener('click', reiniciaJogo);
-}
+// Evento para o botão de reset.
+const eventReset = () => reset.addEventListener('click', reiniciaJogo);
 
-function eventDicas() { // Evento para o botão de dicas.
-  dicas.addEventListener('click', function () {
+const eventDicas = () => { // Evento para o botão de dicas.
+  dicas.addEventListener('click', () => {
     if (dica.style.display === '' || dica.style.display === 'none') {
       dica.style.display = 'block';
     } else {
       dica.style.display = 'none';
     }
   });
-}
+};
 
-window.onload = function () {
+window.onload = () => {
   configuraRGB();
   atribuiCores();
   eventCores();
