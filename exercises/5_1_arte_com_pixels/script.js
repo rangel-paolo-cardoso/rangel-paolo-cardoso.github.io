@@ -102,7 +102,7 @@ const eventoGerador = () => { // Primeiro apaga os pixels.
   });
 };
 
-window.onload = function () {
+window.onload = () => {
   carregaCores();
   configuraPixels();
   adicionaEventPaleta();
