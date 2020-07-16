@@ -69,7 +69,7 @@ const exibeModal = () => {
   }, 100);
 };
 
-function setModal(param) {
+const setModal = (param) => {
   if (param === 1) {
     pelicula.style.display = 'flex';
     msgText.innerText = 'Alterações salvas com sucesso!✅';
@@ -81,11 +81,11 @@ function setModal(param) {
   } else {
     modal.style.marginTop = '-220px';
     document.querySelector('.pagina').style.filter = 'blur(0)';
-    setTimeout(function () {
+    setTimeout(() => {
       pelicula.style.display = 'none';
     }, 1000);
   }
-}
+};
 
 function concluiSalvamento() { // Função que salva no localStorage.
   const itens = lista.childNodes;
