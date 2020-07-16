@@ -157,14 +157,12 @@ const eventBtnRemoveSelecionado = () =>
     document.querySelector('.selected').remove()
   );
 
-function alteraCor() {
-  const red = Number.parseInt(Math.random() * 255, 10);
-  const green = Number.parseInt(Math.random() * 255, 10);
-  const blue = Number.parseInt(Math.random() * 255, 10);
-  corpo.style.backgroundColor = `rgb(${red},${green},${blue})`;
-}
+const alteraCor = () => {
+  const color = () => parseInt(Math.random() * 255, 10);
+  corpo.style.backgroundColor = `rgb(${color()},${color()},${color()})`;
+};
 
-window.onload = function () {
+window.onload = () => {
   eventBtnAdiciona();
   eventBtnLimpa();
   eventBtnLimpaConcluidas();
