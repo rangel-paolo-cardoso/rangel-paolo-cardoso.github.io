@@ -123,11 +123,8 @@ const eventBtnLimpaConcluidas = () => {
   });
 };
 
-function eventBtnSalvarTarefas() {
-  btnSalvaTarefas.addEventListener('click', function () {
-    salvaListaNoStorage();
-  });
-}
+const eventBtnSalvarTarefas = () =>
+  btnSalvaTarefas.addEventListener('click', () => salvaListaNoStorage());
 
 function trocaValores(itemSelecionado, itemSeguinte) {
   const backText = itemSeguinte.innerText;
