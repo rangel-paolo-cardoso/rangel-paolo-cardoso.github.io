@@ -15,31 +15,28 @@ const msgText = document.getElementById('msgText'); // Manipula mensagem.
 
 const minhaLista = [];
 
-function storeExists() { // Verifica so o navegador tem suporte a Storage.
-  return typeof Storage !== 'undefined';
-}
+// Verifica so o navegador tem suporte a Storage.
+const storeExists = () => typeof Storage !== 'undefined';
 
-function selecionaItem() { // Altera o fundo do item clicado.
+const selecionaItem = () => { // Altera o fundo do item clicado.
   const itens = document.querySelectorAll('li');
-  for (let i = 0; i < itens.length; i += 1) {
-    itens[i].style.backgroundColor = 'white';
-    itens[i].classList.remove('selected'); // remova uma classe específica.
-  }
+  itens.forEach((item) => {
+    item.style.backgroundColor = 'white';
+    item.classList.remove('selected'); // remova uma classe específica.
+  });
   event.target.style.backgroundColor = 'rgb(128,128,128)';
   event.target.classList.add('selected'); // Adiciona um classe a mais no elemento.
-}
+};
 
-function marcaItem() { // Risca o item que for clicado duas vezes, e desfaz o risco.
+const marcaItem = () => { // Risca o item que for clicado duas vezes, e desfaz o risco.
   const indentifier = event.target.className.indexOf('completed') > -1;
-  if (indentifier) {
-    event.target.classList.remove('completed');
-  } else {
-    event.target.classList.add('completed');
-  }
-}
+  (indentifier)
+  ? event.target.classList.remove('completed')
+  : event.target.classList.add('completed');
+};
 
-function criaItem() { // Cria item com base do contexto e necessidade.
-  if (textoTarefa.value === '') {
+const criaItem = () => { // Cria item com base do contexto e necessidade.
+  if (!textoTarefa.value) {
     message.style.display = 'block';
   } else {
     const item = document.createElement('li');
@@ -52,25 +49,25 @@ function criaItem() { // Cria item com base do contexto e necessidade.
     textoTarefa.focus();
     message.style.display = 'none';
   }
-}
+};
 
-function carregaLista() { // Carrega a lista salva no Storage usando a função criaItem.
+const carregaLista = () => { // Carrega a lista salva no Storage usando a função criaItem.
   if (localStorage.itens) {
     lista.innerHTML = localStorage.itens;
-    const li = lista.children;
-    for (let i = 0; i < li.length; i += 1) {
-      li[i].addEventListener('click', selecionaItem);
-      li[i].addEventListener('dblclick', marcaItem);
-    }
+    const li = lista.children; // todos os li da lista.
+    li.forEach((item) => {
+      item.addEventListener('click', selecionaItem);
+      item.addEventListener('dblclick', marcaItem);
+    });
   }
-}
+};
 
-function exibeModal() {
-  setTimeout(function () {
+const exibeModal = () => {
+  setTimeout(() {
     modal.style.marginTop = '300px';
     document.querySelector('.pagina').style.filter = 'blur(10px)';
   }, 100);
-}
+};
 
 function setModal(param) {
   if (param === 1) {
@@ -110,32 +107,21 @@ function salvaListaNoStorage() { // Usa a função concluiSalvamento, exibe mens
   }
 }
 
-function eventBtnAdiciona() { // Evento para o botão que adiciona itens.
-  btnAdiciona.addEventListener('click', function () {
-    criaItem();
-  });
-}
+// Evento para o botão que adiciona itens.
+const eventBtnAdiciona = () => btnAdiciona.addEventListener('click', () => criaItem());
 
-function eventBtnLimpa() { // Evento para o botão que limpa a lista.
-  btnLimpa.addEventListener('click', function () {
-    lista.innerHTML = '';
-  });
-}
+// Evento para o botão que limpa a lista.
+const eventBtnLimpa = () => btnLimpa.addEventListener('click', () => lista.innerHTML = '');
 
-function eventBtnLimpaConcluidas() {
-  btnLimpaConcluidas.addEventListener('click', function () {
+const eventBtnLimpaConcluidas = () => {
+  btnLimpaConcluidas.addEventListener('click', () => {
     const concluidas = document.querySelectorAll('.completed');
-    for (let c = 0; c < concluidas.length; c += 1) {
-      lista.removeChild(concluidas[c]);
-    }
+    concluidas.forEach((task) => lista.removeChild(task));
   });
-}
+};
 
-function eventBtnSalvarTarefas() {
-  btnSalvaTarefas.addEventListener('click', function () {
-    salvaListaNoStorage();
-  });
-}
+const eventBtnSalvarTarefas = () =>
+  btnSalvaTarefas.addEventListener('click', () => salvaListaNoStorage());
 
 function trocaValores(itemSelecionado, itemSeguinte) {
   const backText = itemSeguinte.innerText;
@@ -149,40 +135,33 @@ function trocaValores(itemSelecionado, itemSeguinte) {
   itemSelecionado.style.backgroundColor = 'white';
 }
 
-function eventBtnMoveCima() { // Evento para o botão mover-cima.
-  btnMoveCima.addEventListener('click', function () {
+const eventBtnMoveCima = () => { // Evento para o botão mover-cima.
+  btnMoveCima.addEventListener('click', () => {
     const itemSelecionado = document.querySelector('.selected');
     const itemAnterior = itemSelecionado.previousElementSibling;
-    if (itemAnterior !== null) {
-      trocaValores(itemSelecionado, itemAnterior);
-    }
+    if (itemAnterior !== null) trocaValores(itemSelecionado, itemAnterior);
   });
-}
+};
 
-function eventBtnMoveBaixo() { // Evento para o botão mover-baixo.
-  btnMoveBaixo.addEventListener('click', function () {
+const eventBtnMoveBaixo = () => { // Evento para o botão mover-baixo.
+  btnMoveBaixo.addEventListener('click', () => {
     const itemSelecionado = document.querySelector('.selected');
     const itemPosterior = itemSelecionado.nextElementSibling;
-    if (itemPosterior !== null) {
-      trocaValores(itemSelecionado, itemPosterior);
-    }
+    if (itemPosterior !== null) trocaValores(itemSelecionado, itemPosterior);
   });
-}
+};
 
-function eventBtnRemoveSelecionado() {
-  btnRemoveSelecionado.addEventListener('click', function () {
-    document.querySelector('.selected').remove();
-  });
-}
+const eventBtnRemoveSelecionado = () =>
+  btnRemoveSelecionado.addEventListener('click', () =>
+    document.querySelector('.selected').remove()
+  );
 
-function alteraCor() {
-  const red = Number.parseInt(Math.random() * 255, 10);
-  const green = Number.parseInt(Math.random() * 255, 10);
-  const blue = Number.parseInt(Math.random() * 255, 10);
-  corpo.style.backgroundColor = `rgb(${red},${green},${blue})`;
-}
+const alteraCor = () => {
+  const color = () => parseInt(Math.random() * 255, 10);
+  corpo.style.backgroundColor = `rgb(${color()},${color()},${color()})`;
+};
 
-window.onload = function () {
+window.onload = () => {
   eventBtnAdiciona();
   eventBtnLimpa();
   eventBtnLimpaConcluidas();
