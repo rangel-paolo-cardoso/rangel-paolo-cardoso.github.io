@@ -38,8 +38,8 @@ function marcaItem() { // Risca o item que for clicado duas vezes, e desfaz o ri
   }
 }
 
-function criaItem() { // Cria item com base do contexto e necessidade.
-  if (textoTarefa.value === '') {
+const criaItem = () => { // Cria item com base do contexto e necessidade.
+  if (!textoTarefa.value) {
     message.style.display = 'block';
   } else {
     const item = document.createElement('li');
@@ -52,7 +52,7 @@ function criaItem() { // Cria item com base do contexto e necessidade.
     textoTarefa.focus();
     message.style.display = 'none';
   }
-}
+};
 
 function carregaLista() { // Carrega a lista salva no Storage usando a função criaItem.
   if (localStorage.itens) {
@@ -110,26 +110,18 @@ function salvaListaNoStorage() { // Usa a função concluiSalvamento, exibe mens
   }
 }
 
-function eventBtnAdiciona() { // Evento para o botão que adiciona itens.
-  btnAdiciona.addEventListener('click', function () {
-    criaItem();
-  });
-}
+// Evento para o botão que adiciona itens.
+const eventBtnAdiciona = () => btnAdiciona.addEventListener('click', () => criaItem());
 
-function eventBtnLimpa() { // Evento para o botão que limpa a lista.
-  btnLimpa.addEventListener('click', function () {
-    lista.innerHTML = '';
-  });
-}
+// Evento para o botão que limpa a lista.
+const eventBtnLimpa = () => btnLimpa.addEventListener('click', () => lista.innerHTML = '');
 
-function eventBtnLimpaConcluidas() {
-  btnLimpaConcluidas.addEventListener('click', function () {
+const eventBtnLimpaConcluidas = () => {
+  btnLimpaConcluidas.addEventListener('click', () => {
     const concluidas = document.querySelectorAll('.completed');
-    for (let c = 0; c < concluidas.length; c += 1) {
-      lista.removeChild(concluidas[c]);
-    }
+    concluidas.forEach((task) => lista.removeChild(task));
   });
-}
+};
 
 function eventBtnSalvarTarefas() {
   btnSalvaTarefas.addEventListener('click', function () {
