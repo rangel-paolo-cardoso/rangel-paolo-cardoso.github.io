@@ -15,9 +15,8 @@ const msgText = document.getElementById('msgText'); // Manipula mensagem.
 
 const minhaLista = [];
 
-function storeExists() { // Verifica so o navegador tem suporte a Storage.
-  return typeof Storage !== 'undefined';
-}
+// Verifica so o navegador tem suporte a Storage.
+const storeExists = () => typeof Storage !== 'undefined';
 
 const selecionaItem = () => { // Altera o fundo do item clicado.
   const itens = document.querySelectorAll('li');
@@ -63,12 +62,12 @@ const carregaLista = () => { // Carrega a lista salva no Storage usando a funÃ§Ã
   }
 };
 
-function exibeModal() {
-  setTimeout(function () {
+const exibeModal = () => {
+  setTimeout(() => {
     modal.style.marginTop = '300px';
     document.querySelector('.pagina').style.filter = 'blur(10px)';
   }, 100);
-}
+};
 
 function setModal(param) {
   if (param === 1) {
