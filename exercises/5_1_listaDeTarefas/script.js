@@ -144,15 +144,13 @@ const eventBtnMoveCima = () => { // Evento para o botão mover-cima.
   });
 };
 
-function eventBtnMoveBaixo() { // Evento para o botão mover-baixo.
-  btnMoveBaixo.addEventListener('click', function () {
+const eventBtnMoveBaixo = () => { // Evento para o botão mover-baixo.
+  btnMoveBaixo.addEventListener('click', () => {
     const itemSelecionado = document.querySelector('.selected');
     const itemPosterior = itemSelecionado.nextElementSibling;
-    if (itemPosterior !== null) {
-      trocaValores(itemSelecionado, itemPosterior);
-    }
+    if (itemPosterior !== null) trocaValores(itemSelecionado, itemPosterior);
   });
-}
+};
 
 function eventBtnRemoveSelecionado() {
   btnRemoveSelecionado.addEventListener('click', function () {
