@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lista de Tarefas</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap">
-    </head>
-    <body>
-        <div class="pagina">
-            <header>
-                <h1>Minha Lista de Tarefas<div class="catavento"></div></h1>
-                <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
-            </header>
-            <section>
-                <input id="texto-tarefa" type="text" placeholder="Digite sua tarefa">
-                <button id="criar-tarefa">Adicionar</button>
-                <div id="mensagem" class="msgAlert">Digite algo para colocar na lista!</div>
-                <fieldset class="botoes">
-                    <button id="salvar-tarefas">Salvar Lista</button>
-                    <button id="mover-cima">↑</button>
-                    <button id="mover-baixo">↓</button>
-                    <button id="remover-selecionado">X</button>
-                    <button id="apaga-tudo" onclick="setModal(2)">Limpar lista</button>
-                    <button id="remover-finalizados">Limpar Concluídas</button>
-                </fieldset>
-                <ol id="lista-tarefas"></ol>
-            </section>
-        </div>
-        <section id="pelicula-glass" class="pelicula">
-            <div id="modal-window" class="modal">
-                <span id="msgText">Sua lista foi salva com sucesso!✅</span>
-                <button onclick="setModal(3)">OK</button>
-            </div>
-        </section>
-        <script src="script.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap"
+    />
+  </head>
+  <body>
+    <div class="pagina">
+      <header>
+        <h1>
+          Minha Lista de Tarefas
+          <div class="catavento"></div>
+        </h1>
+        <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
+      </header>
+      <section>
+        <input id="texto-tarefa" type="text" placeholder="Digite sua tarefa" />
+        <button id="criar-tarefa">Adicionar</button>
+        <div id="mensagem" class="msgAlert">Digite algo para colocar na lista!</div>
+        <fieldset class="botoes">
+          <button id="salvar-tarefas">Salvar Lista</button>
+          <button id="mover-cima">↑</button>
+          <button id="mover-baixo">↓</button>
+          <button id="remover-selecionado">X</button>
+          <button id="apaga-tudo" onclick="setModal(2)">Limpar lista</button>
+          <button id="remover-finalizados">Limpar Concluídas</button>
+        </fieldset>
+        <ol id="lista-tarefas"></ol>
+      </section>
+    </div>
+    <section id="pelicula-glass" class="pelicula">
+      <div id="modal-window" class="modal">
+        <span id="msgText">Sua lista foi salva com sucesso!✅</span>
+        <button onclick="setModal(3)">OK</button>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
 </html>
