@@ -63,13 +63,13 @@ const carregaLista = () => { // Carrega a lista salva no Storage usando a funç�
 };
 
 const exibeModal = () => {
-  setTimeout(() => {
+  setTimeout(() {
     modal.style.marginTop = '300px';
     document.querySelector('.pagina').style.filter = 'blur(10px)';
   }, 100);
 };
 
-const setModal = (param) => {
+function setModal(param) {
   if (param === 1) {
     pelicula.style.display = 'flex';
     msgText.innerText = 'Alterações salvas com sucesso!✅';
@@ -81,11 +81,11 @@ const setModal = (param) => {
   } else {
     modal.style.marginTop = '-220px';
     document.querySelector('.pagina').style.filter = 'blur(0)';
-    setTimeout(() => {
+    setTimeout(function () {
       pelicula.style.display = 'none';
     }, 1000);
   }
-};
+}
 
 function concluiSalvamento() { // Função que salva no localStorage.
   const itens = lista.childNodes;
