@@ -54,16 +54,16 @@ const criaItem = () => { // Cria item com base do contexto e necessidade.
   }
 };
 
-function carregaLista() { // Carrega a lista salva no Storage usando a função criaItem.
+const carregaLista = () => { // Carrega a lista salva no Storage usando a função criaItem.
   if (localStorage.itens) {
     lista.innerHTML = localStorage.itens;
-    const li = lista.children;
-    for (let i = 0; i < li.length; i += 1) {
-      li[i].addEventListener('click', selecionaItem);
-      li[i].addEventListener('dblclick', marcaItem);
-    }
+    const li = lista.children; // todos os li da lista.
+    li.forEach((item) => {
+      item.addEventListener('click', selecionaItem);
+      item.addEventListener('dblclick', marcaItem);
+    });
   }
-}
+};
 
 function exibeModal() {
   setTimeout(function () {
