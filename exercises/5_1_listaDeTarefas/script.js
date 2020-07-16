@@ -29,14 +29,12 @@ const selecionaItem = () => { // Altera o fundo do item clicado.
   event.target.classList.add('selected'); // Adiciona um classe a mais no elemento.
 };
 
-function marcaItem() { // Risca o item que for clicado duas vezes, e desfaz o risco.
+const marcaItem = () => { // Risca o item que for clicado duas vezes, e desfaz o risco.
   const indentifier = event.target.className.indexOf('completed') > -1;
-  if (indentifier) {
-    event.target.classList.remove('completed');
-  } else {
-    event.target.classList.add('completed');
-  }
-}
+  (indentifier)
+  ? event.target.classList.remove('completed')
+  : event.target.classList.add('completed');
+};
 
 const criaItem = () => { // Cria item com base do contexto e necessidade.
   if (!textoTarefa.value) {
@@ -138,15 +136,13 @@ function trocaValores(itemSelecionado, itemSeguinte) {
   itemSelecionado.style.backgroundColor = 'white';
 }
 
-function eventBtnMoveCima() { // Evento para o botão mover-cima.
-  btnMoveCima.addEventListener('click', function () {
+const eventBtnMoveCima = () => { // Evento para o botão mover-cima.
+  btnMoveCima.addEventListener('click', () => {
     const itemSelecionado = document.querySelector('.selected');
     const itemAnterior = itemSelecionado.previousElementSibling;
-    if (itemAnterior !== null) {
-      trocaValores(itemSelecionado, itemAnterior);
-    }
+    if (itemAnterior !== null) trocaValores(itemSelecionado, itemAnterior);
   });
-}
+};
 
 function eventBtnMoveBaixo() { // Evento para o botão mover-baixo.
   btnMoveBaixo.addEventListener('click', function () {
