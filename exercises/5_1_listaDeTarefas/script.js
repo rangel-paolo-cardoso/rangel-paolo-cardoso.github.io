@@ -152,11 +152,10 @@ const eventBtnMoveBaixo = () => { // Evento para o botão mover-baixo.
   });
 };
 
-function eventBtnRemoveSelecionado() {
-  btnRemoveSelecionado.addEventListener('click', function () {
-    document.querySelector('.selected').remove();
-  });
-}
+const eventBtnRemoveSelecionado = () =>
+  btnRemoveSelecionado.addEventListener('click', () =>
+    document.querySelector('.selected').remove()
+  );
 
 function alteraCor() {
   const red = Number.parseInt(Math.random() * 255, 10);
