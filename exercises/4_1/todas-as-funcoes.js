@@ -14,13 +14,10 @@ const calculoImposto = (custoProd, valorVenda) =>
 		? `O lucro da empresa foi de ${(valorVenda - custoProd * 0.8) * 1000}`
 		: 'Erro!';
 
-function comparacao(num1, num2) {
-  if (num1 > num2) {
-    return `Entre ${num1} e ${num2} o maior número é ${num1}`;
-  } else {
-    return `Entre ${num1} e ${num2} o maior número é ${num2}`;
-  }
-}
+const comparacao = (num1, num2) =>
+	(num1 > num2)
+		? `Entre ${num1} e ${num2} o maior número é ${num1}`
+		: `Entre ${num1} e ${num2} o maior número é ${num2}`;
 
 function imparDeTres(num1, num2, num3) {
   if (num1 % 2 != 0 || num2 % 2 != 0 || num3 % 2 != 0) {
