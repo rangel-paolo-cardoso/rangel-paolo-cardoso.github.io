@@ -7,24 +7,24 @@ const multiplicacao = (a, b) => `O resultado de ${a} * ${b} = ${a * b}`;
 const divisao = (a, b) => `O resultado de ${a} / ${b} = ${a / b}`;
 
 const angulosDoTriangulo = (ang1, ang2, ang3) =>
-	`Os ângulos representam os ângulo internos de um triângulo? ${ang1 + ang2 + ang3 === 180}`;
+  `Os ângulos representam os ângulo internos de um triângulo? ${ang1 + ang2 + ang3 === 180}`;
 
 const calculoImposto = (custoProd, valorVenda) =>
-	(custoProd > 0 && valorVenda > 0)
-		? `O lucro da empresa foi de ${(valorVenda - custoProd * 0.8) * 1000}`
-		: 'Erro!';
+  custoProd > 0 && valorVenda > 0
+    ? `O lucro da empresa foi de ${(valorVenda - custoProd * 0.8) * 1000}`
+    : 'Erro!';
 
 const comparacao = (num1, num2) =>
-	(num1 > num2)
-		? `Entre ${num1} e ${num2} o maior número é ${num1}`
-		: `Entre ${num1} e ${num2} o maior número é ${num2}`;
+  num1 > num2
+    ? `Entre ${num1} e ${num2} o maior número é ${num1}`
+    : `Entre ${num1} e ${num2} o maior número é ${num2}`;
 
 const imparDeTres = (num1, num2, num3) =>
-	(num1 % 2 != 0 || num2 % 2 != 0 || num3 % 2 != 0)
-		? `Entre ${num1}, ${num2} e ${num3} existe um ímpar.`
-		: `Não há impares entre ${num1}, ${num2}e ${num3}.`;
+  num1 % 2 != 0 || num2 % 2 != 0 || num3 % 2 != 0
+    ? `Entre ${num1}, ${num2} e ${num3} existe um ímpar.`
+    : `Não há impares entre ${num1}, ${num2}e ${num3}.`;
 
-function impostoDeRenda(salBruto) {
+const impostoDeRenda = (salBruto) => {
   let salarioBase;
   let salarioLiquido;
   let inss;
@@ -56,17 +56,14 @@ function impostoDeRenda(salBruto) {
 
   salarioLiquido = salarioBase - ir;
   return `Salário líquido é de R$ ${salarioLiquido}.`;
-}
+};
 
-function maiorDeTres(num1, num2, num3) {
-  if (num1 > num2 && num1 > num3) {
-    return `O maior número é o: ${num1}`;
-  } else if (num2 > num1 && num2 > num3) {
-    return `O maior número é o: ${num2}`;
-  } else {
-    return `O maior número é o: ${num3}`;
-  }
-}
+const maiorDeTres = (num1, num2, num3) =>
+  num1 > num2 && num1 > num3
+    ? `O maior número é o: ${num1}`
+    : num2 > num1 && num2 > num3
+    ? `O maior número é o: ${num2}`
+    : `O maior número é o: ${num3}`;
 
 function modulo(a, b) {
   return `O resultado do resto da divisão de ${a} por ${b} = ${a % b}`;
