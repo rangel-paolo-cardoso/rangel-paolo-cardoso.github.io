@@ -9,14 +9,10 @@ const divisao = (a, b) => `O resultado de ${a} / ${b} = ${a / b}`;
 const angulosDoTriangulo = (ang1, ang2, ang3) =>
 	`Os ângulos representam os ângulo internos de um triângulo? ${ang1 + ang2 + ang3 === 180}`;
 
-function calculoImposto(custoProd, valorVenda) {
-  if (custoProd > 0 && valorVenda > 0) {
-    lucro = (valorVenda - custoProd * 0.8) * 1000;
-    return `O lucro da empresa foi de ${lucro}`;
-  } else {
-    return 'Erro!';
-  }
-}
+const calculoImposto = (custoProd, valorVenda) =>
+	(custoProd > 0 && valorVenda > 0)
+		? `O lucro da empresa foi de ${(valorVenda - custoProd * 0.8) * 1000}`
+		: 'Erro!';
 
 function comparacao(num1, num2) {
   if (num1 > num2) {
