@@ -67,7 +67,7 @@ const maiorDeTres = (num1, num2, num3) =>
 
 const modulo = (a, b) => `O resultado do resto da divisão de ${a} por ${b} = ${a % b}`;
 
-function notaPorcentagem(nota) {
+const notaPorcentagem = (nota) => {
   if (nota >= 90 && nota <= 100) {
     return 'Porcentagem >= 90 -> A';
   } else if (nota >= 80 && nota < 90) {
@@ -83,7 +83,7 @@ function notaPorcentagem(nota) {
   } else {
     return 'Nota inválida';
   }
-}
+};
 
 function parDeTres(num1, num2, num3) {
   if (num1 % 2 == 0 || num2 % 2 == 0 || num3 % 2 == 0) {
