@@ -65,9 +65,7 @@ const maiorDeTres = (num1, num2, num3) =>
     ? `O maior número é o: ${num2}`
     : `O maior número é o: ${num3}`;
 
-function modulo(a, b) {
-  return `O resultado do resto da divisão de ${a} por ${b} = ${a % b}`;
-}
+const modulo = (a, b) => `O resultado do resto da divisão de ${a} por ${b} = ${a % b}`;
 
 function notaPorcentagem(nota) {
   if (nota >= 90 && nota <= 100) {
