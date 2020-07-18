@@ -90,7 +90,7 @@ const parDeTres = (num1, num2, num3) =>
     ? `Entre ${num1}, ${num2} e ${num3} existe um par.`
     : `Não há pares entre ${num1}, ${num2}e ${num3}.`;
 
-function pecaDeXadrez(peca) {
+const pecaDeXadrez = (peca) => {
   switch (peca.toLowerCase()) {
     case 'peão':
       return 'Peão -> Para frente';
@@ -107,7 +107,7 @@ function pecaDeXadrez(peca) {
     default:
       return 'Peça inválida!';
   }
-}
+};
 
 function positiveOrNegative(numero) {
   if (numero > 0) {
