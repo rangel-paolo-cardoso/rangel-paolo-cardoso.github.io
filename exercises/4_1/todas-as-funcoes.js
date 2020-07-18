@@ -19,13 +19,10 @@ const comparacao = (num1, num2) =>
 		? `Entre ${num1} e ${num2} o maior número é ${num1}`
 		: `Entre ${num1} e ${num2} o maior número é ${num2}`;
 
-function imparDeTres(num1, num2, num3) {
-  if (num1 % 2 != 0 || num2 % 2 != 0 || num3 % 2 != 0) {
-    return `Entre ${num1}, ${num2} e ${num3} existe um ímpar.`;
-  } else {
-    return `Não há impares entre ${num1}, ${num2}e ${num3}.`;
-  }
-}
+const imparDeTres = (num1, num2, num3) =>
+	(num1 % 2 != 0 || num2 % 2 != 0 || num3 % 2 != 0)
+		? `Entre ${num1}, ${num2} e ${num3} existe um ímpar.`
+		: `Não há impares entre ${num1}, ${num2}e ${num3}.`;
 
 function impostoDeRenda(salBruto) {
   let salarioBase;
