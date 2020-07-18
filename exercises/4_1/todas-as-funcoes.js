@@ -4,9 +4,7 @@ const subtracao = (a, b) => `O resultado de ${a} - ${b} = ${a - b}`;
 
 const multiplicacao = (a, b) => `O resultado de ${a} * ${b} = ${a * b}`;
 
-function adicao(a, b) {
-    return `O resultado de ${a} / ${b} = ${a / b}`;
-}
+const divisao = (a, b) => `O resultado de ${a} / ${b} = ${a / b}`;
 
 function angulosDoTriangulo(ang1, ang2, ang3) {
     let result = false;
