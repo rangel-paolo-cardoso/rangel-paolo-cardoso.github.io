@@ -109,12 +109,4 @@ const pecaDeXadrez = (peca) => {
   }
 };
 
-function positiveOrNegative(numero) {
-  if (numero > 0) {
-    return 'positive';
-  } else if (numero < 0) {
-    return 'negative';
-  } else {
-    return 'zero';
-  }
-}
+const positiveOrNegative = (numero) => (numero > 0 ? 'positive' : numero < 0 ? 'negative' : 'zero');
