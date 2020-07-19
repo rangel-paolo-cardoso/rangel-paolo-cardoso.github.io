@@ -1,19 +1,9 @@
-let numero = 922;
+let numero = 997;
 let cont = 0;
-let avaliador = false;
 
-for(let i = 1 ; i < numero ; i++) {
-    if(numero % 1 == 0 && numero % i == 0) {
-        cont++;
-    }
-    if(cont > 2) {
-        break;
-    }
+for (let i = 2; i <= numero; i += 1) {
+  if (numero % 1 == 0 && numero % i == 0) cont++;
+  if (cont > 2) break;
 }
 
-if(cont < 2) {
-    avaliador = true;
-    console.log(numero + ' é um número primo.');
-} else {
-    console.log(numero + ' não é um número primo.');
-}
+console.log(cont < 2 ? numero + ' é um número primo.' : numero + ' não é um número primo.');

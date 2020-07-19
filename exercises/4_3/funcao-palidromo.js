@@ -1,10 +1,3 @@
-function palidromo(palavra) {
-    let palidromado = palavra.split('').reverse().join('');
-    if(palidromado === palavra) {
-        return true;
-    } else {
-        return false;
-    }
-}
+const palidromo = (palavra) => palavra.split('').reverse().join('') === palavra;
 
-console.log(palidromo('Rangel'));
+console.log(`É palidromo? ${palidromo('ala')}`);

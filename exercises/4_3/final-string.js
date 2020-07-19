@@ -1,5 +1,3 @@
-function verificaFimPalavra(word, ending) {
-    return word.endsWith(ending);
-}
+const verificaFimPalavra = (word, ending) => word.endsWith(ending);
 
-console.log(verificaFimPalavra("joaofernando", "fernan"));
+console.log(verificaFimPalavra('joaofernando', 'fernando'));
