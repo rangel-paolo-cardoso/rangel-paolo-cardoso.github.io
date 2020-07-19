@@ -1,17 +1,13 @@
 let n = 5;
-let txt = [];
+const txt = [];
 let chart = '';
 txt.length = n;
 
-for(let i = 0 ; i < txt.length ; i++) {
-    txt[i] = ' ';
-}
+txt.fill(' ');
 
-for(let i = n ; i > 0 ; i--) {
-    txt[i] = '*';
-    for(let j = 0 ; j < txt.length ; j++) {
-        chart += txt[j];
-    }
-    console.log(chart);
-    chart = '';
+for (let i = n; i > 0; i -= 1) {
+  txt[i] = '*';
+  for (let j = 0; j < txt.length; j += 1) chart += txt[j];
+  console.log(chart);
+  chart = '';
 }
