@@ -1,10 +1,3 @@
-function maiorValor(vetor) {
-    let posicaoMaior = vetor[0];
-    for(valor in vetor) {
-        if(vetor[valor] > posicaoMaior)
-        posicaoMaior = valor;
-    }
-    return posicaoMaior;
-}
+const maiorValor = (vetor) => vetor.reduce((res, next) => Math.max(res, next));
 
-console.log(maiorValor([2, 3, 6, 7, 10, 1]));
+console.log(maiorValor([2, 23, 6, 7, 10, 1]));
