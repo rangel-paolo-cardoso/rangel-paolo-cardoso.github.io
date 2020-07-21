@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  text-align: center;
+}
+
+body {
+  background-color: rgb(1, 5, 131);
+}
+
+.resultado,
+fieldset,
+.form-body {
+  background-color: rgb(2, 39, 182);
+  border: 1px solid rgb(215, 255, 255);
+  color: rgb(215, 255, 255);
+}
+
+.resultado {
+  background-color: rgb(215, 255, 255);
+  color: rgb(1, 5, 131);
+  display: none;
+  margin: 10px auto;
+  width: 55%;
+}
+
+fieldset {
+  border-radius: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding: 12px;
+}
+
+legend {
+  font-size: 15pt;
+}
+
+.form-body {
+  border-radius: 10px;
+  margin: auto;
+  padding: 20px;
+  width: 60%;
+}
+
+label {
+  margin: 0;
+}
+
+input,
+textarea,
+select {
+  background-color: rgba(230, 242, 253, 0.959);
+  border: 2px solid white;
+  border-radius: 4px;
+  color: rgb(1, 5, 131);
+  margin-left: 0px;
+  text-align: left;
+  text-indent: 10px;
+  width: 20%;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border: 2px solid rgb(1, 5, 131);
+}
+
+input[type='radio'] {
+  width: 5%;
+}
+
+button {
+  background-color: rgb(215, 255, 255);
+  border: 3px solid rgb(1, 5, 131);
+  color: rgb(1, 5, 131);
+  font-size: 14pt;
+  font-weight: 900;
+  width: 30%;
+}
+
+button:hover {
+  background-color: rgb(1, 5, 131);
+  border: 3px solid rgb(215, 255, 255);
+  color: rgb(215, 255, 255);
+}
+
+textarea {
+  height: 100px;
+  margin-top: 5px;
+  resize: none;
+  width: 60%;
+}
+
+.data-error {
+  color: red;
+}

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Exercício 4.4</title>
-
     <style>
       div {
         border-color: black;
@@ -30,7 +29,7 @@
     </style>
   </head>
   <body>
-    <h1 class="title">Exercício 4.4 - JavaEscripito </h1>
+    <h1 class="title">Exercício 4.4 - JavaEscripito</h1>
     <div class="main-content">
       <div class="center-content">
         <p>Texto padrão do nosso site</p>
@@ -39,52 +38,47 @@
       </div>
     </div>
     <script>
-        // ex1
-        function mudaParagrafo(texto) {
-            document.getElementsByTagName('p')[1].innerHTML = texto;
+      // ex1
+      function mudaParagrafo(texto) {
+        document.getElementsByTagName('p')[1].innerHTML = texto;
+      }
+      // ex2
+      function mudaBackground(seletor, cor) {
+        let div = document.getElementsByClassName(seletor)[0];
+        div.style.backgroundColor = cor;
+      }
+      // ex3
+      function mudaCorDoVermelho(seletor, cor) {
+        let quadrado = document.querySelector('.main-content ' + seletor);
+        quadrado.style.backgroundColor = cor;
+      }
+      // ex4
+      function corrigeHUm(classeHUm, texto) {
+        let tag = document.querySelector(classeHUm);
+        tag.innerHTML = 'Exercício 4.4 - ' + texto;
+      }
+      // ex5
+      function tagPMaiusculo() {
+        let tagsP = document.getElementsByTagName('p');
+        for (let i = 0; i < tagsP.length; i++) {
+          tagsP[i].innerHTML = tagsP[i].innerHTML.toUpperCase();
         }
-
-        // ex2
-        function mudaBackground(seletor, cor) {
-            let div = document.getElementsByClassName(seletor)[0];
-            div.style.backgroundColor = cor;
+      }
+      // ex6
+      function retornaParagrafos() {
+        let paragrafos = document.getElementsByTagName('p');
+        for (let i = 0; i < paragrafos.length; i++) {
+          console.log(paragrafos[i].innerText);
         }
+      }
 
-        // ex3
-        function mudaCorDoVermelho(seletor, cor) {
-            let quadrado = document.querySelector('.main-content '+seletor);
-            quadrado.style.backgroundColor = cor;
-        }
-
-        // ex4
-        function corrigeHUm(classeHUm, texto) {
-            let tag = document.querySelector(classeHUm);
-            tag.innerHTML = 'Exercício 4.4 - ' + texto;
-        }
-
-        // ex5
-        function tagPMaiusculo() {
-            let tagsP = document.getElementsByTagName('p');
-            for(let i = 0 ; i < tagsP.length ; i++) {
-                tagsP[i].innerHTML = tagsP[i].innerHTML.toUpperCase();
-            }
-        }
-
-        // ex6
-        function retornaParagrafos() {
-            let paragrafos = document.getElementsByTagName('p');
-            for(let i = 0 ; i < paragrafos.length ; i++) {
-                console.log(paragrafos[i].innerText);
-            }
-        }
-
-        mudaParagrafo('Me vejo trabalhando com software development.')
-        mudaBackground('main-content', '#11a36a');
-        mudaCorDoVermelho('.center-content', 'white');
-        corrigeHUm('.title', 'JavaScript');
-        tagPMaiusculo();
-        retornaParagrafos();
-        /*
+      mudaParagrafo('Me vejo trabalhando com software development.');
+      mudaBackground('main-content', '#11a36a');
+      mudaCorDoVermelho('.center-content', 'white');
+      corrigeHUm('.title', 'JavaScript');
+      tagPMaiusculo();
+      retornaParagrafos();
+      /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
         - document.getElementsByClassName()
