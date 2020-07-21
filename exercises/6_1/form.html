@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário de Currículo</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="form-body">
+            <form name="formuser">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <p>
+                        <label for="cNome">Nome: </label>
+                        <input type="text" id="cNome" name="nome" maxlength="40" placeholder="Nome completo" required>
+                    </p>
+                    <p>
+                        <label for="cEmail">Email: </label>
+                        <input type="text" id="cEmail" name="email" placeholder="Email mais usado" pattern="^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$" maxlength="50" required>
+                    </p>
+                    <p>
+                        <label for="cCpf">CPF: </label>
+                        <input type="text" id="cCpf" name="cpf" placeholder="Ex: 000.000.000-00" pattern="^([0-9]{3}\.){2}([0-9]{3}-)([0-9]{2})$" maxlength="14" required>
+                    </p>
+                    <p>
+                        <label for="cEnd">Endereço: </label>
+                        <input type="text" id="cEnd" name="endereco" placeholder="Ex: Rua, Travessa, Av." maxlength="200" required>
+                    </p>
+                    <p>
+                        <label for="cCid">Cidade: </label>
+                        <input type="text" id="cCid" name="cidade" placeholder="Cidade onde mora" maxlength="28" required>
+                    </p>
+                    <p>
+                        <label for="cEst">Estado: </label>
+                        <select name="estado" id="cEst">
+                        </select>
+                    </p>
+                    <p>
+                        Tipo de Residência:
+                        <input type="radio" name="tipoRes" id="cCasa" value="casa" checked required>
+                        <label for="cCasa">Casa</label>
+
+                        <input type="radio" name="tipoRes" id="cApt" value="apartamento" required>
+                        <label for="cApt">Apartamento</label>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Último Emprego</legend>
+                    <p>
+                        <label for="cResumo">Resumo do currículo: </label><br>
+                        <textarea name="resumo" id="cResumo" placeholder="..." maxlength="1000" required></textarea>
+                    </p>
+                    <p>
+                        <label for="cCargo">Cargo: </label>
+                        <input type="text" id="cCargo" name="cargo" placeholder="Ultimo cargo" maxlength="40" required>
+                    </p>
+                    <p>
+                        <label for="cDesc">Descrição do cargo: </label>
+                        <input type="text" id="cDesc" name="descricao" placeholder="O que você fazia?" maxlength="500" required>
+                    </p>
+                    <p>
+                        <label for="cData">Data de início: </label>
+                        <input type="text" id="cData" name="dataInic" placeholder="Quando começou?" pattern="(\d{2})[-.\/](\d{2})[-.\/](\d{4})" required>
+                    </p>
+                    <p class="data-error"></p>
+                    <button id="btEnviar" type="submit">Enviar</button>
+                    <button id="btResetar" type="reset">Limpar</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="resultado">
+            <h2>Dados do Candidato</h2>
+            <p>
+                Nome:
+                <span class="spannome"></span>
+            </p>
+            <p>
+                Email:
+                <span class="spanemail"></span>
+            </p>
+            <p>
+                CPF:
+                <span class="spancpf"></span>
+            </p>
+            <p>
+                Endereço:
+                <span class="spanendereco"></span>
+            </p>
+            <p>
+                Cidade:
+                <span class="spancidade"></span>
+            </p>
+            <p>
+                Estado:
+                <span class="spanestado"></span>
+            </p>
+            <p>
+                Tipo de Risidência:
+                <span class="spantipoRes"></span>
+            </p>
+            <p>
+                Resumo do Currículo:
+                <span class="spanresumo"></span>
+            </p>
+            <p>
+                Cargo:
+                <span class="spancargo"></span>
+            </p>
+            <p>
+                Descrição do cargo:
+                <span class="spandescricao"></span>
+            </p>
+            <p>
+                Data de início:
+                <span class="spandataInic"></span>
+            </p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
