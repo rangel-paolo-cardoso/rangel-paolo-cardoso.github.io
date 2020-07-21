@@ -99,10 +99,10 @@
           const botoes = document.querySelectorAll('button');
           const caixasTxt = document.querySelectorAll('input');
           const storageKeys = ['muda-fundo', 'muda-cor', 'tamanho-font', 'espace-linha', 'tipo-font'];
-          for (let i = 0; i < botoes.length; i++) {
-            botoes[i].addEventListener('click', () => {
-              const {id, value} = caixasTxt[i];
-              switch (i) {
+          botoes.forEach((botao, idx) => {
+            botao.addEventListener('click', () => {
+              const {id, value} = caixasTxt[idx];
+              switch (idx) {
                 case 0:
                   localStorage.setItem(`${id}`, `${value}`);
                   document.querySelector('.' + id).style.backgroundColor = value;
@@ -125,10 +125,9 @@
                   break;
               }
             });
-          }
+          });
           storageKeys.forEach((e) => {
             const chave = e;
-            console.log(e);
             if (chave) {
               switch (chave) {
                 case 'muda-fundo':
@@ -156,7 +155,7 @@
             }
           });
         } else {
-          console.log('Não existe suporte a Web Storage.');
+          alert('Não existe suporte a Web Storage.');
         }
       };
     </script>
