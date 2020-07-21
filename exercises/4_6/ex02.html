@@ -38,6 +38,27 @@
     <script>
       const solution = document.getElementById('solution');
 
+      // Adição do teclado como evento (Bônus).
+      //let inputSquare = Number.parseInt(document.getElementById('square-input').value);
+      //inputSquare.addEventListener('keydown', function(){
+      //    solution.innerHTML += `Square of ${inputSquare}: ${squareNumber(inputSquare)}<br>`;
+      //});
+
+      const squareNumber = (num) => num * num;
+
+      const halfOf = (num) => num / 2;
+
+      const percentOf = (num1, num2) => (num1 / num2) * 100;
+
+      const areaOfCircle = (radius) => Math.PI * squareNumber(radius);
+
+      const doCrazyStuff = (num) => {
+        var half = halfOf(num);
+        var squared = squareNumber(half);
+        var area = areaOfCircle(squared);
+        var result = percentOf(squared, area);
+      }
+
       // Square
       const btnSquare = document.getElementById('square-button');
       btnSquare.addEventListener('click', () => {
@@ -60,7 +81,7 @@
         solution.innerHTML += `The Percentage of fraction ${inputPercentOne}/${inputPercentTwo} is: ${percentOf(
           inputPercentOne,
           inputPercentTwo,
-        )}<br>`;
+        )}%<br>`;
       });
 
       // Circle Area
@@ -71,31 +92,6 @@
           inputArea,
         )}<br>`;
       });
-
-      // Adição do teclado como evento (Bônus).
-      //let inputSquare = Number.parseInt(document.getElementById('square-input').value);
-      //inputSquare.addEventListener('keydown', function(){
-      //    solution.innerHTML += `Square of ${inputSquare}: ${squareNumber(inputSquare)}<br>`;
-      //});
-
-      const squareNumber = (num) => num * num;
-
-      const halfOf = (num) => num / 2;
-
-      const percentOf = (num1, num2) => (num1 / num2) * 100;
-
-      function areaOfCircle(radius) {
-        var area = Math.PI * squareNumber(radius);
-        console.log('The area of circle with radius ' + radius + ' is ' + area);
-        return area;
-      }
-
-      function doCrazyStuff(num) {
-        var half = halfOf(num);
-        var squared = squareNumber(half);
-        var area = areaOfCircle(squared);
-        var result = percentOf(squared, area);
-      }
     </script>
   </body>
 </html>
