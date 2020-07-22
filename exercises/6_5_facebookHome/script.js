@@ -17,18 +17,16 @@ function addRadio() {
   }
 }
 
-function mensagemRetorno(resposta) {
+const mensagemRetorno = (resposta) => {
   mensagem = [];
   if (resposta) {
-    for (let i = 0; i < regisInputs.length; i += 1) {
-      mensagem.push(regisInputs[i].value);
-    }
+    regisInputs.forEach((input) => mensagem.push(input.value));
     addRadio();
     alert(mensagem.join(' - '));
   } else {
     alert('Dados inválidos');
   }
-}
+};
 
 const validaResitro = () => {
   let valid = true;
