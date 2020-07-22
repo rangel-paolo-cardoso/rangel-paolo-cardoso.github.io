@@ -33,7 +33,7 @@ const objEstados = {
   to: 'Tocantins',
 };
 
-function setEstado() {
+const setEstado = () => {
   const estados = document.getElementById('cEst');
   for (estado in objEstados) {
     const option = document.createElement('option');
@@ -41,9 +41,9 @@ function setEstado() {
     option.innerText = objEstados[estado];
     estados.appendChild(option);
   }
-}
+};
 
-function configuraResultado() {
+const configuraResultado = () => {
   [...form.elements].forEach((campo) => {
     if (['text', 'select-one', 'textarea'].indexOf(campo.type) > -1) {
       document.querySelector(`span.span${campo.name}`).innerHTML = campo.value;
@@ -52,24 +52,22 @@ function configuraResultado() {
       document.querySelector(`span.span${campo.name}`).innerHTML = campo.value;
     }
   });
-}
+};
 
-function validaForm() {
+const validaForm = () => {
   if (validation.isValid()) {
     resultado.classList.remove('is-hidden');
     configuraResultado();
   }
-}
+};
 
-function limpaTudo() {
+const limpaTudo = () => {
   const spans = document.querySelectorAll('span');
-  for (let i = 0; i < spans.length; i += 1) {
-    spans[i].innerHTML = '';
-  }
+  spans.forEach((span) => (span.innerHTML = ''));
   resultado.classList.add('is-hidden');
-}
+};
 
-window.onload = function () {
+window.onload = () => {
   setEstado();
   cData.DatePickerX.init({
     format: 'dd/mm/yyyy',
