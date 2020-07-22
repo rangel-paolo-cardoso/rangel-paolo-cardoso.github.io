@@ -118,22 +118,22 @@ body {
 }
 
 .description {
+  -webkit-transition: background-color 1s, color 1s, box-shadow 1s;
   background-color: rgba(100, 100, 100, 0.2);
-  border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   color: rgba(255, 255, 255, 0.18);
   display: flex;
-  font-size: 2.2vh;
-  flex-direction: column;
   flex-basis: 8.6em;
-  max-height: 45%;
+  flex-direction: column;
+  font-size: 2.2vh;
   line-height: 4.8vh;
   margin: 0;
+  max-height: 45%;
   padding: 45px;
   text-align: justify;
   transition: background-color, color 1.2s;
-  -webkit-transition: background-color 1s, color 1s, box-shadow 1s;
   width: 30%;
 }
 
@@ -154,7 +154,9 @@ body {
 }
 
 /* Agrupamento de containers relacionados */
-.habs , .portfolio , .favorito {
+.habs,
+.portfolio,
+.favorito {
   align-items: center;
   display: flex;
   flex-direction: column;
