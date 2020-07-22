@@ -7,11 +7,7 @@ const regisInputs = document.querySelectorAll('input.res-data');
 const radios = document.querySelectorAll('input[type=radio]');
 let mensagem = [];
 
-function exibeLogin() {
-  if (email.value !== '') {
-    alert(email.value);
-  }
-}
+const exibeLogin = () => email.value !== '' && alert(email.value);
 
 function addRadio() {
   for (let j = 0; j < radios.length; j += 1) {
