@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Facebook – entre ou cadastre-se</title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-      <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook – entre ou cadastre-se</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="corpo">
@@ -21,7 +21,9 @@
               <tbody>
                 <tr>
                   <td>
-                    <label class="form-label" id="user-email-phone-label" for="user-email-phone">Email ou telefone</label>
+                    <label class="form-label" id="user-email-phone-label" for="user-email-phone"
+                      >Email ou telefone</label
+                    >
                   </td>
                   <td>
                     <label class="form-label" for="user-password">Senha</label>
@@ -29,10 +31,10 @@
                 </tr>
                 <tr>
                   <td>
-                    <input class="data-entry" type="text" id="user-email-phone" required>
+                    <input class="data-entry" type="text" id="user-email-phone" required />
                   </td>
                   <td>
-                    <input class="data-entry" type="password" id="user-password" required>
+                    <input class="data-entry" type="password" id="user-password" required />
                   </td>
                   <td>
                     <button class="data-login" type="submit" id="button-login">Entrar</button>
@@ -55,10 +57,10 @@
         <div class="res-section">
           <div class="presentation">
             <div class="pres-text">
-              O Facebook ajuda você a se conectar e compartilhar com as pessoas que
-              fazem parte da sua vida.
+              O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da
+              sua vida.
             </div>
-            <img id="facebook-networking" src="imagens/networking.png">
+            <img id="facebook-networking" src="imagens/networking.png" />
           </div>
           <div class="register">
             <div class="register-title">
@@ -69,21 +71,21 @@
               <form class="user-data-info" name="resg-form" action="#">
                 <div class="user-login-data">
                   <div class="user-name">
-                    <input type="text" class="res-data" placeholder="Nome">
-                    <input type="text" class="res-data" placeholder="Sobrenome">
+                    <input type="text" class="res-data" placeholder="Nome" />
+                    <input type="text" class="res-data" placeholder="Sobrenome" />
                   </div>
                   <div class="user-email">
-                    <input type="text" class="res-data" placeholder="Celular ou email">
+                    <input type="text" class="res-data" placeholder="Celular ou email" />
                   </div>
                   <div class="user-pass">
-                    <input type="password" class="res-data" placeholder="Nova senha">
+                    <input type="password" class="res-data" placeholder="Nova senha" />
                   </div>
                 </div>
                 <div class="user-birth">
                   <div class="info-title">Data de nascimento</div>
                   <div class="birth-container">
                     <div class="date-select">
-                      <input id="data-nasc" class="res-data" type="text" placeholder="dd/mm/aaaa">
+                      <input id="data-nasc" class="res-data" type="text" placeholder="dd/mm/aaaa" />
                     </div>
                     <div class="info-message">
                       <a href="#">
@@ -96,15 +98,15 @@
                   <div class="info-title">Gênero</div>
                   <div class="user-gender">
                     <div class="gender-fem">
-                      <input type="radio" name="genero" id="femGen" checked value="Feminino">
+                      <input type="radio" name="genero" id="femGen" checked value="Feminino" />
                       <label for="femGen">Feminino</label>
                     </div>
                     <div class="gender-masc">
-                      <input type="radio" name="genero" id="mascGen" value="Masculino">
+                      <input type="radio" name="genero" id="mascGen" value="Masculino" />
                       <label for="mascGen">Masculino</label>
                     </div>
                     <div class="gender-pers">
-                      <input type="radio" name="genero" id="persGen" value="Personalizado">
+                      <input type="radio" name="genero" id="persGen" value="Personalizado" />
                       <label for="persGen">Personalizado</label>
                     </div>
                   </div>
@@ -116,8 +118,8 @@
                   <div class="res-dicas">
                     <p class="res-dicas-text">
                       Ao clicar em Cadastre-se, você concorda com nossos <a href="#">Termos</a>,
-                      <a href="#">Política de Dados</a> e <a href="#">Política de Cookies</a>. Você pode receber
-                      notificações por SMS e pode cancelar isso quando quiser.
+                      <a href="#">Política de Dados</a> e <a href="#">Política de Cookies</a>. Você
+                      pode receber notificações por SMS e pode cancelar isso quando quiser.
                     </p>
                   </div>
                 </div>
@@ -206,7 +208,7 @@
           const month = date.getMonth() + 1;
           const year = date.getFullYear();
           return `${day}/${month}/${year}`;
-        }
+        },
       });
     </script>
   </body>

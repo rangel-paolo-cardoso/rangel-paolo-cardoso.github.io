@@ -7,44 +7,32 @@ const regisInputs = document.querySelectorAll('input.res-data');
 const radios = document.querySelectorAll('input[type=radio]');
 let mensagem = [];
 
-function exibeLogin() {
-  if (email.value !== '') {
-    alert(email.value);
-  }
-}
+const exibeLogin = () => email.value !== '' && alert(email.value);
 
-function addRadio() {
-  for (let j = 0; j < radios.length; j += 1) {
-    if (radios[j].checked) {
-      mensagem.push(radios[j].value);
-    }
-  }
-}
+const addRadio = () => radios.forEach((radio) => radio.checked && mensagem.push(radio.value));
 
-function mensagemRetorno(resposta) {
+const mensagemRetorno = (resposta) => {
   mensagem = [];
   if (resposta) {
-    for (let i = 0; i < regisInputs.length; i += 1) {
-      mensagem.push(regisInputs[i].value);
-    }
+    regisInputs.forEach((input) => mensagem.push(input.value));
     addRadio();
     alert(mensagem.join(' - '));
   } else {
     alert('Dados inválidos');
   }
-}
+};
 
-function validaResitro() {
+const validaResitro = () => {
   let valid = true;
-  for (let i = 0; i < regisInputs.length; i += 1) {
-    if (regisInputs[i].value === '') {
+  regisInputs.forEach((input) => {
+    if (input.value === '') {
       valid = false;
     }
-  }
+  });
   mensagemRetorno(valid);
-}
+};
 
-window.onload = function () {
+window.onload = () => {
   btLogar.onclick = exibeLogin;
   btRegister.onclick = validaResitro;
   formResg.addEventListener('submit', (e) => {
