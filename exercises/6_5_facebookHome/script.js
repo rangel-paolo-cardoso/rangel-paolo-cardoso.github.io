@@ -9,13 +9,7 @@ let mensagem = [];
 
 const exibeLogin = () => email.value !== '' && alert(email.value);
 
-function addRadio() {
-  for (let j = 0; j < radios.length; j += 1) {
-    if (radios[j].checked) {
-      mensagem.push(radios[j].value);
-    }
-  }
-}
+const addRadio = () => radios.forEach((radio) => radio.checked && mensagem.push(radio.value));
 
 const mensagemRetorno = (resposta) => {
   mensagem = [];
