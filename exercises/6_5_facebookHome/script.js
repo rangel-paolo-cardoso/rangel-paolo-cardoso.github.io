@@ -30,17 +30,17 @@ function mensagemRetorno(resposta) {
   }
 }
 
-function validaResitro() {
+const validaResitro = () => {
   let valid = true;
-  for (let i = 0; i < regisInputs.length; i += 1) {
-    if (regisInputs[i].value === '') {
+  regisInputs.forEach((input) => {
+    if (input.value === '') {
       valid = false;
     }
-  }
+  });
   mensagemRetorno(valid);
-}
+};
 
-window.onload = function () {
+window.onload = () => {
   btLogar.onclick = exibeLogin;
   btRegister.onclick = validaResitro;
   formResg.addEventListener('submit', (e) => {
