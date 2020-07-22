@@ -44,56 +44,56 @@
           <input type="text" id="cCid" class="input is-primary validate form-control" data-validate="required" name="cidade" placeholder="Cidade onde mora" maxlength="28">
         </label>
       </p>
-      <p>
-        <label class="label is-medium">Estado: 
-          <div class="select is-medium is-fullwidth is-rounded is-primary">
-            <select name="estado" class="validate form-control" id="cEst" data-validate="required">
-              <option selected></option>
-            </select>
-          </div>
-        </label>
-      </p>
-      <p>
-      <p class="label is-medium">Tipo de Residência:</p>
-        <label class="label is-inline">Casa
-          <input type="radio" name="tipoRes" id="cCasa" data-validate="required" class="radio" value="casa" checked>
-        </label>
+           <p>
+             <label class="label is-medium">Estado: 
+               <div class="select is-medium is-fullwidth is-rounded is-primary">
+                 <select name="estado" class="validate form-control" id="cEst" data-validate="required">
+                   <option selected></option>
+                 </select>
+               </div>
+             </label>
+           </p>
+            <p>
+              <p class="label is-medium">Tipo de Residência:</p>
+              <label class="label is-inline">Casa
+                <input type="radio" name="tipoRes" id="cCasa" data-validate="required" class="radio" value="casa" checked>
+              </label>
 
-  <label class="label is-inline">Apartamento
-    <input type="radio" name="tipoRes" id="cApt" data-validate="required" class="radio" value="apartamento">
-  </label>
-  </p>
-  </div>
-  <div class="content">
-  <p class="title is-2">Último Emprego</p>
-  <p>
-  <label class="label is-medium">Resumo do currículo: 
-    <textarea name="resumo" id="cResumo" data-validate="required" class="textarea is-primary validate form-control" placeholder="..." maxlength="1000"></textarea>
-  </label>
-  </p>
-  <p>
-  <label class="label is-medium">Cargo: 
-    <input type="text" id="cCargo" data-validate="required" class="input is-primary validate form-control" name="cargo" placeholder="Ultimo cargo" maxlength="40">
-  </label>
-  </p>
-  <p>
-  <label class="label is-medium">Descrição do cargo: 
-    <input type="text" id="cDesc" data-validate="required" class="input is-primary validate form-control" name="descricao" placeholder="O que você fazia?" maxlength="500">
-  </label>
-  </p>
-  <p>
-  <label class="label is-medium">Data de início: 
-    <input type="text" id="cData" data-validate="required" class="input number is-primary validate form-control" name="dataInic" placeholder="Quando começou?">
-  </label>
-  </p>
-  <p class="data-error has-text-danger"></p>
-  <div class="buttons are-medium">
-  <button id="btEnviar" class="button is-primary is-outlined is-fullwidth" type="submit">Enviar</button>
-  <button id="btResetar" class="button is-danger is-outlined is-fullwidth" type="reset">Limpar</button>
-  </div>
-  </div>
-  </form>
-    </section>
+              <label class="label is-inline">Apartamento
+                <input type="radio" name="tipoRes" id="cApt" data-validate="required" class="radio" value="apartamento">
+              </label>
+            </p>
+          </div>
+          <div class="content">
+            <p class="title is-2">Último Emprego</p>
+            <p>
+              <label class="label is-medium">Resumo do currículo: 
+                <textarea name="resumo" id="cResumo" data-validate="required" class="textarea is-primary validate form-control" placeholder="..." maxlength="1000"></textarea>
+              </label>
+            </p>
+            <p>
+              <label class="label is-medium">Cargo: 
+                <input type="text" id="cCargo" data-validate="required" class="input is-primary validate form-control" name="cargo" placeholder="Ultimo cargo" maxlength="40">
+              </label>
+            </p>
+            <p>
+              <label class="label is-medium">Descrição do cargo: 
+                <input type="text" id="cDesc" data-validate="required" class="input is-primary validate form-control" name="descricao" placeholder="O que você fazia?" maxlength="500">
+              </label>
+            </p>
+            <p>
+              <label class="label is-medium">Data de início: 
+                <input type="text" id="cData" data-validate="required" class="input number is-primary validate form-control" name="dataInic" placeholder="Quando começou?">
+              </label>
+            </p>
+            <p class="data-error has-text-danger"></p>
+            <div class="buttons are-medium">
+              <button id="btEnviar" class="button is-primary is-outlined is-fullwidth" type="submit">Enviar</button>
+              <button id="btResetar" class="button is-danger is-outlined is-fullwidth" type="reset">Limpar</button>
+            </div>
+          </div>
+        </form>
+      </section>
       <footer id="rodape" class="hero-foot footer is-hidden">
         <div class="resultado is-medium has-text-centered">
           <h2 class="title">Dados do Candidato</h2>
@@ -133,12 +133,12 @@
             Cargo:
             <span class="spancargo"></span>
           </p>
-            <p class="label">
-              Descrição do cargo:
-              <span class="spandescricao"></span>
-            </p>
-            <p class="label">
-              Data de início:
+          <p class="label">
+            Descrição do cargo:
+            <span class="spandescricao"></span>
+          </p>
+          <p class="label">
+            Data de início:
             <span class="spandataInic"></span>
           </p>
         </div>
