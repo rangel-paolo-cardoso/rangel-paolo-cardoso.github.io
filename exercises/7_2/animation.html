@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercícios 7.3</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 90%;
+        height: 100px;
+        border: 1px solid red;
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+      .flex-direction__column {
+        flex-direction: column;
+      }
+      .justify-content__space-between {
+        justify-content: space-between;
+      }
+      .justify-content__center {
+        justify-content: center;
+      }
+      .align-items__flex-start {
+        align-items: flex-start;
+      }
+      .automatic-box-height {
+        height: auto;
+      }
+      .ball {
+        border-radius: 100%;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .red {
+        background-color: red;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .black {
+        background-color: black;
+      }
+      .medium {
+        width: 50px;
+        height: 50px;
+      }
+
+      #exercise-4 {
+        animation: vaiFica 5s;
+        animation-play-state: paused;
+        background: url('https://cdn.pixabay.com/photo/2012/01/09/09/10/sun-11582_960_720.jpg') 50%;
+      }
+
+      #exercise-4:hover {
+        animation-play-state: running;
+      }
+
+      #section-5:hover {
+        animation: tabsIn 5s forwards;
+      }
+
+      #exercise-6 {
+        background: url('https://cdn.pixabay.com/photo/2014/01/28/08/49/meadow-253616_960_720.jpg');
+      }
+
+      #exercise-6-square {
+        background: url('https://cdn.pixabay.com/photo/2014/06/25/06/33/light-bulb-376926_960_720.jpg');
+        background-size: cover;
+      }
+
+      #exercise-6-square:hover + div {
+        animation: dirTabs 5s;
+      }
+
+      #exercise-11_1,
+      #exercise-11_2,
+      #exercise-11_3,
+      #exercise-11_4,
+      #exercise-11_5 {
+        animation: corre 2s 3s infinite alternate;
+      }
+
+      #exercise-11_1 {
+        animation-timing-function: linear;
+      }
+
+      #exercise-11_2 {
+        animation-timing-function: ease;
+      }
+
+      #exercise-11_3 {
+        animation-timing-function: ease-in;
+      }
+
+      #exercise-11_4 {
+        animation-timing-function: ease-out;
+      }
+
+      #exercise-11_5 {
+        animation-timing-function: ease-in-out;
+      }
+
+      #exercise-12 {
+        animation-duration: 1s;
+        animation-name: sumir;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        animation-play-state: paused;
+      }
+
+      #exercise-12:active {
+        animation-play-state: running;
+      }
+
+      @keyframes sumir {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes corre {
+        0% {
+          margin-left: 0%;
+        }
+
+        100% {
+          margin-left: 97%;
+        }
+      }
+
+      @keyframes vaiFica {
+        0% {
+          margin-left: 0;
+        }
+
+        100% {
+          margin-left: 97%;
+        }
+      }
+
+      @keyframes vaiVolta {
+        0% {
+          margin-left: 0;
+        }
+
+        50% {
+          margin-left: 100%;
+        }
+
+        100% {
+          margin-left: 0%;
+        }
+      }
+
+      @keyframes tabsIn {
+        0% {
+          padding-left: 0%;
+        }
+
+        100% {
+          padding-left: 87%;
+        }
+      }
+
+      @keyframes dirTabs {
+        0% {
+          margin-right: 0%;
+        }
+
+        100% {
+          margin-right: 93.5%;
+        }
+      }
+
+      @keyframes growthing {
+        0% {
+          transform: scale(1);
+        }
+
+        100% {
+          width: 100%;
+        }
+      }
+
+      @keyframes alrCor {
+        0% {
+          background: red;
+        }
+
+        100% {
+          background: yellow;
+        }
+      }
+
+      @keyframes alr4Cor {
+        0% {
+          background: red;
+        }
+
+        25% {
+          background: yellow;
+        }
+
+        50% {
+          background: blue;
+        }
+
+        75% {
+          background: green;
+        }
+      }
+
+      @keyframes growCAlt {
+        0% {
+          background: red;
+          transform: scale(1);
+        }
+
+        25% {
+          background: yellow;
+        }
+
+        50% {
+          background: blue;
+        }
+
+        75% {
+          background: green;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li>
+        <section>
+          <div id="exercise-1" class="ball green medium"></div>
+        </section>
+      </li>
+      <li>
+        <section>
+          <div id="exercise-2" class="ball green medium"></div>
+        </section>
+      </li>
+      <li>
+        <section>
+          <div id="exercise-3" class="ball green medium"></div>
+        </section>
+      </li>
+      <li>
+        <section>
+          <div id="exercise-4" class="ball green medium"></div>
+        </section>
+      </li>
+      <li>
+        <section id="section-5">
+          <div id="exercise-5" class="ball green medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__space-between">
+          <div id="exercise-6-square" class="blue medium"></div>
+          <div id="exercise-6" class="ball green medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__center">
+          <div id="exercise-7" class="blue medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__center">
+          <div id="exercise-8" class="red medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__center">
+          <div id="exercise-9" class="red medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__center">
+          <div id="exercise-10" class="red medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="flex-direction__column align-items__flex-start automatic-box-height">
+          <div id="exercise-11_1" class="red medium"></div>
+          <div id="exercise-11_2" class="blue medium"></div>
+          <div id="exercise-11_3" class="green medium"></div>
+          <div id="exercise-11_4" class="yellow medium"></div>
+          <div id="exercise-11_5" class="black medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__center">
+          <div id="exercise-12" class="black medium"></div>
+        </section>
+      </li>
+    </ol>
+    <script>
+      const div1 = document.getElementById('exercise-1');
+      const div2 = document.getElementById('exercise-2');
+      const div3 = document.getElementById('exercise-3');
+      // const div4 = document.getElementById('exercise-4');
+      const div7 = document.getElementById('exercise-7');
+      const div8 = document.getElementById('exercise-8');
+      const div9 = document.getElementById('exercise-9');
+      const div10 = document.getElementById('exercise-10');
+      const ex11 = document.querySelectorAll('.flex-direction__column div');
+
+      const div111 = document.getElementById('exercise-11_1');
+      const div112 = document.getElementById('exercise-11_2');
+      const div113 = document.getElementById('exercise-11_3');
+      const div114 = document.getElementById('exercise-11_4');
+      const div115 = document.getElementById('exercise-11_5');
+      window.onload = () => {
+        setTimeout(() => {
+          div1.style.animationDuration = '3s';
+          div1.style.animationName = 'vaiFica';
+          div1.style.animationFillMode = 'forwards';
+          div1.style.background =
+            'url(https://cdn.pixabay.com/photo/2014/01/28/08/49/meadow-253616_960_720.jpg) 50%';
+
+          div2.style.animationDuration = '2s';
+          div2.style.animationName = 'vaiFica';
+          div2.style.animationFillMode = 'forwards';
+          div2.style.background =
+            'url(https://cdn.pixabay.com/photo/2014/01/28/08/49/meadow-253616_960_720.jpg) 50%';
+
+          div3.style.animationDuration = '1s';
+          div3.style.animationName = 'vaiVolta';
+          div3.style.animationDirection = 'alternate';
+
+          div7.style.animationDuration = '10s';
+          div7.style.animationName = 'growthing';
+          div7.style.animationIterationCount = 'infinite';
+          div7.style.background =
+            'url(https://cdn.pixabay.com/photo/2018/06/13/18/20/wave-3473335_960_720.jpg) 50%';
+
+          div8.style.animationDuration = '4s';
+          div8.style.animationName = 'alrCor';
+
+          div9.style.animationDuration = '4s';
+          div9.style.animationName = 'alr4Cor';
+          div9.style.animationIterationCount = 'infinite';
+          div9.style.animationDirection = 'alternate';
+
+          div10.style.animationDuration = '10s';
+          div10.style.animationName = 'growCAlt';
+          div10.style.animationIterationCount = 'infinite';
+          div10.style.animationDirection = 'alternate';
+        }, 1000);
+
+        setTimeout(function () {}, 2000);
+      };
+    </script>
+  </body>
+</html>

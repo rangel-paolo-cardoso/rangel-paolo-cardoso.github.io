@@ -1,0 +1,55 @@
+body {
+    background: url('https://image.freepik.com/foto-gratis/fichas-casino-dados-mesa-verde_23-2147881287.jpg') repeat-y;
+    background-size: 100%;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+img {
+    box-shadow: 0 0 15px yellow;
+    margin: 10px 20px;
+    width: 200px;
+}
+
+img:hover {
+    box-shadow: 0 0 30px white;
+}
+
+/* Efeitos das cartas */
+.grow:hover {
+    transform: scale(1.5);
+}
+
+.rotateRight:hover {
+    transform: rotate(360deg);
+}
+
+.rotateLeft:hover {
+    transform: rotate(-360deg);
+}
+
+.rotateX:hover {
+    transform: rotatex(360deg);
+}
+
+.rotateY:hover {
+    transform: rotateY(180deg);
+}
+
+.translateIt:hover {
+    transform: translate(20px, 20px);
+}
+
+.rotate3D:hover {
+    transform: rotate3d(1, 1, 1, 200deg);
+}
