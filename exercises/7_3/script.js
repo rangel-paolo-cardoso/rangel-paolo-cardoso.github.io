@@ -17,15 +17,11 @@ const cartas = [
   'cartas/tres-de-ouros.png',
 ]; // Vetor de endereços de cartas.
 
-function posCarta() {
-  // Posição da carta.
-  return Math.floor(Math.random() * cartas.length);
-}
+// Posição da carta.
+const posCarta = () => Math.floor(Math.random() * cartas.length);
 
-function posEfeito() {
-  // Posição do efeito.
-  return Math.floor(Math.random() * efeitos.length);
-}
+// Posição do efeito.
+const posEfeito = () => Math.floor(Math.random() * efeitos.length);
 
 // Número de 0 a 10.
 const numbGerardor = () => Math.ceil(Math.random() * 3);
