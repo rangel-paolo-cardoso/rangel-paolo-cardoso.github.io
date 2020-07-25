@@ -1,4 +1,4 @@
-var myDog = {
+const myDog = {
   "name": "Coder",
   "legs": 4,
   "tails": 1,
