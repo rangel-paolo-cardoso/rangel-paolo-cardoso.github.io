@@ -1,5 +1,5 @@
 const assert = require('assert');
 
-function thereIs() {}
+const thereIs = () => {};
 
 assert.equal(typeof thereIs, 'function');
