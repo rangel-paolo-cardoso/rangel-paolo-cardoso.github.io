@@ -1,12 +1,11 @@
 const assert = require('assert');
 
-const addAllnumbers = (vet) => {
-  let sum = 0;
-  for (let i in vet) {
-    sum += vet[i];
-  }
-  return sum;
-};
+const addAllnumbers = (vet) => vet.reduce((res, nxt) => res + nxt);
+  // let sum = 0;
+  // for (let i in vet) {
+  //   sum += vet[i];
+  // }
+  // return sum;
 
 const numbers = [9, 23, 10, 3, 8];
 const expected = 53;
