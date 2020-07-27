@@ -1,11 +1,10 @@
 const assert = require('assert');
-const addOne = (arr) => {
-  let vet = [];
-  for (let i in arr) {
-    vet.push(arr[i] + 1);
-  }
-  return vet;
-};
+const addOne = (arr) => arr.map((n) => n + 1);
+  // let vet = [];
+  // for (let i in arr) {
+  //   vet.push(arr[i] + 1);
+  // }
+  // return vet;
 
 const myArray = [31, 57, 12, 5];
 const unchanged = [31, 57, 12, 5];
