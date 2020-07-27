@@ -1,12 +1,11 @@
 const assert = require('assert');
 
-const wordLengths = (vet) => {
-  let lenWords = [];
-  for (let i in vet) {
-    lenWords.push(vet[i].length);
-  }
-  return lenWords;
-};
+const wordLengths = (vet) => vet.map((word) => word.length);
+  // let lenWords = [];
+  // for (let i in vet) {
+  //   lenWords.push(vet[i].length);
+  // }
+  // return lenWords;
 
 const words = ['sun', 'potato', 'roundabout', 'pizza'];
 const expected = [3, 6, 10, 5];
