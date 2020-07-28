@@ -1,27 +1,41 @@
 const assert = require('assert');
 
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
 const removeVowels = (word) => {
-  const characters = word.split('');
   let results = '';
   let count = 0;
 
-  for (let i = 0; i < characters.length; i += 1) {
-    if (
-      characters[i] === 'a' ||
-      characters[i] === 'o' ||
-      characters[i] === 'i' ||
-      characters[i] === 'e' ||
-      characters[i] === 'u'
-    ) {
-        count += 1;
+  word.split('').forEach((char) => {
+    if (vowels.includes(char)) {
+      count += 1;
       results += count;
     } else {
-      results += characters[i];
+      results += char;
     }
-  }
-  return results;
-};
+  });
 
+  return results;
+  // const characters = word.split('');
+  // let results = '';
+  // let count = 0;
+
+  // for (let i = 0; i < characters.length; i += 1) {
+  //   if (
+  //     characters[i] === 'a' ||
+  //     characters[i] === 'o' ||
+  //     characters[i] === 'i' ||
+  //     characters[i] === 'e' ||
+  //     characters[i] === 'u'
+  //   ) {
+  //     count += 1;
+  //     results += count;
+  //   } else {
+  //     results += characters[i];
+  //   }
+  // }
+  // return results;
+};
 
 const parameter = 'Dayane';
 const result = 'D1y2n3';

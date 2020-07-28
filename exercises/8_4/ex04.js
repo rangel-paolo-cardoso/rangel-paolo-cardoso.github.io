@@ -1,8 +1,6 @@
 const assert = require('assert');
 
-const findTheNeedle = (vet, word) => {
-  return vet.indexOf(word);
-};
+const findTheNeedle = (vet, word) => vet.indexOf(word);
 
 
 let words = ['house', 'train', 'slide', 'needle', 'book'];
