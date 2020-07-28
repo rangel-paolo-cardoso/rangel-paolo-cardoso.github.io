@@ -1,13 +1,12 @@
 const assert = require('assert');
 
-const factorial = (n) => {
-  let fat = 1;
-  if (n < 2) return 1;
-  for (let i = n; i > 1; i -= 1) {
-    fat *= i;
-  }
-  return fat;
-};
+const factorial = (n) => (n === 0) ? 1 : n * factorial(n - 1);
+  // let fat = 1;
+  // if (n < 2) return 1;
+  // for (let i = n; i > 1; i -= 1) {
+  //   fat *= i;
+  // }
+  // return fat;
 
 const in1 = 5;
 const exp1 = 120;
