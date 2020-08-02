@@ -7,7 +7,7 @@ const books = [
     genre: 'Fantasia',
     author: {
       name: 'George R. R. Martin',
-      birthYear: 1948
+      birthYear: 1948,
     },
     releaseYear: 1991,
   },
@@ -47,7 +47,7 @@ const books = [
     genre: 'Terror',
     author: {
       name: 'Stephen King',
-      birthYear: 1947
+      birthYear: 1947,
     },
     releaseYear: 1986,
   },
@@ -65,7 +65,7 @@ const books = [
 
 const smallerName = () => {
   let mLen = books[0].name;
-  books.forEach(book => mLen = (book.name.length < mLen.length)? book.name : mLen);
+  books.forEach((book) => (mLen = book.name.length < mLen.length ? book.name : mLen));
   return mLen;
 };
 

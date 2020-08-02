@@ -86,7 +86,8 @@ const expected_result = [
     releaseYear: 1954
   }
 ]
+const year = () => new Date().getFullYear();
 
-const oldBooks = () => books.filter(book => 2020 - book.releaseYear > 60).sort((a, b) => a.releaseYear - b.releaseYear);
+const oldBooks = () => books.filter((book) => year() - book.releaseYear > 60).sort((a, b) => a.releaseYear - b.releaseYear);
 
 assert.deepEqual(oldBooks(), expected_result);
