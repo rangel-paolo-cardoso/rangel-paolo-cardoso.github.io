@@ -7,7 +7,7 @@ const books = [
     genre: 'Fantasia',
     author: {
       name: 'George R. R. Martin',
-      birthYear: 1948
+      birthYear: 1948,
     },
     releaseYear: 1991,
   },
@@ -47,7 +47,7 @@ const books = [
     genre: 'Terror',
     author: {
       name: 'Stephen King',
-      birthYear: 1947
+      birthYear: 1947,
     },
     releaseYear: 1986,
   },
@@ -63,8 +63,8 @@ const books = [
   },
 ];
 
-const expected_result = false
+const expected_result = false;
 
-const everyoneWasBornOnSecXX = () => books.every(person => person.author.birthYear >= 1900);
+const everyoneWasBornOnSecXX = () => books.every((books) => books.author.birthYear >= 1900);
 
 assert.equal(everyoneWasBornOnSecXX(), expected_result);
