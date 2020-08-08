@@ -312,7 +312,14 @@ ul {
     margin-top: 35px;
     padding: 5px;
     text-align: center;
-    width: 50%;
+    width: 60%;
+  }
+
+  .fotografia {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto 10px;
+    width: 60%;
   }
 }
 
