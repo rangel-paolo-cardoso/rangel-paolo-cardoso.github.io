@@ -315,11 +315,42 @@ ul {
     width: 60%;
   }
 
-  .fotografia {
+  .sinopse {
+    align-items: stretch;
     display: flex;
-    justify-content: center;
-    margin: 15px auto 10px;
-    width: 60%;
+    flex-direction: row;
+    height: 80vh;
+    justify-content: space-around;
+    margin-top: 35px;
+  }
+
+  .fotografia {
+    width: 50%;
+  }
+
+  .description {
+    align-items: center;
+    display: flex;
+    height: 25rem;
+    line-height: 30px;
+    margin: 0;
+    width: 30%;
+  }
+}
+
+@media (min-width: 900px) {
+
+  .fotografia {
+    max-width: 360px;
+  }
+
+  .description {
+    /* align-items: center;
+    display: flex;
+    height: 25rem;
+    line-height: 30px;
+    margin: 0; */
+    width: 40%;
   }
 }
 
@@ -329,5 +360,15 @@ ul {
   }
 
   .indice a {
+  }
+
+  .fotografia {
+    max-width: 360px;
+  }
+
+  .description {
+    height: 50vh;
+    line-height: 40px;
+    width: 50%;
   }
 }
