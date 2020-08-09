@@ -222,14 +222,17 @@ ul {
 
 /* Sessão portfólio */
 .portfolio {
-  background: url('images/profe-rangel.jpg') no-repeat;
+  background: url('https://apollocurrency.com/static/media/document-gif.1d30b5a0.gif') no-repeat;
+  /* background: url('images/profe-rangel.jpg') no-repeat; */
+  /* background: url('https://64.media.tumblr.com/bff245925ee537755c3c3b1f9a3f2a7f/tumblr_oq9smvbNLz1vsjcxvo1_540.gifv') no-repeat; */
+  /* background: url('images/profe-rangel.jpg') no-repeat; */
   background-position: 40%;
   background-size: cover;
 }
 
 /* ul li de projetos */
 .projetos li {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.75);
   margin: 0 0 20px;
   padding: 8px;
   text-align: center;
@@ -328,13 +331,39 @@ ul {
     width: 50%;
   }
 
+  .foto {
+    border-radius: 8px;
+    box-shadow: none;
+    transition: box-shadow 0.7s;
+    width: 90%;
+  }
+  
+  .foto:hover {
+    box-shadow: -10px 10px 10px blue;
+  }
+
   .description {
     align-items: center;
+    box-shadow: none;
     display: flex;
     height: 25rem;
     line-height: 30px;
     margin: 0;
+    transition: box-shadow 1s;
     width: 30%;
+  }
+
+  .description:hover {
+    /* https://2.bp.blogspot.com/-zO8hwvt7iMk/XAVxt4aoQvI/AAAAAAAAwa0/_01xZj87g04GvxpSEKEGRVBEWggW-fC5gCLcBGAs/s1600/7T9364v.gif */
+    /* https://thumbs.gfycat.com/BewitchedAntiqueAllensbigearedbat-size_restricted.gif */
+    /*  */
+    /*  */
+    background: radial-gradient(rgba(100, 100, 100, 0.3), rgb(6, 6, 112)), url('https://thumbs.gfycat.com/BewitchedAntiqueAllensbigearedbat-size_restricted.gif');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 10px 10px 10px white;
+    color: white;
   }
 }
 
@@ -345,11 +374,6 @@ ul {
   }
 
   .description {
-    /* align-items: center;
-    display: flex;
-    height: 25rem;
-    line-height: 30px;
-    margin: 0; */
     width: 40%;
   }
 }
@@ -363,12 +387,12 @@ ul {
   }
 
   .fotografia {
-    max-width: 360px;
+    max-width: 400px;
   }
 
   .description {
     height: 50vh;
-    line-height: 40px;
+    line-height: 45px;
     width: 50%;
   }
 }
