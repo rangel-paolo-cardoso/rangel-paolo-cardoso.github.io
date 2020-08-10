@@ -266,6 +266,29 @@ ul {
   text-shadow: 0 0 5px white;
 }
 
+.images-container-footer {
+  display: flex;
+}
+
+.social-network {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 30px;
+  width: 100%;
+}
+
+.social-network img {
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  width: 40px;
+}
+
+.social-network img:hover {
+  border: 2px solid blue;
+}
+
 /* Animação de títulos superiores */
 @keyframes titleAni {
 
