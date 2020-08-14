@@ -266,6 +266,23 @@ ul {
   text-shadow: 0 0 5px white;
 }
 
+.rodape {
+  align-items: center;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 25vh;
+  width: 100%;
+  padding: 60px 0;
+}
+
+.rodape-title {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
 .images-container-footer {
   display: flex;
 }
@@ -274,7 +291,7 @@ ul {
   align-items: center;
   display: flex;
   justify-content: space-around;
-  margin: 10px 30px;
+  margin: 10px 20px;
   width: 100%;
 }
 
@@ -286,7 +303,11 @@ ul {
 }
 
 .social-network img:hover {
-  border: 2px solid blue;
+  border: 2px solid cornflowerblue;
+}
+
+.social-network span {
+  margin-left: 10px;
 }
 
 /* Animação de títulos superiores */
