@@ -268,7 +268,7 @@ ul {
 
 .rodape {
   align-items: center;
-  background: linear-gradient(black, rgb(24, 24, 24), black);
+  background: linear-gradient(black, rgb(6, 1, 29), black);
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
