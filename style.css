@@ -268,13 +268,14 @@ ul {
 
 .rodape {
   align-items: center;
+  background: linear-gradient(black, rgb(6, 1, 29), black);
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 25vh;
-  width: 100%;
+  justify-content: center;
   padding: 60px 0;
+  width: 100%;
 }
 
 .rodape-title {
