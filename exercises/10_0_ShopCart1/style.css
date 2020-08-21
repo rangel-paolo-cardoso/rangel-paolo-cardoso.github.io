@@ -1,5 +1,5 @@
 body {
-  background-color: rgb( 82 , 65 , 10 );
+  background-color: rgb( 11 , 37 , 37 );
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -145,7 +145,7 @@ body {
 
 .empty-cart:active {
   box-shadow: 1px 1px 2px white;
-  transition: box-shadow 0.1s linear;
+  transition: box-shadow 0.05s linear;
 }
 
 .loading {
