@@ -69,7 +69,9 @@ const exibeModal = () => {
   }, 100);
 };
 
-const decideSeLimpa = () => confirm('Deseja mesmo apagar todas as tarefas?');
+function decideSeLimpa() {
+  return confirm('Deseja mesmo apagar todas as tarefas?');
+}
 
 function setModal(param) {
   if (param === 1) {
