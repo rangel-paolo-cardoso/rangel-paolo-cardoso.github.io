@@ -69,12 +69,15 @@ const exibeModal = () => {
   }, 100);
 };
 
+const decideSeLimpa = () => confirm('Deseja mesmo apagar todas as tarefas?');
+
 function setModal(param) {
   if (param === 1) {
     pelicula.style.display = 'flex';
     msgText.innerText = 'Alterações salvas com sucesso!✅';
     exibeModal();
-  } else if (param === 2) {
+  } else if (param === 2 && decideSeLimpa()) {
+    lista.innerHTML = '';
     pelicula.style.display = 'flex';
     msgText.innerText = 'Lista apagada!✅';
     exibeModal();
@@ -110,8 +113,9 @@ function salvaListaNoStorage() { // Usa a função concluiSalvamento, exibe mens
 // Evento para o botão que adiciona itens.
 const eventBtnAdiciona = () => btnAdiciona.addEventListener('click', () => criaItem());
 
+
 // Evento para o botão que limpa a lista.
-const eventBtnLimpa = () => btnLimpa.addEventListener('click', () => lista.innerHTML = '');
+// const eventBtnLimpa = () => btnLimpa.addEventListener('click', () => lista.innerHTML = '');
 
 const eventBtnLimpaConcluidas = () => {
   btnLimpaConcluidas.addEventListener('click', () => {
