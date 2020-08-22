@@ -1,6 +1,6 @@
 const textoTarefa = document.getElementById('texto-tarefa'); // Manipula a caixa de texto.
 const btnAdiciona = document.getElementById('criar-tarefa'); // Manipula o botão que adiciona na lista.
-const btnLimpa = document.getElementById('apaga-tudo'); // Manipula o botão que apaga a lista.
+// const btnLimpa = document.getElementById('apaga-tudo'); // Manipula o botão que apaga a lista.
 const btnLimpaConcluidas = document.getElementById('remover-finalizados'); // Manipula o botão que limpa itens concluídos.
 const btnSalvaTarefas = document.getElementById('salvar-tarefas'); // Manipula botão salva tarefas.
 const btnMoveCima = document.getElementById('mover-cima'); // Manipula botão mover para cima.
@@ -167,7 +167,6 @@ const alteraCor = () => {
 
 window.onload = () => {
   eventBtnAdiciona();
-  eventBtnLimpa();
   eventBtnLimpaConcluidas();
   eventBtnSalvarTarefas();
   carregaLista();
