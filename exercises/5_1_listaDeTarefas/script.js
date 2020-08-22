@@ -1,6 +1,5 @@
 const textoTarefa = document.getElementById('texto-tarefa'); // Manipula a caixa de texto.
 const btnAdiciona = document.getElementById('criar-tarefa'); // Manipula o botão que adiciona na lista.
-const btnLimpa = document.getElementById('apaga-tudo'); // Manipula o botão que apaga a lista.
 const btnLimpaConcluidas = document.getElementById('remover-finalizados'); // Manipula o botão que limpa itens concluídos.
 const btnSalvaTarefas = document.getElementById('salvar-tarefas'); // Manipula botão salva tarefas.
 const btnMoveCima = document.getElementById('mover-cima'); // Manipula botão mover para cima.
@@ -69,7 +68,9 @@ const exibeModal = () => {
   }, 100);
 };
 
-const decideSeLimpa = () => confirm('Deseja mesmo apagar todas as tarefas?');
+function decideSeLimpa() {
+  return confirm('Deseja mesmo apagar todas as tarefas?');
+}
 
 function setModal(param) {
   if (param === 1) {
@@ -112,10 +113,6 @@ function salvaListaNoStorage() { // Usa a função concluiSalvamento, exibe mens
 
 // Evento para o botão que adiciona itens.
 const eventBtnAdiciona = () => btnAdiciona.addEventListener('click', () => criaItem());
-
-
-// Evento para o botão que limpa a lista.
-// const eventBtnLimpa = () => btnLimpa.addEventListener('click', () => lista.innerHTML = '');
 
 const eventBtnLimpaConcluidas = () => {
   btnLimpaConcluidas.addEventListener('click', () => {
@@ -167,7 +164,6 @@ const alteraCor = () => {
 
 window.onload = () => {
   eventBtnAdiciona();
-  eventBtnLimpa();
   eventBtnLimpaConcluidas();
   eventBtnSalvarTarefas();
   carregaLista();
