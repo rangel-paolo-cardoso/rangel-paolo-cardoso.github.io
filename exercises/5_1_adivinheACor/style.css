@@ -65,10 +65,16 @@ button:hover {
 }
 
 .choose {
+  align-items: center;
   background-color: rgba(0, 110, 255, 0.562);
   border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: auto;
-  width: 50%;
+  /* max-width: 465px; */
+  max-width: 165px;
+  /* width: 165px; */
 }
 
 .ball {
@@ -76,7 +82,7 @@ button:hover {
   border-radius: 50%;
   display: inline-block;
   height: 55px;
-  margin: 0 4%;
+  margin: 6px;
   width: 55px;
 }
 
