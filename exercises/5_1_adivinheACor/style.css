@@ -13,6 +13,10 @@ body {
   margin-top: 120px;
 }
 
+.resposta {
+  text-shadow: 0 0 3px black;
+}
+
 .gameTitle , .rgbColor , .resposta , .dicas , label {
   background-color: rgba(90, 160, 240, 0.4);
   border: 2px solid rgb(0, 50, 50);
