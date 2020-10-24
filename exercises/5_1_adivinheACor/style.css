@@ -1,12 +1,14 @@
 body {
   background: url('https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_960_720.jpg') no-repeat;
   background-size: cover;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
   margin: auto;
   width: 80%;
 }
 
 .rgbColor {
-  text-shadow: 5px 5px 3px black;
+  text-shadow: 5px 5px 3px blue;
 }
 
 .gameTitle {
@@ -14,7 +16,7 @@ body {
 }
 
 .resposta {
-  text-shadow: 0 0 3px black;
+  text-shadow: 1px 1px 3px black;
 }
 
 .gameTitle , .rgbColor , .resposta , .dicas , label {
