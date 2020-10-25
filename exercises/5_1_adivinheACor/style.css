@@ -94,6 +94,7 @@ button:hover {
 
 .ball:hover {
   border-color: lime;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
 .luz , .coroa , .sol {
