@@ -72,7 +72,7 @@ button:hover {
 
 .choose {
   align-items: center;
-  background-color: rgba(0, 110, 255, 0.562);
+  background-color: rgb(109, 160, 255);
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
