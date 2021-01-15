@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adivinhe a Cor</title>
+    <title>Guess the Color</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <main>
       <header>
-        <h1 id="title" class="gameTitle">Adivinhe a Cor!🤓</h1>
+        <h1 id="title" class="gameTitle">Guess the Color!🤓</h1>
       </header>
       <section>
-        <label>Placar:</label>
+        <label>Scoreboard:</label>
         <p id="score" class="pontos-pos">0</p>
         <p id="rgb-color" class="rgbColor"></p>
         <div class="luz">
@@ -31,20 +31,19 @@
           <div class="ball"></div>
           <div class="ball"></div>
         </div>
-        <p id="answer" class="resposta">Escolha uma cor</p>
-        <button id="reset-game">Reiniciar Jogo</button>
+        <p id="answer" class="resposta">Choose a color</p>
+        <button id="reset-game">Restart game</button>
       </section>
       <footer>
-        <button id="dicas">Dicas</button>
+        <button id="dicas">Tips</button>
         <div class="dicas">
           <p>
-            Dicas: Os números entre os parênteses representam o RGB da cor, o primeiro número é o
-            nível de vermelho, o segundo de verde e o terceiro número é o nível de azul.
+            Tips: The numbers between parentheses represent the RGB color, the fisrt number is
+            the red level, the second is green and the third number is the blue level.
           </p>
           <p>
-            Pontos: A cada acerto você ganha 3 pontos, ao errar perde 2. Assim que você acerta, os
-            pontos deixam de ser contabilizados, então você precisa clicar em reiniciar, para
-            adivinhar outra cor.
+            Scores: For each hit you get 3 points, when you miss you lose 2. As soon as you get the points right,
+            they stop counting, then you will need to click Restart to guess another color.
           </p>
         </div>
       </footer>

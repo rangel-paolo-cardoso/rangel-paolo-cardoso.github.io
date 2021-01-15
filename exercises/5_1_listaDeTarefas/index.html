@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista de Tarefas</title>
+    <title>Task List</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -14,29 +14,29 @@
     <div class="pagina">
       <header>
         <h1>
-          Minha Lista de Tarefas
+          My Task List
           <div class="catavento"></div>
         </h1>
-        <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
+        <p id="funcionamento">Double-click an item to mark it complete</p>
       </header>
       <section>
-        <input id="texto-tarefa" type="text" placeholder="Digite sua tarefa" />
-        <button id="criar-tarefa">Adicionar</button>
+        <input id="texto-tarefa" type="text" placeholder="Enter your task" />
+        <button id="criar-tarefa">Add</button>
         <div id="mensagem" class="msgAlert">Digite algo para colocar na lista!</div>
         <fieldset class="botoes">
-          <button id="salvar-tarefas">Salvar Lista</button>
+          <button id="salvar-tarefas">Save list</button>
           <button id="mover-cima">↑</button>
           <button id="mover-baixo">↓</button>
           <button id="remover-selecionado">X</button>
-          <button id="apaga-tudo" onclick="setModal(2)">Limpar lista</button>
-          <button id="remover-finalizados">Limpar Concluídas</button>
+          <button id="apaga-tudo" onclick="setModal(2)">Clear list</button>
+          <button id="remover-finalizados">Clear completed</button>
         </fieldset>
         <ol id="lista-tarefas"></ol>
       </section>
     </div>
     <section id="pelicula-glass" class="pelicula">
       <div id="modal-window" class="modal">
-        <span id="msgText">Sua lista foi salva com sucesso!✅</span>
+        <span id="msgText">Your task list has been successfully saved!✅</span>
         <button onclick="setModal(3)">OK</button>
       </div>
     </section>
