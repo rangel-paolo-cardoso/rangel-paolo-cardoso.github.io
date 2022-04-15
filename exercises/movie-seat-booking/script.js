@@ -1,0 +1,32 @@
+const container = document.querySelector('.container');
+const seats = document.querySelectorAll('.row .seat:not(.occupied)');
+const count = document.getElementById('count');
+const total = document.getElementById('total');
+const movieSelect = document.getElementById('movie');
+
+let ticketPrice = +movieSelect.value;
+
+// Update total and count
+function updateSelectedCount() {
+  const seletedSeats = document.querySelectorAll('.row .seat.selected');
+
+  const selectedSeatsCount = seletedSeats.length;
+  
+  count.innerText = selectedSeatsCount;
+  total.innerText = selectedSeatsCount * ticketPrice;
+}
+
+// Movie select event
+movieSelect.addEventListener('change', (event) => {
+  ticketPrice = +event.target.value;
+  updateSelectedCount();
+});
+
+// Seat click event
+container.addEventListener('click', (event) => {
+  if (event.target.classList.contains('seat') && !event.target.classList.contains('occupied')) {
+    event.target.classList.toggle('selected');
+
+    updateSelectedCount();
+  }
+});
