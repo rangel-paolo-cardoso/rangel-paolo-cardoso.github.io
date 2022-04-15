@@ -101,7 +101,7 @@ ul {
   background: linear-gradient(to right, rgb(4, 4, 90), blue, rgb(4, 4, 90));
   color: white;
   font-weight: 700;
-  box-shadow: 0 0 20px white;
+  box-shadow: 0 5px 10px 1px rgba(255, 255, 255, 0.6);
 }
 
 /* Formatação do conteúdo principal */
