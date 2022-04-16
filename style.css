@@ -88,7 +88,7 @@ ul {
 /* Links do índice */
 .indice a {
   background: linear-gradient(rgb(34, 32, 32), black);
-  border: 1px solid white;
+  border: 1px solid #333;
   color: white;
   display: flex;
   font-size: 18px;
@@ -102,7 +102,8 @@ ul {
   background: linear-gradient(to right, rgb(4, 4, 90), blue, rgb(4, 4, 90));
   color: white;
   font-weight: 700;
-  box-shadow: 0 5px 10px 1px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 5px 10px 1px rgba(255, 255, 255, 0.75);
+  transition: box-shadow 500ms linear;
 }
 
 /* Formatação do conteúdo principal */
@@ -236,10 +237,9 @@ ul {
 
 /* Sessão portfólio */
 .portfolio {
-  background: url('https://apollocurrency.com/static/media/document-gif.1d30b5a0.gif') no-repeat;
   /* background: url('images/profe-rangel.jpg') no-repeat; */
   /* background: url('https://64.media.tumblr.com/bff245925ee537755c3c3b1f9a3f2a7f/tumblr_oq9smvbNLz1vsjcxvo1_540.gifv') no-repeat; */
-  /* background: url('images/profe-rangel.jpg') no-repeat; */
+  /* background: linear-gradient(rgb(17, 17, 78), rgb(44, 5, 5)); */
   background-position: 40%;
   background-size: cover;
 }
@@ -269,7 +269,7 @@ ul {
 
 .rodape {
   align-items: center;
-  background: linear-gradient(black, rgb(6, 1, 29), black);
+  background: linear-gradient(black, rgb(9, 2, 43), black);
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
