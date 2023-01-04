@@ -1,0 +1,43 @@
+/* #05183c */
+/* #06296b */
+/* #1a3c7d aqui */ 
+/* #0d56df */
+/* #417cea */
+
+body {
+    background-color: #05183c;
+}
+
+.navbar-nav a {
+    color: #05183c;
+}
+
+.navbar-nav a:hover {
+    color: #bbb;
+}
+
+h1 {
+    color: #dfdff8;
+}
+
+main {
+    margin-top: 50px;
+}
+
+section {
+    margin-bottom: 50px;
+    padding-bottom: 50xp;
+}
+
+.panels {
+    background-color: #06296b;
+    color: #05183c;
+    color: #06296b;
+    color: #1a3c7d;
+    color: #0d56df;
+    color: #417cea;
+}
+
+footer {
+    width: 100%;
+}

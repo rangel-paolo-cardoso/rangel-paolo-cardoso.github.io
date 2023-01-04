@@ -134,21 +134,10 @@ ul {
   height: 126vh;
 }
 
-/* Tag âncora que envolve a foto */
-.fotografia {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 25px;
-  min-height: 70vh;
-  width: 100%;
-}
-
 /* Formata minha foto */
 .foto {
   border-radius: 8px;
   box-shadow: -10px 10px 10px blue;
-  /* transition: box-shadow 0.7s; Configurar no desktop */
-  width: 90%;
 }
 
 /* 
@@ -394,7 +383,8 @@ ul {
     border-radius: 8px;
     box-shadow: none;
     transition: box-shadow 0.7s;
-    width: 90%;
+    height: 400px;
+    width: 400px;
   }
   
   .foto:hover {
