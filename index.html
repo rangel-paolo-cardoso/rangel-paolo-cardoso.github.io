@@ -11,12 +11,13 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.4.0-web/css/all.css">
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg sticky-top bg-dark bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
           <button
             class="navbar-toggler"
             type="button"
@@ -87,6 +88,62 @@
     <!-- Work History -->
     <section id="history">
       <h2>Work History</h2>
+      <div class="timeline">
+        <div class="container">
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
+                <h4>2020</h4>
+                <i class="fa-solid fa-business-time"></i>
+              </button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="active" aria-label="Slide 2">
+                <h4>2022</h4>
+                <i class="fa-solid fa-business-time"></i>
+              </button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item">
+                <div class="experience-slide-one row h-100 align-items-center">
+                  <div class="col-md-5">
+                    <div class="experience-slide-img">
+                      Insert img
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="experience-slide-text">
+                      <h3>2020</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item active">
+                <div class="experience-slide-one row h-100 align-items-center">
+                  <div class="col-md-5">
+                    <div class="experience-slide-img">
+                      Insert img
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="experience-slide-text">
+                      <h3>2022</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true">
+                <i class="fa-solid fa-chevron-left"></i>
+              </span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true">
+                <i class="fa-solid fa-chevron-right"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects -->

@@ -1,52 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.timeline {
+    padding: 100px 0;
+}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+.carousel {
+    position: relative;
+}
+
+.carousel-indicators {
+    top: 50;
+    width: 75%;
+    margin-left: 14%;
+    position: static;
+    margin-bottom: 40px;
+}
+
+.experience-slide-one {
+    padding: 0 50px;
+}
+
+.carousel-indicators button {
+    text-indent: 0 !important;
+    background: 0 0;
     border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    margin: 0 !important;
+    position: relative;
+    width: 25% !important;
 }
 
-:root {
-    --bg-color: #1f242d;
-    --second-bg-color: #323846;
-    --text-color: #fff;
-    --main-color: #0ef;
-}
-
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-
-body {
-    background: var(--bg-color);
-    color: var(--text-color);
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
+.carousel-indicators button:before {
+    position: absolute;
+    content: "";
+    border-top: 3px solid #c8cbd0;
     width: 100%;
-    padding: 2rem 9%;
-    background: var(--bg-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+    left: 0;
 }
 
-.logo {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600;
-    cursor: default;
+.carousel-indicators button h4 {
+    margin-top: -41px;
+    position: absolute;
+    left: 52%;
+    transform: translatex(-50%);
 }
 
-/* Tutorial */
-/* https://youtu.be/Tkp3FDgOueM */
+.carousel-indicators button i {
+    margin-top: -8px;
+    position: absolute;
+}
+
+.carousel-indicators button.active h4,
+.carousel-indicators button.active i {
+    color: #2ecc71;
+}
+
+.carousel-indicators button.active h4 {
+    font-size: 34px;
+    position: absolute;
+    text-align: center;
+    margin-top: -49px;
+}
+
+.experience-slide-text h3 {
+    margin-bottom: 30px;
+    font-size: 27px;
+    color: #242b55;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 2%;
+    opacity: .8;
+}
+
+.carousel-control-next-icon i,
+.carousel-control-prev-icon i {
+    font-size: 30px;
+    color: #333;
+}
