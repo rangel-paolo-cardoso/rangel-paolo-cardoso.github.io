@@ -1,14 +1,22 @@
-const years = document.getElementById('years');
-const months = document.getElementById('months');
+// About section
+const experience = document.getElementById('total-xp');
 
-const statingDate = new Date(2020, 9, 5); // October 5th, 2020
+const startingDate = new Date(2020, 9, 5); // October 5th, 2020
 const currentDate = new Date();
-const dateDifferenceInMillisecond = currentDate - statingDate;
-const datDifferenceInYears = dateDifferenceInMillisecond / (1000 * 60 * 60 * 24 * 365.25);
-const yearsOfExperience = Math.floor(datDifferenceInYears);
+const dateDifferenceInMillisecond = currentDate - startingDate;
+const dateDifferenceInYears = convertMillisecondsToYears(dateDifferenceInMillisecond);
+const yearsOfExperience = Math.floor(dateDifferenceInYears);
 
-const datDifferenceInMonths = (datDifferenceInYears - yearsOfExperience) * 12;
-const monthssOfExperience = Math.floor(datDifferenceInMonths);
+const dateDifferenceInMonths = (dateDifferenceInYears - yearsOfExperience) * 12;
+const monthsOfExperience = Math.floor(dateDifferenceInMonths);
 
-years.innerHTML = yearsOfExperience;
-months.innerHTML = monthssOfExperience;
+const text1 = `${yearsOfExperience} years`;
+const text2 = ` and ${monthsOfExperience} months `;
+const text3 = `of experience`;
+const text4 = ` as a Software Developer.`;
+
+experience.innerHTML += `${text1}${text2}${text3}${text4}`;
+
+function convertMillisecondsToYears(miliseconds) {
+    return miliseconds / (1000 * 60 * 60 * 24 * 365.25);
+}
