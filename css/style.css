@@ -1,3 +1,8 @@
+#history,
+#about {
+    height: 100vh;
+}
+
 .timeline {
     padding: 100px 0;
 }
@@ -63,6 +68,10 @@
     margin-bottom: 30px;
     font-size: 27px;
     color: #242b55;
+}
+
+.experience-slide-text p {
+    text-align: justify;
 }
 
 .carousel-control-next,
