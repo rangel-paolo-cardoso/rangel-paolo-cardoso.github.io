@@ -18,6 +18,10 @@
     height: 400px;
 }
 
+.row-container {
+    height: 100%;
+}
+
 .card img {
     position: absolute;
     border-radius: 50%;
@@ -26,17 +30,21 @@
 
 .card-pic-layer {
     visibility: hidden;
-    background: rgba(10, 10, 10, 0.5);
-    background-image: url('');
+    background: url('../assets/images/tech-pixels.gif');
     position: absolute;
     height: 400px;
-    width: 429px;
+    width: 400px;
     top: -130;
     z-index: 1;
 }
 
 .card:hover .card-pic-layer {
     visibility: visible;
+}
+
+.card .card-desc {
+    display: inline;
+    /* height: 100%; */
 }
 
 .timeline {
