@@ -3,6 +3,50 @@
     height: 100vh;
 }
 
+.navbar-brand i {
+    font-size: 200px;
+    color: #333;
+}
+
+.nav-item a:hover {
+    font-weight: 600;
+}
+
+/* .col-md-4 .bg-primary */
+.card {
+    position: relative;
+    height: 400px;
+}
+
+.row-container {
+    height: 100%;
+}
+
+.card img {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.card-pic-layer {
+    visibility: hidden;
+    background: url('../assets/images/tech-pixels.gif');
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: -130;
+    z-index: 1;
+}
+
+.card:hover .card-pic-layer {
+    visibility: visible;
+}
+
+.card .card-desc {
+    display: inline;
+    /* height: 100%; */
+}
+
 .timeline {
     padding: 100px 0;
 }
