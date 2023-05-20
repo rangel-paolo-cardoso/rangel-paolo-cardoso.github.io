@@ -1,0 +1,87 @@
+#history,
+#about {
+    height: 100vh;
+}
+
+.timeline {
+    padding: 100px 0;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carousel-indicators {
+    top: 50;
+    width: 75%;
+    margin-left: 14%;
+    position: static;
+    margin-bottom: 40px;
+}
+
+.experience-slide-one {
+    padding: 0 50px;
+}
+
+.carousel-indicators button {
+    text-indent: 0 !important;
+    background: 0 0;
+    border: none;
+    margin: 0 !important;
+    position: relative;
+    width: 25% !important;
+}
+
+.carousel-indicators button:before {
+    position: absolute;
+    content: "";
+    border-top: 3px solid #c8cbd0;
+    width: 100%;
+    left: 0;
+}
+
+.carousel-indicators button h4 {
+    margin-top: -41px;
+    position: absolute;
+    left: 52%;
+    transform: translatex(-50%);
+}
+
+.carousel-indicators button i {
+    margin-top: -8px;
+    position: absolute;
+}
+
+.carousel-indicators button.active h4,
+.carousel-indicators button.active i {
+    color: #2ecc71;
+}
+
+.carousel-indicators button.active h4 {
+    font-size: 34px;
+    position: absolute;
+    text-align: center;
+    margin-top: -49px;
+}
+
+.experience-slide-text h3 {
+    margin-bottom: 30px;
+    font-size: 27px;
+    color: #242b55;
+}
+
+.experience-slide-text p {
+    text-align: justify;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 2%;
+    opacity: .8;
+}
+
+.carousel-control-next-icon i,
+.carousel-control-prev-icon i {
+    font-size: 30px;
+    color: #333;
+}
