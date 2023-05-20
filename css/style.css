@@ -1,6 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
 #history,
 #about {
     height: 100vh;
+}
+
+#total-xp {
+    font-weight: 700;
 }
 
 .navbar-brand i {
