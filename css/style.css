@@ -135,3 +135,16 @@
     font-size: 30px;
     color: #333;
 }
+
+.form-container {
+    margin: 80px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contact-icon-container i {
+    font-size: 50px;
+    color: #00f;
+}
