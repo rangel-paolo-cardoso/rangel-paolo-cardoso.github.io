@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
 
+h2 {
+    margin-top: 30px;
+    text-align: center;
+}
+
 #history,
 #about {
     height: 100vh;
@@ -140,11 +145,16 @@
     margin: 80px 0;
 }
 
+footer {
+    padding: 50px 0 0;
+}
+
 a {
     text-decoration: none;
+    color: #fff;
 }
 
 .contact-icon-container i {
     font-size: 50px;
-    color: #00f;
+    color: #fff;
 }
