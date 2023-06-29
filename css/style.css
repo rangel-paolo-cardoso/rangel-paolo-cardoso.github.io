@@ -156,5 +156,22 @@ a {
 
 .contact-icon-container i {
     font-size: 50px;
-    color: #fff;
+    /* color: #666; */
+}
+
+.linkedin-icon {
+    color: #0a66c2;
+}
+
+.github-icon {
+    color: #1f2328;
+}
+
+.instagram-icon {
+    color: #8009df;
+    background: linear-gradient(10%, #8009df, #fc4328, #fec806);
+}
+
+.facebook-icon {
+    color: #1877f2;
 }
