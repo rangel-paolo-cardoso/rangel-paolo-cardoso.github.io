@@ -15,6 +15,11 @@ const text2 = ` and ${monthsOfExperience} months `;
 const text3 = `of experience`;
 const text4 = ` as a Software Developer.`;
 
+// Copyright from Social Media
+const copyright = document.getElementById('copyright');
+copyright.innerText = `© ${currentDate.getFullYear()} Rangel Paolo Cardoso Bomfim`;
+
+
 experience.innerHTML += `${text1}${text2}${text3}${text4}`;
 
 function convertMillisecondsToYears(miliseconds) {

@@ -146,7 +146,7 @@ h2 {
 }
 
 footer {
-    padding: 50px 0 0;
+    padding: 70px 0 50px;
 }
 
 a {
@@ -154,9 +154,22 @@ a {
     color: #fff;
 }
 
+.copyright-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
 .contact-icon-container i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 50px;
-    /* color: #666; */
+    height: 50px;
+    width: 50px;
+}
+
+.fa-brands {
+    border-radius: 15px;
 }
 
 .linkedin-icon {
@@ -168,10 +181,11 @@ a {
 }
 
 .instagram-icon {
-    color: #8009df;
-    background: linear-gradient(10%, #8009df, #fc4328, #fec806);
+    color: #eee;
+    background: linear-gradient(140deg, #7209c9, #fc4328, #fec806);
 }
 
 .facebook-icon {
     color: #1877f2;
 }
+
