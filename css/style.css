@@ -159,10 +159,17 @@ a {
     margin-top: 50px;
 }
 
+.contact-link {
+    text-align: center;
+    display: block;
+    width: 80px;
+}
+
+.contact-icon-container{
+    margin: 0;;
+}
+
 .contact-icon-container i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 50px;
     height: 50px;
     width: 50px;
@@ -187,5 +194,14 @@ a {
 
 .facebook-icon {
     color: #1877f2;
+}
+
+figcaption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #33d;
+    text-align: center;
+    text-decoration: underline;
 }
 
