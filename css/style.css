@@ -23,6 +23,10 @@ h2 {
     font-weight: 600;
 }
 
+.profile-photo {
+    overflow: hidden;
+}
+
 /* .col-md-4 .bg-primary */
 .card {
     position: relative;
